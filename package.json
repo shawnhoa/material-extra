@@ -1,17 +1,17 @@
 {
-  "name": "meterial-extra",
+  "name": "material-extra",
   "version": "0.1.2",
   "private": false,
   "description": "A Material 3 personal publishing site with a visitor app and admin workspace.",
   "license": "MIT",
   "type": "module",
-  "homepage": "https://shawnhoa.github.io/meterial-extra/",
+  "homepage": "https://shawnhoa.github.io/material-extra/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawnhoa/meterial-extra.git"
+    "url": "git+https://github.com/shawnhoa/material-extra.git"
   },
   "bugs": {
-    "url": "https://github.com/shawnhoa/meterial-extra/issues"
+    "url": "https://github.com/shawnhoa/material-extra/issues"
   },
   "scripts": {
     "start": "sh run.sh",

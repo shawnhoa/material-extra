@@ -1,7 +1,7 @@
 services:
-  meterial-extra:
+  material-extra:
     build: .
-    container_name: meterial-extra
+    container_name: material-extra
     env_file: .env
     environment:
       DATA_DIR: /data

@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for improving Meterial Extra.
+Thank you for improving Material Extra.
 
 ## Before opening a pull request
 

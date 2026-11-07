@@ -1196,7 +1196,7 @@ def server_runtime_status():
 
 
 class BlogHandler(BaseHTTPRequestHandler):
-    server_version = "MeterialExtra/0.1.2"
+    server_version = "MaterialExtra/0.1.2"
     def log_message(self, fmt, *args): print("[%s] %s" % (self.log_date_time_string(), fmt % args))
     @property
     def admin_port(self): return self.server.server_port == ADMIN_PORT
@@ -2543,7 +2543,7 @@ class BlogHandler(BaseHTTPRequestHandler):
 
 def main():
     guest = ThreadingHTTPServer((os.getenv("GUEST_BIND_HOST", "0.0.0.0"), PORT), BlogHandler); admin = ThreadingHTTPServer((os.getenv("ADMIN_BIND_HOST", "127.0.0.1"), ADMIN_PORT), BlogHandler)
-    threading.Thread(target=admin.serve_forever, daemon=True).start(); print(f"Meterial Extra guest :{PORT}, admin :{ADMIN_PORT}"); guest.serve_forever()
+    threading.Thread(target=admin.serve_forever, daemon=True).start(); print(f"Material Extra guest :{PORT}, admin :{ADMIN_PORT}"); guest.serve_forever()
 
 
 if __name__ == "__main__": main()

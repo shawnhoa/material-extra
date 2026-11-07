@@ -1,17 +1,17 @@
-# Meterial Extra
+# Material Extra
 
-![Logo](docs/images/IMG_8191.png)
+![Material Extra Logo](docs/images/IMG_8191.png)
 
 一个基于 Material 3 的个人内容站点模板，包含访客网站、独立管理端和轻量 Python 服务端。界面与数据均为重新生成的演示内容，不包含原部署实例的文章、用户、图片、账号、接口地址或服务器配置。
 
 <p align="center">
-  <a href="https://github.com/shawnhoa/meterial-extra/releases/tag/v0.1.2">下载 v0.1.2</a> ·
-  <a href="https://github.com/shawnhoa/meterial-extra">源代码</a>
+  <a href="https://github.com/shawnhoa/material-extra/releases/tag/v0.1.2">下载 v0.1.2</a> ·
+  <a href="https://github.com/shawnhoa/material-extra">源代码</a>
 </p>
 
 ## 预览
 
-线上部署示例：[站点所有者的实例](https://shawnho.top/)。该站点内容与本仓库无关，不会被复制到演示数据中。仓库预览图展示的是该主题框架的演示界面。
+线上部署示例：[星屿笔记站点所有者的实例](https://shawnho.top/)。该站点内容与本仓库无关，不会被复制到演示数据中。仓库预览图展示的是重新生成的演示界面。
 
 ![桌面端演示](./docs/images/demo-desktop.png)
 
@@ -77,6 +77,7 @@ Dockerfile           容器构建文件
 
 ### v0.1.2
 
+- 将项目名称统一更正为 Material Extra。
 - 串行化状态文件的读取、修改与保存，避免并发请求覆盖站点数据。
 - 刷新桌面端与移动端演示截图，使仓库预览与当前模板一致。
 - 忽略本地截图与界面审计数据目录，避免运行时文件进入版本控制。
@@ -85,7 +86,6 @@ Dockerfile           容器构建文件
 
 - 修复关于页引用缺失角色素材和页脚演示备案资源的问题。
 - 刷新桌面端演示截图，并更新发布归档。
-
 
 ## License
 

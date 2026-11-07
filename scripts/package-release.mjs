@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const version = JSON.parse(await fs.readFile(path.join(root, "package.json"), "utf8")).version;
-const staging = path.join(root, "dist", `meterial-extra-${version}`);
-const archive = path.join(root, "dist", `meterial-extra-${version}.tar.gz`);
+const staging = path.join(root, "dist", `material-extra-${version}`);
+const archive = path.join(root, "dist", `material-extra-${version}.tar.gz`);
 const entries = [".dockerignore", ".env.example", ".gitignore", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "Dockerfile", "LICENSE", "README.md", "SECURITY.md", "compose.yaml", "package.json", "run.ps1", "run.sh", "app", "docs", "scripts"];
 const ignoredNames = new Set(["__pycache__", ".DS_Store", "Thumbs.db"]);
 

@@ -4,8 +4,8 @@ $root = Split-Path -Parent $PSScriptRoot
 $package = Get-Content -LiteralPath (Join-Path $root "package.json") -Raw | ConvertFrom-Json
 $version = $package.version
 $dist = Join-Path $root "dist"
-$stagingRoot = Join-Path $dist "meterial-extra-$version"
-$zip = Join-Path $dist "meterial-extra-$version.zip"
+$stagingRoot = Join-Path $dist "material-extra-$version"
+$zip = Join-Path $dist "material-extra-$version.zip"
 $entries = @(
     ".dockerignore",
     ".env.example",
