@@ -1,0 +1,6 @@
+.git
+.github
+artifacts
+dist
+node_modules
+*.log

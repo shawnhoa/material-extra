@@ -1,0 +1,29 @@
+{
+  "name": "meterial-extra",
+  "version": "0.1.0",
+  "private": false,
+  "description": "An open Material-inspired theme and responsive frontend framework.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://shawnhoa.github.io/meterial-extra/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawnhoa/meterial-extra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shawnhoa/meterial-extra/issues"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "visual": "node scripts/visual-check.mjs",
+    "package": "node scripts/package-release.mjs"
+  },
+  "keywords": [
+    "material",
+    "theme",
+    "design-system",
+    "frontend-framework",
+    "static-site"
+  ]
+}

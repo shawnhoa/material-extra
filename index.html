@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-palette="lilac" data-mode="light" data-radius="expressive">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f2ff">
+    <meta name="description" content="Meterial Extra — an open Material-inspired theme and frontend framework.">
+    <title>Meterial Extra — Open Theme Framework</title>
+    <link rel="icon" href="public/assets/logo.svg" type="image/svg+xml">
+    <link rel="preload" href="public/assets/fonts/big-john.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="src/css/tokens.css">
+    <link rel="stylesheet" href="src/css/theme.css">
+    <link rel="stylesheet" href="src/css/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <a class="brand" href="#" aria-label="Meterial Extra home">
+        <img src="public/assets/logo.svg" alt="">
+        <span class="theme-wordmark" role="img" aria-label="Meterial Extra">METERIAL EXTRA</span>
+      </a>
+      <div class="header-actions">
+        <button class="language-button" id="language-toggle" type="button" aria-label="Switch language">中文</button>
+        <button class="icon-button" id="mode-toggle" type="button" aria-label="Switch color mode">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36-6.36-1.42 1.42M7.06 16.94l-1.42 1.42m12.72 0-1.42-1.42M7.06 7.06 5.64 5.64M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+        </button>
+        <a class="outlined-button compact" href="https://github.com/shawnhoa/meterial-extra" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="site-nav" aria-label="Primary navigation">
+      <div class="sidebar-label" data-i18n="framework">FRAMEWORK</div>
+      <nav class="nav-list">
+        <a class="nav-link active" href="#overview"><span>01</span><span data-i18n="navOverview">Overview</span></a>
+        <a class="nav-link" href="#stories"><span>02</span><span data-i18n="navStories">Stories</span></a>
+        <a class="nav-link" href="#archive"><span>03</span><span data-i18n="navArchive">Archive</span></a>
+        <a class="nav-link" href="#friends"><span>04</span><span data-i18n="navFriends">Friends</span></a>
+        <a class="nav-link" href="#announcements"><span>05</span><span data-i18n="navAnnouncements">Announcements</span></a>
+        <a class="nav-link" href="#about-template"><span>06</span><span data-i18n="navAbout">About</span></a>
+        <a class="nav-link" href="#components"><span>07</span><span data-i18n="navComponents">Components</span></a>
+        <a class="nav-link" href="#themes"><span>08</span><span data-i18n="navPalettes">Palettes</span></a>
+      </nav>
+      <div class="sidebar-card">
+        <span class="eyebrow" data-i18n="openSource">OPEN SOURCE</span>
+        <strong data-i18n="mitLicensed">MIT licensed</strong>
+        <p data-i18n="sidebarDescription">Fork it, adapt it, and replace the demo with your own content.</p>
+        <a href="https://github.com/shawnhoa/meterial-extra" target="_blank" rel="noopener" data-i18n="viewRepository">View repository ↗</a>
+        <a href="https://shawnho.top/" target="_blank" rel="noopener" data-i18n="productionExample">Production example: shawnho.top ↗</a>
+      </div>
+      <div class="sidebar-meta">v0.1.0 · 2026</div>
+    </aside>
+
+    <div class="nav-scrim" id="nav-scrim" hidden></div>
+
+    <main id="main" class="page">
+      <section class="hero" id="overview" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="heroEyebrow">METERIAL EXTRA · DESIGN SYSTEM</span>
+          <h1 id="hero-title" data-i18n-html="heroTitle">A calm frame for <em>expressive content.</em></h1>
+          <p data-i18n="heroDescription">An open Material-inspired theme with room for editorial layouts, technical notes, journals, and curated collections.</p>
+          <div class="hero-actions">
+            <a class="filled-button" href="#stories" data-i18n="exploreDemo">Explore demo</a>
+            <a class="text-button" href="README.md" data-i18n="readDocs">Read documentation →</a>
+          </div>
+          <div class="hero-facts" aria-label="Project facts">
+            <span><strong>0</strong> <span data-i18n="runtimeDependencies">runtime dependencies</span></span>
+            <span><strong>4</strong> <span data-i18n="palettes">palettes</span></span>
+            <span><strong>MIT</strong> <span data-i18n="sourceLicense">source license</span></span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="planet">
+            <span class="planet-ring"></span>
+            <span class="planet-core">ME</span>
+          </div>
+          <span class="spark spark-a"></span>
+          <span class="spark spark-b"></span>
+          <span class="art-caption">MATERIAL / MODULAR / YOURS</span>
+        </div>
+      </section>
+
+      <section class="story-section" id="stories" aria-labelledby="stories-title">
+        <div class="section-heading">
+          <div><span class="eyebrow" data-i18n="generatedDemo">GENERATED DEMO CONTENT</span><h2 id="stories-title" data-i18n="storiesTitle">Fresh stories, no personal data.</h2></div>
+          <span class="result-count" id="result-count"></span>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-control">
+            <span class="sr-only" data-i18n="searchLabel">Search demo stories</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg>
+            <input id="story-search" type="search" placeholder="Search generated stories">
+          </label>
+          <div class="category-control" id="category-control" role="group" aria-label="Filter by category"></div>
+        </div>
+
+        <div class="story-layout">
+          <div class="story-grid" id="story-grid"></div>
+          <aside class="story-sidebar" aria-label="Story statistics and topics">
+            <div class="stat-grid">
+              <div><strong id="stat-stories">0</strong><span data-i18n="stories">Stories</span></div>
+              <div><strong id="stat-topics">0</strong><span data-i18n="topics">Topics</span></div>
+              <div><strong>12</strong><span data-i18n="minRead">Min read</span></div>
+            </div>
+            <div class="topic-panel">
+              <div class="topic-heading"><strong data-i18n="topics">Topics</strong><button id="topic-toggle" type="button" aria-expanded="false" data-i18n="showAll">Show all</button></div>
+              <div class="topic-list is-collapsed" id="topic-list"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="template-page" id="archive" aria-labelledby="archive-title">
+        <div class="section-heading">
+          <div><span class="eyebrow" data-i18n="generatedPage">GENERATED PAGE</span><h2 id="archive-title" data-i18n="archiveTitle">A generated archive layout.</h2></div>
+        </div>
+        <div class="archive-grid" id="archive-grid"></div>
+      </section>
+
+      <section class="template-page" id="friends" aria-labelledby="friends-title">
+        <div class="section-heading">
+          <div><span class="eyebrow" data-i18n="generatedPage">GENERATED PAGE</span><h2 id="friends-title" data-i18n="friendsTitle">Fictional friend-link cards.</h2></div>
+        </div>
+        <div class="friend-grid" id="friend-grid"></div>
+      </section>
+
+      <section class="template-page" id="announcements" aria-labelledby="announcements-title">
+        <div class="section-heading">
+          <div><span class="eyebrow" data-i18n="generatedPage">GENERATED PAGE</span><h2 id="announcements-title" data-i18n="announcementsTitle">Generated announcement notes.</h2></div>
+        </div>
+        <div class="announcement-grid" id="announcement-grid"></div>
+      </section>
+
+      <section class="template-page about-template-page" id="about-template" aria-labelledby="about-template-title">
+        <div>
+          <span class="eyebrow" data-i18n="generatedPage">GENERATED PAGE</span>
+          <h2 id="about-template-title" data-i18n="aboutTemplateTitle">A blank frame for your own story.</h2>
+          <p data-i18n="aboutTemplateText">This page shows the structure, typography, and content rhythm. Replace the generated copy through the content adapter or connect an API endpoint using the included configuration template.</p>
+          <div class="about-template-points">
+            <span data-i18n="configPointOne">Semantic layout</span>
+            <span data-i18n="configPointTwo">Replaceable content</span>
+            <span data-i18n="configPointThree">No private API data</span>
+          </div>
+        </div>
+        <div class="api-template-card">
+          <span class="eyebrow">API TEMPLATE</span>
+          <strong data-i18n="apiTemplateTitle">Connect your own service</strong>
+          <code>window.METERIAL_EXTRA_CONFIG.apiBaseUrl = "https://api.example.com"</code>
+          <a href="config.example.js" data-i18n="openConfig">Open configuration example →</a>
+        </div>
+      </section>
+
+      <section class="component-section" id="components" aria-labelledby="components-title">
+        <div class="section-heading">
+          <div><span class="eyebrow" data-i18n="frameworkParts">FRAMEWORK PARTS</span><h2 id="components-title" data-i18n="componentsTitle">Small pieces, coherent behavior.</h2></div>
+        </div>
+        <div class="component-grid">
+          <article class="component-card">
+            <span class="component-index">A</span>
+            <h3 data-i18n="actionSystem">Action system</h3>
+            <p data-i18n="actionDescription">Rounded controls share one radius token and preserve a centered text baseline.</p>
+            <div class="component-demo"><button class="filled-button" type="button" data-i18n="primary">Primary</button><button class="outlined-button" type="button" data-i18n="secondary">Secondary</button><button class="text-button" type="button" data-i18n="quiet">Quiet</button></div>
+          </article>
+          <article class="component-card">
+            <span class="component-index">B</span>
+            <h3 data-i18n="responsiveNavigation">Responsive navigation</h3>
+            <p data-i18n="responsiveDescription">A rail on wide screens becomes a compact drawer on narrow and portrait layouts.</p>
+            <div class="component-demo"><button class="tonal-button" id="demo-nav" type="button" data-i18n="toggleDrawer">Toggle drawer</button></div>
+          </article>
+          <article class="component-card">
+            <span class="component-index">C</span>
+            <h3 data-i18n="tokenShape">Token-driven shape</h3>
+            <p data-i18n="tokenDescription">Switch the global corner style and every participating component follows.</p>
+            <div class="component-demo"><select class="select-control" id="radius-select" aria-label="Corner style"><option value="soft">Soft</option><option value="rounded">Rounded</option><option value="expressive">Expressive</option></select></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="theme-section" id="themes" aria-labelledby="themes-title">
+        <div>
+          <span class="eyebrow" data-i18n="livePalettes">LIVE PALETTES</span>
+          <h2 id="themes-title" data-i18n="themesTitle">Set the atmosphere without changing the layout.</h2>
+          <p data-i18n="themesDescription">Each palette supplies the same semantic roles, so components remain readable in light and dark modes.</p>
+        </div>
+        <div class="palette-grid" id="palette-grid" role="group" aria-label="Choose palette"></div>
+      </section>
+
+      <footer class="footer">
+        <div><strong>Meterial Extra</strong><p data-i18n="footerDescription">An open theme and frontend framework for expressive content.</p></div>
+        <div class="footer-links"><a href="LICENSE">MIT License</a><a href="BRAND_ASSET_LICENSE.md" data-i18n="brandAssets">Brand assets</a><a href="CONTRIBUTING.md" data-i18n="contribute">Contribute</a><a href="DEPLOYMENT.md" data-i18n="deployGuide">Deployment guide</a></div>
+      </footer>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="config.js"></script>
+    <script type="module" src="src/js/app.js"></script>
+  </body>
+</html>
