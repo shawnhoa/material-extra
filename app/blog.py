@@ -1186,7 +1186,7 @@ def server_runtime_status():
 
 
 class BlogHandler(BaseHTTPRequestHandler):
-    server_version = "MeterialExtra/0.1.0"
+    server_version = "MeterialExtra/0.1.1"
     def log_message(self, fmt, *args): print("[%s] %s" % (self.log_date_time_string(), fmt % args))
     @property
     def admin_port(self): return self.server.server_port == ADMIN_PORT

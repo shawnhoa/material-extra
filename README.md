@@ -3,7 +3,7 @@
 一个基于 Material 3 的个人内容站点模板，包含访客网站、独立管理端和轻量 Python 服务端。界面与数据均为重新生成的演示内容，不包含原部署实例的文章、用户、图片、账号、接口地址或服务器配置。
 
 <p align="center">
-  <a href="https://github.com/shawnhoa/meterial-extra/releases/tag/v0.1.0">下载 v0.1.0</a> ·
+  <a href="https://github.com/shawnhoa/meterial-extra/releases/tag/v0.1.1">下载 v0.1.1</a> ·
   <a href="https://github.com/shawnhoa/meterial-extra">源代码</a>
 </p>
 
@@ -72,6 +72,11 @@ Dockerfile           容器构建文件
 本主题的部署实例可由项目所有者自行引用真实站点与截图。该站点仅作为外观和部署参考，任何站点专属文字、接口、图片与用户数据都不属于本模板。
 
 ## 版本
+
+### v0.1.1
+
+- 修复关于页引用缺失角色素材和页脚演示备案资源的问题。
+- 刷新桌面端演示截图，并更新发布归档。
 
 ### v0.1.0
 

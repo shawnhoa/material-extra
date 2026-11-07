@@ -8,29 +8,21 @@ $stagingRoot = Join-Path $dist "meterial-extra-$version"
 $zip = Join-Path $dist "meterial-extra-$version.zip"
 $entries = @(
     ".dockerignore",
+    ".env.example",
     ".gitignore",
-    "API_TEMPLATE.md",
-    "BRAND_ASSET_LICENSE.md",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
-    "DEPLOYMENT.md",
     "Dockerfile",
     "LICENSE",
     "README.md",
-    "README_zh_CN.md",
-    "RELEASE_NOTES_v0.1.0.md",
     "SECURITY.md",
-    "config.example.js",
-    "config.js",
-    "index.html",
-    "nginx.conf",
+    "compose.yaml",
     "package.json",
     "run.ps1",
     "run.sh",
+    "app",
     "docs",
-    "public",
-    "scripts",
-    "src"
+    "scripts"
 )
 
 New-Item -ItemType Directory -Path $dist -Force | Out-Null
