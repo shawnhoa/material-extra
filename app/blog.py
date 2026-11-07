@@ -32,6 +32,7 @@ from solar_themes import get_theme, theme_catalog, THEME_BY_KEY
 
 DATA_DIR = Path(os.getenv("DATA_DIR", "/data"))
 DATA_FILE = DATA_DIR / "blog.json"
+LOCK = threading.RLock()
 UPLOAD_DIR = DATA_DIR / "uploads"
 STATIC_DIR = Path(__file__).parent
 FRIEND_CATALOG_FILE = STATIC_DIR / "friends.json"
@@ -63,7 +64,6 @@ MAX_GALLERY_IMAGES = 9
 Image.MAX_IMAGE_PIXELS = 40_000_000
 REPORT_REASONS = {"spam", "harassment", "hate", "privacy", "impersonation", "other"}
 PAYPAL_DONATION_URL = ""
-LOCK = threading.RLock()
 SESSIONS = {}
 EMAIL_CODES = {}
 EMAIL_SEND_HISTORY = {}
@@ -790,7 +790,7 @@ def sync_legal_announcements(state):
     return True
 
 
-def load_state():
+def _load_state_unlocked():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     if not DATA_FILE.exists():
         state = default_state(); sync_legal_announcements(state); save_state(state); return state
@@ -919,9 +919,19 @@ def load_state():
     return state
 
 
-def save_state(state):
+def _save_state_unlocked(state):
     DATA_DIR.mkdir(parents=True, exist_ok=True); temp = DATA_FILE.with_suffix(".tmp")
     temp.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8"); temp.replace(DATA_FILE)
+
+
+def load_state():
+    with LOCK:
+        return _load_state_unlocked()
+
+
+def save_state(state):
+    with LOCK:
+        _save_state_unlocked(state)
 
 
 def user_is_muted(user):
@@ -1186,7 +1196,7 @@ def server_runtime_status():
 
 
 class BlogHandler(BaseHTTPRequestHandler):
-    server_version = "MeterialExtra/0.1.1"
+    server_version = "MeterialExtra/0.1.2"
     def log_message(self, fmt, *args): print("[%s] %s" % (self.log_date_time_string(), fmt % args))
     @property
     def admin_port(self): return self.server.server_port == ADMIN_PORT
@@ -2533,7 +2543,7 @@ class BlogHandler(BaseHTTPRequestHandler):
 
 def main():
     guest = ThreadingHTTPServer((os.getenv("GUEST_BIND_HOST", "0.0.0.0"), PORT), BlogHandler); admin = ThreadingHTTPServer((os.getenv("ADMIN_BIND_HOST", "127.0.0.1"), ADMIN_PORT), BlogHandler)
-    threading.Thread(target=admin.serve_forever, daemon=True).start(); print(f"Star Isle Notes guest :{PORT}, admin :{ADMIN_PORT}"); guest.serve_forever()
+    threading.Thread(target=admin.serve_forever, daemon=True).start(); print(f"Meterial Extra guest :{PORT}, admin :{ADMIN_PORT}"); guest.serve_forever()
 
 
 if __name__ == "__main__": main()

@@ -38,6 +38,20 @@ foreach ($entry in $entries) {
     Copy-Item -LiteralPath (Join-Path $root $entry) -Destination (Join-Path $stagingRoot $entry) -Recurse -Force
 }
 
+Get-ChildItem -LiteralPath $stagingRoot -Directory -Filter "__pycache__" -Recurse | ForEach-Object {
+    Remove-Item -LiteralPath $_.FullName -Recurse -Force
+}
+Get-ChildItem -LiteralPath $stagingRoot -File -Filter "*.pyc" -Recurse | ForEach-Object {
+    Remove-Item -LiteralPath $_.FullName -Force
+}
+
+$unexpected = Get-ChildItem -LiteralPath $stagingRoot -Recurse -Force | Where-Object {
+    $_.Name -eq "__pycache__" -or $_.Extension -eq ".pyc"
+}
+if ($unexpected) {
+    throw "Unexpected runtime files in release staging: $($unexpected.FullName -join ', ')"
+}
+
 Compress-Archive -LiteralPath $stagingRoot -DestinationPath $zip -CompressionLevel Optimal
 $result = Get-Item -LiteralPath $zip
 [pscustomobject]@{
