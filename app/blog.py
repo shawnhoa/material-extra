@@ -1186,7 +1186,7 @@ def server_runtime_status():
 
 
 class BlogHandler(BaseHTTPRequestHandler):
-    server_version = "StarIsleBlog/3.2"
+    server_version = "MeterialExtra/0.1.0"
     def log_message(self, fmt, *args): print("[%s] %s" % (self.log_date_time_string(), fmt % args))
     @property
     def admin_port(self): return self.server.server_port == ADMIN_PORT
@@ -1549,7 +1549,7 @@ class BlogHandler(BaseHTTPRequestHandler):
             page = "article" if parsed.path.startswith("/post/") else clean(parsed.path.strip("/"), "home") or "home"
             return self.send_index(page) if not self.admin_port else self.send_error(404)
         if parsed.path == "/admin": return self.send_file("admin.html") if self.admin_port else self.send_error(404)
-        if parsed.path in ("/style.css", "/friends.css", "/friends.json", "/theme-complete.css", "/solar.css", "/libraries.css", "/article-material.css", "/about-material.css", "/about-avatar-frames.webp", "/solar.js", "/icons.js", "/mdui-icon-train.js", "/material-symbols-rounded-outlined.woff2", "/material-symbols-rounded-filled.woff2", "/material-select.js", "/app.js", "/admin.js", "/admin-material.css", "/brand.svg", "/brand.svg", "/moe-icp-icon.svg", "/brand-github.svg", "/brand-email.svg", "/brand-bilibili.svg", "/brand-douyin.svg", "/brand-x.svg", "/brand-weibo.svg", "/brand-qq.svg"): return self.send_file(parsed.path[1:]) if (parsed.path not in ("/admin.js",) or self.admin_port) else self.send_error(404)
+        if parsed.path in ("/style.css", "/friends.css", "/friends.json", "/theme-complete.css", "/solar.css", "/libraries.css", "/article-material.css", "/about-material.css", "/solar.js", "/icons.js", "/mdui-icon-train.js", "/material-symbols-rounded-outlined.woff2", "/material-symbols-rounded-filled.woff2", "/material-select.js", "/app.js", "/admin.js", "/admin-material.css", "/brand.svg", "/brand-github.svg", "/brand-email.svg", "/brand-bilibili.svg", "/brand-douyin.svg", "/brand-x.svg", "/brand-weibo.svg", "/brand-qq.svg"): return self.send_file(parsed.path[1:]) if (parsed.path not in ("/admin.js",) or self.admin_port) else self.send_error(404)
         if parsed.path.startswith("/uploads/"): return self.send_upload(parsed.path.rsplit("/", 1)[-1])
         if parsed.path == "/health": return self.send_json({"status": "ok", "port": self.server.server_port})
         if parsed.path == "/api/minecraft/catalog":

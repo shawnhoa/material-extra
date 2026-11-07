@@ -292,6 +292,7 @@ function renderSupportCard(imageSelector, emptySelector, hintSelector, value) {
   empty.classList.toggle('hidden', Boolean(safeUrl));
   hint.classList.toggle('hidden', !safeUrl);
   if (safeUrl) {
+    hint.href = safeUrl;
     image.src = `${safeUrl}${safeUrl.includes('?') ? '&' : '?'}asset=no-recipient-20261104`;
     image.onerror = () => {
       image.classList.add('hidden');
@@ -465,11 +466,6 @@ function renderSite() {
   avatar.textContent = (text(p.name, p.name_en) || 'S').slice(0,1).toUpperCase();
   avatarImage.onerror = () => { avatarImage.classList.add('hidden'); avatar.classList.remove('hidden'); };
   if (p.avatar_url) { avatarImage.src = p.avatar_url; avatarImage.classList.remove('hidden'); avatar.classList.add('hidden'); } else { avatar.classList.remove('hidden'); avatarImage.classList.add('hidden'); avatarImage.removeAttribute('src'); }
-  const aboutCharacterFallback = $('#about-character-fallback');
-  if (aboutCharacterFallback) {
-    if (p.avatar_url) aboutCharacterFallback.src = p.avatar_url;
-    else aboutCharacterFallback.removeAttribute('src');
-  }
   $('#copyright').textContent = p.copyright || '© 2026 StarIsle'; $('#footer-note').textContent = text(p.footer_note, p.footer_note_en);
   renderSupportPage();
   renderLanguageUI();
@@ -3151,22 +3147,12 @@ document.querySelectorAll('#user-login-form input').forEach(field => field.addEv
     animationFrame = requestAnimationFrame(play);
   }
 
-  const sheet = new Image();
-  sheet.decoding = 'async';
-  sheet.onload = () => {
-    sheetReady = true;
-    player.classList.add('sheet-ready');
-    character.classList.add('is-ready');
-    setFrame(0);
-    syncPlayback();
-  };
-  sheet.onerror = () => {
-    sheetReady = false;
-    player.classList.remove('sheet-ready');
-    character.classList.remove('is-ready');
-  };
-  sheet.src = '/about-avatar-frames.webp';
+  // The public template uses a lightweight brand mark instead of private avatar artwork.
+  sheetReady = true;
+  player.classList.add('sheet-ready');
+  character.classList.add('is-ready');
   setFrame(0);
+  syncPlayback();
 
   function activeDialogues() {
     return configuredDialogues();

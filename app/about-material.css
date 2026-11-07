@@ -219,10 +219,10 @@
 }
 
 #about-view .about-character-frame-player {
-  background-image: url('/about-avatar-frames.webp');
+  background-image: url('/brand.svg');
   background-repeat: no-repeat;
-  background-size: 800% 800%;
-  background-position: 0 0;
+  background-size: 100% auto;
+  background-position: center;
   opacity: 0;
 }
 
