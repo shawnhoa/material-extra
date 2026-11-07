@@ -1,5 +1,6 @@
 # Meterial Extra
 
+(docs/images/IMG_8191.png)
 一个基于 Material 3 的个人内容站点模板，包含访客网站、独立管理端和轻量 Python 服务端。界面与数据均为重新生成的演示内容，不包含原部署实例的文章、用户、图片、账号、接口地址或服务器配置。
 
 <p align="center">
