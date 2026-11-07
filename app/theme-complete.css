@@ -1,0 +1,1464 @@
+/* Theme-completeness layer: every accent-bearing surface follows the active solar theme. */
+body:not(.admin-page)[data-term] .post-card {
+  background: color-mix(in srgb, var(--primary) 3.5%, var(--surface-low));
+}
+body:not(.admin-page)[data-term] .post-card:hover {
+  background: color-mix(in srgb, var(--primary-container) 54%, var(--surface-low));
+}
+body:not(.admin-page)[data-term] .post-card.featured {
+  background: color-mix(in srgb, var(--primary-container) 45%, var(--surface-low));
+}
+body:not(.admin-page)[data-term] .tag {
+  background: color-mix(in srgb, var(--primary-container) 72%, var(--surface));
+  color: var(--primary);
+}
+body:not(.admin-page)[data-term] .tag:hover {
+  background: color-mix(in srgb, var(--primary) 18%, var(--surface));
+}
+body:not(.admin-page)[data-term] .filter-tag.selected,
+body:not(.admin-page)[data-term] .filter-tag.selected:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+  box-shadow: 0 3px 12px color-mix(in srgb, var(--primary) 28%, transparent);
+}
+body:not(.admin-page)[data-term] .post-index,
+body:not(.admin-page)[data-term] .post-stats strong {
+  color: var(--primary);
+}
+body:not(.admin-page)[data-term] .outlined-button:hover {
+  background: color-mix(in srgb, var(--primary-container) 56%, var(--surface));
+}
+body:not(.admin-page)[data-term] .about-page {
+  background: color-mix(in srgb, var(--primary) 8%, var(--surface)) !important;
+}
+body:not(.admin-page)[data-term] .about-story {
+  background: color-mix(in srgb, var(--primary) 5%, var(--surface-low));
+  border-color: color-mix(in srgb, var(--primary) 22%, var(--outline));
+}
+body:not(.admin-page)[data-term] .about-traits span {
+  border-color: color-mix(in srgb, var(--primary) 24%, var(--outline));
+  color: var(--primary);
+}
+body:not(.admin-page)[data-term] .comment-item {
+  background: color-mix(in srgb, var(--primary) 2.5%, var(--surface));
+  border-color: color-mix(in srgb, var(--primary) 18%, var(--outline));
+}
+body:not(.admin-page)[data-term] .comment-reply {
+  background: color-mix(in srgb, var(--primary) 4%, var(--surface-low));
+}
+body:not(.admin-page)[data-term] .article-content,
+body:not(.admin-page)[data-term] .article-actions {
+  background: color-mix(in srgb, var(--primary) 4%, var(--surface-low));
+  border-color: color-mix(in srgb, var(--primary) 20%, var(--outline));
+}
+body:not(.admin-page)[data-term] .comment-form,
+body:not(.admin-page)[data-term] .comment-reply-form {
+  background: color-mix(in srgb, var(--primary) 3.5%, var(--surface));
+  border-color: color-mix(in srgb, var(--primary) 18%, var(--outline));
+}
+body:not(.admin-page)[data-term] .library-source-badge,
+body:not(.admin-page)[data-term] .support-qr,
+body:not(.admin-page)[data-term] .support-paypal-panel {
+  border-color: color-mix(in srgb, var(--primary) 22%, var(--outline));
+}
+body:not(.admin-page)[data-term] .support-hero {
+  background: color-mix(in srgb, var(--primary-container) 42%, var(--surface-low));
+}
+body:not(.admin-page)[data-term] .support-paypal-panel {
+  background: color-mix(in srgb, var(--primary) 4%, var(--surface-low));
+}
+body:not(.admin-page)[data-term] .library-hero {
+  background: color-mix(in srgb, var(--primary-container) 38%, var(--surface-low));
+}
+body:not(.admin-page)[data-term] .support-qr {
+  background: color-mix(in srgb, var(--primary) 4%, var(--surface-low));
+  background-image: none;
+}
+body:not(.admin-page)[data-term] .footer {
+  border-top-color: color-mix(in srgb, var(--primary) 16%, transparent);
+}
+body:not(.admin-page)[data-term] .surface,
+body:not(.admin-page)[data-term] .account-dialog,
+body:not(.admin-page)[data-term] .reader-dialog {
+  background-color: color-mix(in srgb, var(--primary) 2.5%, var(--surface));
+}
+body:not(.admin-page)[data-term] .blog-toolbar input,
+body:not(.admin-page)[data-term] .blog-toolbar select,
+body:not(.admin-page)[data-term] .friends-toolbar input,
+body:not(.admin-page)[data-term] .account-dialog input:not([type="hidden"]):not([type="file"]):not([type="checkbox"]),
+body:not(.admin-page)[data-term] .account-dialog select,
+body:not(.admin-page)[data-term] .report-dialog select,
+body:not(.admin-page)[data-term] .report-dialog textarea,
+body:not(.admin-page)[data-term] .library-field input,
+body:not(.admin-page)[data-term] .library-field select,
+body:not(.admin-page)[data-term] .library-search input,
+body:not(.admin-page)[data-term] .comment-reply-form textarea {
+  background-color: color-mix(in srgb, var(--primary) 3.5%, var(--surface));
+  border-color: color-mix(in srgb, var(--primary) 22%, var(--outline));
+  caret-color: var(--primary);
+}
+body:not(.admin-page)[data-term] :is(input, textarea)::placeholder {
+  color: color-mix(in srgb, var(--muted) 82%, var(--primary));
+}
+body:not(.admin-page)[data-term] .account-dialog .account-tabs,
+body:not(.admin-page)[data-term] .library-controls {
+  background-color: color-mix(in srgb, var(--primary) 4%, var(--surface-low));
+}
+body:not(.admin-page)[data-term] .comment-form>textarea {
+  background: transparent;
+}
+
+/* Material 3 page surface and festival foreground artwork. */
+body:not(.admin-page)[data-term] {
+  --page-theme-surface: var(--surface);
+  background-color: var(--page-theme-surface);
+  background-image: none !important;
+  transition: background-color .35s, color .35s;
+}
+:root[data-theme="dark"] body:not(.admin-page)[data-term] {
+  --page-theme-surface: var(--surface);
+  background-color: var(--page-theme-surface);
+  background-image: none !important;
+}
+body:not(.admin-page)[data-term] .about-page{background:transparent!important}
+.festival-foreground{position:fixed;inset:0;z-index:6;overflow:hidden;pointer-events:none;contain:strict}
+.festival-foreground:empty{display:none}
+.festival-illustration{position:fixed;top:calc(var(--header-height,72px) + 24px);right:clamp(18px,4vw,64px);width:min(34vw,420px);opacity:.13;filter:saturate(.82);mix-blend-mode:multiply;transition:opacity .3s,transform .3s}
+.festival-illustration svg{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 28px color-mix(in srgb,var(--term-accent) 18%,transparent))}
+.festival-illustration>span{display:block;margin-top:8px;color:var(--primary);font-size:10px;font-weight:800;letter-spacing:1.8px;text-align:right;text-transform:uppercase}
+:root[data-theme="dark"] .festival-illustration{mix-blend-mode:screen;opacity:.16}
+body[data-page="article"] .festival-illustration{right:clamp(8px,2vw,28px);width:min(24vw,280px);opacity:.08;transform:rotate(3deg)}
+body[data-page="archive"] .festival-illustration{right:auto;left:calc(208px + 3vw);width:min(25vw,300px);transform:rotate(-4deg)}
+body[data-page="minecraft"] .festival-illustration{top:auto;right:4vw;bottom:8vh;width:min(23vw,280px);transform:rotate(5deg)}
+body[data-page="mirrors"] .festival-illustration{right:5vw;top:calc(var(--header-height,72px) + 35vh);width:min(22vw,260px);transform:rotate(-5deg)}
+body[data-page="support"] .festival-illustration{right:auto;left:calc(208px + 2vw);top:22vh;width:min(23vw,270px);transform:rotate(4deg)}
+body[data-page="friends"] .festival-illustration{right:4vw;top:calc(var(--header-height,72px) + 30vh);width:min(20vw,240px);transform:rotate(4deg)}
+body[data-page="thoughts"] .festival-illustration{right:auto;left:calc(208px + 3vw);top:calc(var(--header-height,72px) + 24vh);width:min(20vw,235px);transform:rotate(-4deg)}
+body[data-page="about"] .festival-illustration{right:2vw;top:auto;bottom:7vh;width:min(22vw,260px);transform:rotate(-3deg)}
+.festival-particles{position:absolute;inset:0}
+.festival-particle{position:absolute;top:-12vh;left:var(--x);width:var(--size);height:var(--size);color:color-mix(in srgb,var(--term-accent) 78%,var(--term-sun));opacity:.48;animation:festival-fall var(--duration) linear infinite;animation-delay:var(--delay);will-change:transform,opacity}
+.festival-particle svg{display:block;width:100%;height:100%;filter:drop-shadow(0 3px 5px color-mix(in srgb,var(--term-accent) 22%,transparent))}
+.festival-particle:nth-child(3n){color:var(--term-sun);opacity:.36}.festival-particle:nth-child(4n){animation-name:festival-drift}
+body[data-page="article"] .festival-particle:nth-child(n+13),body[data-page="about"] .festival-particle:nth-child(n+15){display:none}
+@keyframes festival-fall{0%{transform:translate3d(0,-12vh,0) rotate(0);opacity:0}12%{opacity:.55}55%{transform:translate3d(36px,52vh,0) rotate(170deg)}100%{transform:translate3d(-18px,118vh,0) rotate(360deg);opacity:0}}
+@keyframes festival-drift{0%{transform:translate3d(-25px,-10vh,0) rotate(-20deg);opacity:0}15%{opacity:.45}55%{transform:translate3d(62px,48vh,0) rotate(210deg)}100%{transform:translate3d(8px,115vh,0) rotate(410deg);opacity:0}}
+@media(max-width:760px){.festival-illustration,body[data-page="article"] .festival-illustration,body[data-page="archive"] .festival-illustration,body[data-page="minecraft"] .festival-illustration,body[data-page="mirrors"] .festival-illustration,body[data-page="support"] .festival-illustration,body[data-page="friends"] .festival-illustration,body[data-page="thoughts"] .festival-illustration,body[data-page="about"] .festival-illustration{left:auto;right:10px;top:calc(var(--header-height,106px) + 18px);bottom:auto;width:min(42vw,170px);opacity:.09}.festival-particle:nth-child(n+11){display:none}}
+@media(prefers-reduced-motion:reduce){.festival-foreground *{animation:none!important}.festival-particle{display:none!important}}
+
+/* Shared public UI color roles. Artwork keeps the authored seasonal palette. */
+:root[data-term] {
+  --primary: var(--theme-primary-light, #386650);
+  --on-primary: #ffffff;
+  --primary-container: color-mix(in srgb, var(--term-accent) 13%, #f6faf5);
+  --surface: color-mix(in srgb, var(--term-accent) 2%, #fbfcfa);
+  --surface-low: color-mix(in srgb, var(--term-accent) 5%, #f4f6f3);
+  --surface-high: color-mix(in srgb, var(--term-accent) 9%, #e9ede8);
+  --ink: color-mix(in srgb, var(--term-accent) 14%, #202622);
+  --muted: color-mix(in srgb, var(--term-accent) 10%, #505b55);
+  --outline: color-mix(in srgb, var(--term-accent) 15%, #7c8c82);
+  --secondary: var(--muted);
+  --tertiary: var(--primary);
+  --about-bg: var(--surface-low);
+  --error: #a92121;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --warning: #704500;
+  --warning-container: #ffdfa6;
+  --success: #226c40;
+  background: var(--surface);
+  color: var(--ink);
+}
+:root[data-term][data-theme="dark"] {
+  --primary: var(--theme-primary-dark, #b3d5be);
+  --on-primary: color-mix(in srgb, var(--term-accent) 12%, #14231a);
+  --primary-container: color-mix(in srgb, var(--term-accent) 23%, #24312a);
+  --surface: color-mix(in srgb, var(--term-accent) 8%, #151a18);
+  --surface-low: color-mix(in srgb, var(--term-accent) 10%, #1c2320);
+  --surface-high: color-mix(in srgb, var(--term-accent) 16%, #29332e);
+  --ink: color-mix(in srgb, var(--term-accent) 6%, #e4ece6);
+  --muted: color-mix(in srgb, var(--term-accent) 10%, #b8c6be);
+  --outline: color-mix(in srgb, var(--term-accent) 12%, #85968b);
+  --error: #ffb4ab;
+  --on-error: #5e1010;
+  --error-container: #5b2522;
+  --warning: #ffdda3;
+  --warning-container: #503b1d;
+  --success: #9bd5ad;
+}
+
+/* Tone down decorative outlines while keeping field boundaries and focus clear. */
+body:not(.admin-page)[data-term] :is(.home-carousel,.server-runtime-card,.about-story,.about-social,.about-messages,.friend-card,.thought-card,.archive-group,.article-content,.article-actions,.article-toc,.library-hero,.friends-hero,.articles-page-intro,.support-hero,.comment-item) {
+  border-color: color-mix(in srgb, var(--primary) 17%, var(--surface-high));
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--ink) 5%, transparent);
+}
+body:not(.admin-page)[data-term] .server-runtime-card,
+body:not(.admin-page)[data-term] .article-actions {
+  border-color: color-mix(in srgb, var(--primary) 17%, var(--surface-high)) !important;
+}
+
+/* State rules must outrank the legacy blanket color overrides. */
+:root[data-term] body:not(.admin-page) .filled-button:not(.danger-button),
+body:not(.admin-page)[data-term] .segment-button.active,
+body:not(.admin-page)[data-term] .filter-tag.selected,
+body:not(.admin-page)[data-term] .filter-tag.selected:hover,
+body:not(.admin-page)[data-term] .home-feed-sidebar .filter-tag.selected,
+body:not(.admin-page)[data-term] .home-feed-sidebar .filter-tag.selected:hover,
+body:not(.admin-page)[data-term] .blog-toolbar-left>.home-feed-sidebar .filter-tag.selected {
+  background: var(--primary) !important;
+  color: var(--on-primary) !important;
+}
+body:not(.admin-page)[data-term] .filter-tag.selected .tag-count {
+  background: color-mix(in srgb, var(--on-primary) 12%, transparent) !important;
+  color: var(--on-primary) !important;
+}
+body:not(.admin-page)[data-term] .switch-row input:checked+.switch-ui {
+  background: var(--primary) !important;
+}
+body:not(.admin-page)[data-term] .switch-row input:checked+.switch-ui:after {
+  background: var(--on-primary);
+}
+body:not(.admin-page)[data-term] .carousel-dot {
+  background: color-mix(in srgb, var(--primary) 30%, var(--surface-high)) !important;
+}
+body:not(.admin-page)[data-term] .carousel-dot.active {
+  background: var(--primary) !important;
+}
+body:not(.admin-page)[data-term] .carousel-progress {
+  background: var(--surface-high) !important;
+}
+body:not(.admin-page)[data-term] .carousel-category {
+  background: color-mix(in srgb, var(--theme-primary-light) 82%, #152119) !important;
+  color: #ffffff !important;
+}
+body:not(.admin-page)[data-term] .account-current {
+  color: var(--primary);
+}
+:root[data-term] #app-loading {
+  background: var(--surface);
+  color: var(--primary);
+}
+:root[data-term][data-app-loading="true"],
+:root[data-term][data-app-loading="true"] body {
+  background: var(--surface);
+}
+
+/* Code chrome follows both modes; macOS traffic-light dots remain recognizable. */
+body:not(.admin-page)[data-term] .macos-code,
+body:not(.admin-page)[data-term] .article-content .macos-code {
+  background: linear-gradient(180deg, var(--surface-low), var(--surface-high));
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--outline) 35%, var(--surface-high));
+}
+body:not(.admin-page)[data-term] .macos-code:after,
+body:not(.admin-page)[data-term] .article-content .macos-code:after {
+  background: var(--surface-low);
+  border-bottom-color: color-mix(in srgb, var(--outline) 25%, var(--surface-high));
+}
+body:not(.admin-page)[data-term] :is(input,textarea,select) {
+  accent-color: var(--primary);
+  caret-color: var(--primary);
+}
+body:not(.admin-page)[data-term] :is(input,textarea,select):focus-visible {
+  border-color: var(--primary) !important;
+  outline: 2px solid color-mix(in srgb, var(--primary) 65%, transparent);
+  outline-offset: 2px;
+}
+
+/* Status colors express meaning independently of the selected holiday. */
+body:not(.admin-page)[data-term] :is(.form-error,.form-error.error,.avatar-upload-status.error,.comment-image-status.error,.probe-status.failed,.save-status.error,.danger-text) {
+  color: var(--error);
+}
+:root[data-term] body:not(.admin-page) .filled-button.danger-button {
+  background: var(--error) !important;
+  color: var(--on-error) !important;
+}
+body:not(.admin-page)[data-term] :is(.status-chip.warning,.comment-review-label) {
+  background: var(--warning-container) !important;
+  color: var(--warning) !important;
+  border-color: color-mix(in srgb, var(--warning) 30%, var(--warning-container));
+}
+body:not(.admin-page)[data-term] :is(.status-chip.danger,.app-dialog-icon.danger) {
+  background: var(--error-container) !important;
+  color: var(--error) !important;
+}
+body:not(.admin-page)[data-term] :is(.save-status.success,.comment-image-status.success,.probe-status.ok) {
+  color: var(--success);
+}
+@media (prefers-reduced-motion: reduce) {
+  body:not(.admin-page)[data-term],
+  body:not(.admin-page)[data-term] :is(.site-footer,.footer-bottom) {
+    transition: none;
+  }
+}
+
+
+/* Selective rollback: previous page UI, retained navigation and footer. */
+body:not(.admin-page)[data-ui="material3"] {
+  --md-sys-color-surface-container-low:var(--surface-low);
+  --md-sys-color-outline-variant:color-mix(in srgb,var(--outline) 30%,var(--surface-high));
+  --md-sys-elevation-2:0 2px 6px 2px #00000012,0 1px 2px #00000020;
+  --md-sys-elevation-3:0 4px 8px 3px #00000012,0 1px 3px #00000026;
+}
+.m3-skip-link {position:fixed;z-index:10000;left:16px;top:8px;padding:12px 20px;border-radius:var(--radius-control);background:var(--primary);color:var(--on-primary);transform:translateY(-150%)}
+.m3-skip-link:focus {transform:none}
+/* Desktop rail expands into a standard navigation drawer. */
+.m3-secondary-nav {display:none}
+body:not(.admin-page)[data-ui="material3"] .nav-links a.icon-only {position:relative;overflow:hidden;color:var(--muted);font-weight:500}
+body:not(.admin-page)[data-ui="material3"] .nav-links a.icon-only.active {background:var(--primary-container)!important;color:var(--primary)!important}
+body:not(.admin-page)[data-ui="material3"] .nav-links a.icon-only:hover {background:color-mix(in srgb,var(--primary) 8%,var(--surface-low))!important}
+body:not(.admin-page)[data-ui="material3"] .nav-links .sidebar-language-button {width:100%;height:48px;min-height:48px;display:flex;gap:8px;border-radius:999px}
+@media(min-width:1100px) and (orientation:landscape) {
+  body:not(.admin-page)[data-ui="material3"] {padding-left:256px!important}
+  body:not(.admin-page)[data-ui="material3"].sidebar-collapsed {padding-left:88px!important}
+  body:not(.admin-page)[data-ui="material3"] .nav-links {
+    top:0!important;left:0!important;width:256px!important;
+    padding:88px 12px 16px!important;gap:4px!important;
+    background:var(--surface-low)!important;
+    border:0!important;border-radius:0!important;box-shadow:none!important;
+  }
+  body:not(.admin-page)[data-ui="material3"] .nav-links a.icon-only {height:56px!important;min-height:56px!important;border-radius:999px!important;padding:0 20px!important}
+  body:not(.admin-page)[data-ui="material3"] .nav-links a.icon-only::after {font-weight:500!important;font-size:14px!important}
+  body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links {
+    width:88px!important;padding:80px 8px 12px!important;
+    opacity:1!important;pointer-events:auto!important;transform:none!important;
+  }
+  body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links a.icon-only {
+    height:64px!important;min-height:64px!important;padding:8px 0!important;
+    display:flex!important;flex-direction:column!important;justify-content:center!important;
+    gap:4px!important;border-radius:var(--radius)!important;
+  }
+  body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links a.icon-only::after {
+    content:attr(data-m3-label)!important;margin:0!important;max-width:72px;min-height:16px;font-size:11px!important;line-height:16px;
+    overflow:hidden;text-align:center;white-space:nowrap;text-overflow:ellipsis;
+  }
+  body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links a.icon-only.active {background:transparent!important}
+  body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links a.icon-only.active::before {content:"";position:absolute;top:4px;left:8px;right:8px;height:32px;border-radius:999px;background:var(--primary-container);z-index:-1}
+  body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links .sidebar-language-button {height:56px;flex-direction:column;gap:2px;padding:4px!important;border-radius:var(--radius);font-size:11px}
+  body:not(.admin-page)[data-ui="material3"] .nav-links .sidebar-language-placement {margin-top:auto;padding-top:16px}
+}
+@media(max-width:1099px),(orientation:portrait) {
+  body:not(.admin-page)[data-ui="material3"] .nav-links {
+    top:var(--header-height)!important;
+    width:min(320px,86vw)!important;max-width:86vw!important;
+    padding:16px 12px!important;gap:4px!important;
+    border:0!important;border-radius:0 var(--radius) var(--radius) 0!important;
+    background:var(--md-sys-color-surface-container-low)!important;
+    box-shadow:var(--md-sys-elevation-3)!important;
+  }
+  body:not(.admin-page)[data-ui="material3"] .nav-links a.icon-only {height:56px!important;min-height:56px!important;border-radius:999px!important;padding:0 20px!important}
+  body:not(.admin-page)[data-ui="material3"] .nav-links a.icon-only::after {font-weight:500!important}
+  body:not(.admin-page)[data-ui="material3"]::after {top:var(--header-height)!important;background:#00000052;z-index:28}
+}
+
+@media(max-width:600px) {
+  body:not(.admin-page)[data-ui="material3"] .m3-secondary-nav {display:grid;gap:4px;padding-top:12px;margin-top:12px;border-top:1px solid var(--md-sys-color-outline-variant)}
+  body:not(.admin-page)[data-ui="material3"] .m3-nav-utility {display:flex;align-items:center;gap:12px;min-height:56px;padding:12px 20px;border-radius:999px;color:var(--muted);font-size:14px}
+  body:not(.admin-page)[data-ui="material3"] .m3-nav-utility mdui-icon {font-size:24px}
+}
+
+body:not(.admin-page)[data-ui="material3"] .site-footer {border-radius:var(--radius) var(--radius) 0 0;border:0;line-height:1.5}
+body:not(.admin-page)[data-ui="material3"] .footer-main {width:min(1120px,calc(100% - 64px))}
+body:not(.admin-page)[data-ui="material3"] .back-to-top {width:56px;height:56px;border-radius:var(--radius);box-shadow:var(--md-sys-elevation-2)}
+@media(max-width:1099px),(orientation:portrait) {body:not(.admin-page)[data-ui="material3"] .footer-main {width:calc(100% - 48px)}}
+@media(max-width:760px) {body:not(.admin-page)[data-ui="material3"] .footer-main {width:calc(100% - 32px)}}
+body:not(.admin-page)[data-ui="material3"] .nav-links :is(a,button):focus-visible {outline:3px solid var(--primary);outline-offset:3px}
+@media(prefers-reduced-motion:reduce) {body:not(.admin-page)[data-ui="material3"] .nav-links {transition-duration:.01ms!important}}
+
+/* Navigation backgrounds are rounded rectangles in both rail and drawer. */
+body:not(.admin-page)[data-ui="material3"] .nav-links :is(a.icon-only,.m3-nav-utility,.sidebar-language-button),
+body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links :is(a.icon-only,.sidebar-language-button) {border-radius:var(--radius-control)!important}
+body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links a.icon-only.active {background:var(--primary-container)!important}
+body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links a.icon-only.active::before {content:none}
+
+/* Filled selected state keeps sign-in mode distinguishable in every palette. */
+body:not(.admin-page) .account-dialog .account-tab.active {background:var(--primary)!important;color:var(--on-primary)!important;box-shadow:0 1px 3px #00000026}
+body:not(.admin-page) .account-dialog .account-tab:not(.active) {background:transparent!important;color:var(--muted)!important}
+body:not(.admin-page) .account-dialog .account-tab:focus-visible {outline:3px solid var(--primary);outline-offset:2px}
+
+/* Agreement and provider availability jointly gate third-party sign-in. */
+body:not(.admin-page) .oauth-login-button:disabled,
+body:not(.admin-page) .oauth-login-button:disabled:hover {background:color-mix(in srgb,var(--ink) 8%,var(--surface))!important;color:var(--muted)!important;border-color:color-mix(in srgb,var(--outline) 25%,var(--surface))!important;opacity:.45;filter:grayscale(1);cursor:not-allowed;transform:none;box-shadow:none}
+body:not(.admin-page) .oauth-login-button:disabled .oauth-provider-mark {--oauth-accent:var(--muted);background:transparent}
+
+/* Apply the same theme-aware tint to every preview, including featured cards. */
+body:not(.admin-page)[data-term] #post-grid .post-card:is(:hover,:focus-within) {background:color-mix(in srgb,var(--primary) 12%,var(--surface-low))!important}
+body:not(.admin-page) .category-segment[aria-pressed="true"] {color:var(--primary);font-weight:800}
+
+/* The menu control belongs to the sidebar shell, outside the inert drawer. */
+body:not(.admin-page)[data-ui="material3"] :is(.topbar,.sidebar-shell)>#sidebar-toggle {position:fixed;z-index:1300;top:12px;left:20px;width:48px;min-width:48px;height:48px;border-radius:var(--radius-control);background:var(--surface-low);color:var(--primary);padding:12px!important}
+body:not(.admin-page)[data-ui="material3"] .nav-links {padding-top:80px!important}
+@media(max-width:1099px),(orientation:portrait) {
+ body:not(.admin-page)[data-ui="material3"] .topbar>#sidebar-toggle {top:8px;left:8px}
+ body:not(.admin-page)[data-ui="material3"] .nav-links {padding-top:16px!important}
+ body:not(.admin-page)[data-ui="material3"]>.topbar {height:64px!important;display:flex!important;padding:8px 16px 8px 64px!important;gap:12px!important}
+ body:not(.admin-page)[data-ui="material3"] {--header-height:64px}
+ body:not(.admin-page)[data-ui="material3"] .topbar .brand {min-width:0;gap:8px}
+ body:not(.admin-page)[data-ui="material3"] #brand-name {overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ body:not(.admin-page)[data-ui="material3"] .topbar .header-actions {flex-shrink:0;margin:0!important;gap:4px!important}
+ body:not(.admin-page)[data-ui="material3"] .header-actions :is(#announcement-open,.travellings-header) {display:none!important}
+ body:not(.admin-page)[data-ui="material3"] .m3-secondary-nav {display:grid;gap:4px;padding-top:12px;margin-top:12px;border-top:1px solid var(--md-sys-color-outline-variant)}
+ body:not(.admin-page)[data-ui="material3"] .m3-nav-utility {display:flex;align-items:center;gap:12px;min-height:48px;padding:12px 20px;color:var(--muted);font-size:14px}
+}
+@media(max-width:600px) {
+ body:not(.admin-page)[data-ui="material3"]>.topbar {gap:4px!important;padding-right:8px!important}
+ body:not(.admin-page)[data-ui="material3"] .topbar .brand {font-size:16px}
+ body:not(.admin-page)[data-ui="material3"] .topbar .brand-logo {width:32px;height:32px}
+ body:not(.admin-page)[data-ui="material3"] #account-open {font-size:0;width:40px;min-width:40px;padding:8px!important;gap:0}
+ body:not(.admin-page)[data-ui="material3"] #account-open::after {content:none!important}
+ body:not(.admin-page)[data-ui="material3"] #account-open svg {width:22px;height:22px;flex:none}
+ body:not(.admin-page)[data-ui="material3"] .header-actions {gap:0!important}
+}
+/* Selected thumbs use the same filled role as the primary action. */
+body:not(.admin-page) :is(.category-segmented-thumb,.articles-layout-thumb) {background:var(--primary)!important;box-shadow:0 1px 4px #0003}
+body:not(.admin-page) :is(.category-segment.active,.category-segment[aria-pressed="true"],.articles-layout-option.active,.articles-layout-option[aria-pressed="true"]) {color:var(--on-primary)!important}
+
+/* Unaccepted policies remain an activation guard without muting provider buttons. */
+body:not(.admin-page) .oauth-login-button.consent-pending {opacity:1;border-style:solid}
+body:not(.admin-page) .oauth-login-button.consent-pending:hover {opacity:1}
+
+/* The new theme is revealed above a frozen snapshot of the previous one. */
+html.theme-circle-transition::view-transition-old(root),
+html.theme-circle-transition::view-transition-new(root) {animation:none;mix-blend-mode:normal}
+html.theme-circle-transition::view-transition-old(root) {z-index:1}
+html.theme-circle-transition::view-transition-new(root) {z-index:2}
+html.theme-circle-transition *,html.theme-circle-transition *::before,html.theme-circle-transition *::after {transition:none!important}
+
+/* About-page conversations: playful, readable chat bubbles within the active theme. */
+body:not(.admin-page) .about-body>.about-signature-chat {
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:12px;
+  border:1px solid color-mix(in srgb,var(--primary) 16%,var(--outline));
+  border-radius:var(--radius) var(--radius) var(--radius) 5px;
+  background:color-mix(in srgb,var(--primary-container) 46%,var(--surface));
+  box-shadow:0 3px 12px color-mix(in srgb,var(--ink) 6%,transparent);
+}
+body:not(.admin-page) .about-signature-chat p {
+  flex:1;
+  margin:0;
+  color:var(--ink)!important;
+  font-weight:700!important;
+}
+body:not(.admin-page) :is(.about-chat-mini-avatar,.about-chat-avatar) {
+  display:grid;
+  place-items:center;
+  flex:0 0 34px;
+  width:34px;
+  height:34px;
+  border-radius:var(--radius-control);
+  background:var(--primary);
+  color:var(--on-primary);
+  font-size:13px;
+  font-weight:800;
+  box-shadow:0 2px 7px color-mix(in srgb,var(--primary) 24%,transparent);
+}
+body:not(.admin-page) .about-chat-thread {
+  display:grid;
+  gap:12px;
+  margin-block:4px;
+  padding:14px;
+  border:1px solid color-mix(in srgb,var(--outline) 20%,transparent);
+  border-radius:var(--radius);
+  background:
+    radial-gradient(circle at 92% 8%,color-mix(in srgb,var(--primary-container) 54%,transparent),transparent 32%),
+    color-mix(in srgb,var(--surface-high) 46%,var(--surface));
+}
+body:not(.admin-page) .about-chat-head {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding-bottom:10px;
+  border-bottom:1px solid color-mix(in srgb,var(--outline) 18%,transparent);
+}
+body:not(.admin-page) .about-chat-head>div {display:grid;gap:2px;min-width:0}
+body:not(.admin-page) .about-chat-head strong {font-size:13px;line-height:1.3;color:var(--ink)}
+body:not(.admin-page) .about-chat-head small {font-size:10px;line-height:1.5;color:var(--muted)}
+body:not(.admin-page) .about-chat-list {display:grid;gap:9px}
+body:not(.admin-page) .about-chat-bubble {
+  display:flex;
+  align-items:flex-start;
+  gap:9px;
+  width:max-content;
+  max-width:90%;
+  padding:10px 12px;
+  border-radius:var(--radius) var(--radius) var(--radius) 5px;
+  background:var(--surface);
+  color:var(--ink);
+  box-shadow:0 2px 8px color-mix(in srgb,var(--ink) 7%,transparent);
+}
+body:not(.admin-page) .about-chat-bubble.right {
+  justify-self:end;
+  border-radius:var(--radius) var(--radius) 5px var(--radius);
+  background:var(--primary);
+  color:var(--on-primary);
+}
+body:not(.admin-page) .about-chat-icon {
+  flex:0 0 20px;
+  font-size:20px!important;
+  color:var(--primary);
+}
+body:not(.admin-page) .about-chat-bubble.right .about-chat-icon {color:var(--on-primary)}
+body:not(.admin-page) .about-chat-copy {align-self:center;font-size:13px;line-height:1.65}
+@media(max-width:760px) {
+  body:not(.admin-page) .about-chat-thread {padding:12px;border-radius:var(--radius)}
+  body:not(.admin-page) .about-chat-bubble {max-width:96%;padding:9px 11px}
+  body:not(.admin-page) .about-chat-copy {font-size:12px}
+  body:not(.admin-page) .about-chat-mini-avatar {flex-basis:30px;width:30px;height:30px}
+}
+@media(prefers-reduced-motion:reduce) {body:not(.admin-page) .about-chat-thread *,body:not(.admin-page) .about-signature-chat * {animation:none!important;transition:none!important}}
+
+/* One continuous footer surface, including the legal-information row. */
+body:not(.admin-page)[data-ui="material3"] .site-footer {background:var(--surface-low)!important;color:var(--ink)}
+body:not(.admin-page)[data-ui="material3"] .site-footer .footer-bottom {background:transparent!important;color:var(--muted);border-top-color:color-mix(in srgb,var(--outline) 22%,transparent)}
+body:not(.admin-page)[data-ui="material3"] .back-to-top {bottom:calc(18px + env(safe-area-inset-bottom) + var(--footer-button-lift,0px))!important;transition:bottom .18s ease,opacity .2s ease,transform .2s ease}
+/* Quiet rounded-square close control with theme-aware hover and focus states. */
+body:not(.admin-page)[data-ui="material3"] #account-dialog .account-close-row .dialog-close {width:40px;min-width:40px;height:40px;min-height:40px;border-radius:var(--radius-control)!important;background:transparent!important;color:var(--muted)!important;border:1px solid color-mix(in srgb,var(--outline) 35%,transparent);box-shadow:none;transition:background .16s,color .16s}
+body:not(.admin-page)[data-ui="material3"] #account-dialog .account-close-row .dialog-close:hover {background:var(--primary-container)!important;color:var(--primary)!important;transform:none}
+body:not(.admin-page)[data-ui="material3"] #account-dialog .dialog-close:focus-visible {outline:3px solid var(--primary);outline-offset:3px}
+body:not(.admin-page) #user-login-form input[aria-invalid="true"] {border-color:var(--error)!important;outline-color:var(--error)}
+body:not(.admin-page) #user-login-form .login-field-error {display:block;color:var(--error);font-size:12px;line-height:1.6;margin-top:2px}
+@media(prefers-reduced-motion:reduce) {body:not(.admin-page)[data-ui="material3"] .back-to-top {transition:none}}
+
+/* New theme-aware brand mark. */
+body:not(.admin-page) .brand-logo {color:var(--primary)!important;transition:color .35s ease}
+body:not(.admin-page) .brand-logo svg {width:100%;height:100%;display:block;overflow:visible}
+
+/* Stronger lower cover scrim for featured-story titles. */
+body:not(.admin-page) .carousel-scrim {background:linear-gradient(180deg,transparent 18%,color-mix(in srgb,#101412 18%,transparent) 42%,color-mix(in srgb,#060807 70%,transparent) 75%,#060807 100%)!important}
+body:not(.admin-page) .carousel-copy strong {text-shadow:0 2px 5px #000,0 5px 22px #000c!important}
+body:not(.admin-page) .carousel-category,body:not(.admin-page) .carousel-copy small {text-shadow:0 1px 5px #000}
+
+/* Footer Travellings entry and compact CC mark. */
+body:not(.admin-page) .footer-nav-travellings {display:inline-flex;align-items:center;gap:7px}
+body:not(.admin-page) .footer-nav-travellings mdui-icon {font-size:17px;color:var(--primary)}
+body:not(.admin-page) .footer-cc-icon {display:block;width:22px;height:22px;color:var(--muted);transition:color .18s ease}
+body:not(.admin-page) .footer-cc-license:hover .footer-cc-icon,body:not(.admin-page) .footer-cc-license:focus-visible .footer-cc-icon {color:var(--primary)}
+
+/* Drag-and-drop image upload affordance. */
+body:not(.admin-page) :is(.comment-form,.comment-reply-form) {position:relative}
+body:not(.admin-page) :is(.comment-form,.comment-reply-form).dragging-images {outline:3px dashed var(--primary);outline-offset:5px;background:color-mix(in srgb,var(--primary-container) 20%,var(--surface-low))!important}
+body:not(.admin-page) :is(.comment-form,.comment-reply-form).dragging-images::after {content:attr(data-drop-label);position:absolute;inset:8px;z-index:4;display:grid;place-items:center;border-radius:var(--radius);background:color-mix(in srgb,var(--surface) 92%,transparent);color:var(--primary);font-size:14px;font-weight:700;pointer-events:none;backdrop-filter:blur(4px)}
+
+/* Four official CC condition marks, shown as one compact clickable group. */
+body:not(.admin-page) .footer-cc-icons {display:inline-flex;align-items:center;gap:4px;color:var(--muted)}
+body:not(.admin-page) .footer-cc-icons .footer-cc-icon {display:block;width:20px;height:20px;color:currentColor;transition:color .18s ease}
+body:not(.admin-page) .footer-cc-license {gap:0}
+body:not(.admin-page) .footer-cc-license:hover .footer-cc-icons,body:not(.admin-page) .footer-cc-license:focus-visible .footer-cc-icons {color:var(--primary)}
+
+/* Login/register tab and panel transitions stay in the active theme. */
+body:not(.admin-page) .account-dialog .account-tab {transition:background-color .24s cubic-bezier(.2,0,0,1),color .24s cubic-bezier(.2,0,0,1),transform .24s cubic-bezier(.2,0,0,1)}
+body:not(.admin-page) .account-dialog .account-tab.active {transform:translateY(-1px)}
+body:not(.admin-page) #user-login-form,body:not(.admin-page) #user-register-form {will-change:opacity,transform}
+
+/* Touch can start a drag on the cover without suppressing native page scrolling. */
+body:not(.admin-page) .carousel-link {touch-action:pan-y}
+@media(max-width:760px) {body:not(.admin-page) .footer-cc-icons .footer-cc-icon {width:18px;height:18px}}
+@media(prefers-reduced-motion:reduce) {body:not(.admin-page) .account-dialog .account-tab {transition:none!important}}
+
+/* Admin-controlled public appearance presets. */
+body:not(.admin-page)[data-ui-width="focus"] .container {width:min(960px,calc(100% - 64px))}
+body:not(.admin-page)[data-ui-width="wide"] .container {width:min(1320px,calc(100% - 64px))}
+body:not(.admin-page)[data-ui-width="custom"] .container {width:min(var(--site-custom-width,1120px),calc(100% - 64px))}
+body:not(.admin-page)[data-ui-cards="elevated"] :is(.post-card,.friend-card,.thought-card,.archive-group){box-shadow:0 8px 24px color-mix(in srgb,var(--ink) 10%,transparent)!important}
+body:not(.admin-page)[data-ui-cards="outlined"] :is(.post-card,.friend-card,.thought-card,.archive-group){border:1px solid color-mix(in srgb,var(--outline) 35%,transparent)!important;box-shadow:none!important}
+body:not(.admin-page)[data-ui-density="compact"] :is(.section,.home-latest-heading){padding-block:30px 56px;margin-block:22px}
+body:not(.admin-page)[data-ui-density="airy"] :is(.section,.home-latest-heading){padding-block:72px 120px;margin-block:42px}
+body:not(.admin-page)[data-ui-hero-layout="focus"] .hero {grid-template-columns:1fr;min-height:auto}
+body:not(.admin-page)[data-ui-hero-layout="focus"] .hero-art {height:260px}
+body:not(.admin-page)[data-ui-hero-layout="compact"] .hero {min-height:330px;padding-block:30px}
+body:not(.admin-page)[data-ui-motion="reduced"] :is(.page-transition,.hero-art,.festival-foreground,.post-card,.carousel-slide){animation:none!important;transition:none!important}
+body:not(.admin-page)[data-ui-motion="subtle"] :is(.hero-art,.post-card,.carousel-slide){animation-duration:.18s!important;transition-duration:.18s!important}
+@media(max-width:760px){body:not(.admin-page)[data-ui-width] .container,body:not(.admin-page)[data-ui-width] .footer-main{width:calc(100% - 32px)}body:not(.admin-page)[data-ui-hero-layout="focus"] .hero-art{height:210px}}
+/* Keep the progress loader scoped to the content area with the chrome visible. */
+:root[data-term] #app-loading { background: var(--surface) !important; }
+
+/* Keep every visible public surface on the active corner preset.  A few older
+   component rules still carried literal radii, which made the preset look
+   inconsistent when it changed. */
+body:not(.admin-page) :is(
+  .hero,
+  .server-runtime-card,
+  .hero-art,
+  .solar-scene,
+  .home-carousel,
+  .carousel-slide,
+  .carousel-link,
+  .section-more,
+  .articles-layout-slider,
+  .site-footer,
+  .cookie-consent
+) { border-radius: var(--radius) !important; }
+
+body:not(.admin-page) :is(
+  .category-segmented,
+  .category-segmented-thumb,
+  .category-segment,
+  .articles-layout-thumb,
+  .articles-layout-option,
+  .cookie-consent-icon,
+  .home-feed-sidebar .filter-tag,
+  .blog-toolbar-left > .portrait-topic-panel .filter-tag,
+  .tag,
+  .filter-tag,
+  .post-category-chip,
+  .article-category-chip,
+  #search-input,
+  .blog-toolbar input,
+  .blog-toolbar select
+) { border-radius: var(--radius-control) !important; }
+
+body:not(.admin-page)[data-ui="material3"] .site-footer {
+  border-radius: var(--radius) var(--radius) 0 0 !important;
+}
+
+/* Inline article content and text links also participate in the control scale. */
+body:not(.admin-page) :is(.article-content code:not(.macos-code code), .comment-user-name) {
+  border-radius: var(--radius-control) !important;
+}
+
+/* Content surfaces use the main page radius.  These controls were previously
+   left on the 12px control radius, so they did not respond with the rest of
+   the page when the corner preset changed. */
+body:not(.admin-page) :is(
+  #search-input,
+  .blog-toolbar input,
+  .blog-toolbar select,
+  .library-search input,
+  .library-field input,
+  .library-field select,
+  .category-segmented,
+  .category-segmented-thumb,
+  .category-segment,
+  .articles-layout-slider,
+  .articles-layout-thumb,
+  .articles-layout-option,
+  .articles-page-stat,
+  .feed-stats > div,
+  .archive-post,
+  .version-cube,
+  .detail-fact,
+  .download-link,
+  .mirror-logo,
+  .mirror-path,
+  .path-list code,
+  .download-option
+) { border-radius: var(--radius) !important; }
+
+body.admin-page .admin-announcement-en {
+  border-radius: var(--radius) !important;
+}
+
+/* Login, registration, password recovery, and their third-party actions all
+   share the active page radius. */
+body:not(.admin-page) .account-dialog :is(button, .account-tabs) {
+  border-radius: var(--radius) !important;
+}
+
+body:not(.admin-page) .account-dialog :is(
+  input:not([type="hidden"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea,
+  .auth-agreement
+) {
+  border-radius: var(--radius) !important;
+}
+
+body:not(.admin-page)[data-ui="material3"] #account-dialog .account-close-row .dialog-close {
+  border-radius: var(--radius) !important;
+}
+
+body.admin-page .login-panel :is(button, .filled-button) {
+  border-radius: var(--radius) !important;
+}
+
+/* Brand mark follows the same corner preset as the rest of the interface. */
+#brand-logo-image,
+#brand-logo-custom,
+#brand-mark,
+body.admin-page > .topbar .brand-logo {
+  border-radius: var(--radius) !important;
+}
+
+/* Navigation selection and language control share the active corner preset. */
+body:not(.admin-page)[data-ui="material3"] .nav-links :is(a.icon-only, .m3-nav-utility, .sidebar-language-button, #language-toggle),
+body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links :is(a.icon-only, .m3-nav-utility, .sidebar-language-button, #language-toggle) {
+  border-radius: var(--radius) !important;
+}
+body:not(.admin-page)[data-ui="material3"] .nav-links a.icon-only:hover {
+  border-radius: var(--radius) !important;
+}
+body:not(.admin-page)[data-ui="material3"] :is(.topbar,.sidebar-shell) > #sidebar-toggle {
+  border-radius: var(--radius) !important;
+  transition: color .18s ease, background-color .18s ease, transform .18s ease;
+}
+body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links .sidebar-language-placement {
+  justify-content: stretch;
+  padding-inline: 0;
+}
+body:not(.admin-page)[data-ui="material3"].sidebar-collapsed .nav-links .sidebar-language-button {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden;
+}
+body:not(.admin-page) #sidebar-toggle:hover :is(svg, mdui-icon, .material-symbols-rounded) {
+  transform: none !important;
+}
+
+/* One top-left page return control for every public destination. */
+body:not(.admin-page) .page-back-shell {
+  position: relative;
+  z-index: 6;
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding-block: 14px 0;
+}
+body:not(.admin-page) .page-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 15px;
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, var(--outline));
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--primary-container) 54%, var(--surface));
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--ink) 8%, transparent);
+  transition: background-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+body:not(.admin-page) .page-back-button:hover,
+body:not(.admin-page) .page-back-button:focus-visible {
+  background: color-mix(in srgb, var(--primary) 14%, var(--surface));
+  box-shadow: 0 7px 20px color-mix(in srgb, var(--primary) 18%, transparent);
+  transform: translateY(-1px);
+  outline: none;
+}
+body:not(.admin-page) .page-back-button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 42%, transparent);
+  outline-offset: 3px;
+}
+body:not(.admin-page) .page-back-button .material-symbols-rounded {
+  font-size: 19px;
+}
+body:not(.admin-page) :is(
+  #announcement-detail-view > .back-link,
+  .profile-page-back,
+  .profile-activity-hero > a.tonal-button,
+  .user-detail-hero > a.tonal-button,
+  .notifications-page-hero > a.tonal-button,
+  .policy-page-hero > a.tonal-button
+) {
+  display: none !important;
+}
+
+/* Topic selection is collapsible and defaults to ten visible rows. */
+body:not(.admin-page) .topic-filter-panel {
+  position: relative;
+}
+body:not(.admin-page) .topic-filter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+body:not(.admin-page) .topic-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 4px;
+  min-height: 30px;
+  padding: 4px 9px;
+  border: 1px solid color-mix(in srgb, var(--primary) 22%, var(--outline));
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--primary-container) 34%, var(--surface));
+  color: var(--primary);
+  font: 700 10px/1.2 inherit;
+  cursor: pointer;
+}
+body:not(.admin-page) .topic-toggle .material-symbols-rounded {
+  font-size: 17px;
+  transition: transform .2s ease;
+}
+body:not(.admin-page) .topic-filter-panel.is-collapsed #tag-filter {
+  max-height: calc(10 * 36px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 4px;
+  scrollbar-color: color-mix(in srgb, var(--primary) 52%, transparent) transparent;
+  scrollbar-width: thin;
+}
+body:not(.admin-page) .topic-filter-panel #tag-filter::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+body:not(.admin-page) .topic-filter-panel #tag-filter::-webkit-scrollbar-track {
+  background: transparent;
+}
+body:not(.admin-page) .topic-filter-panel #tag-filter::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 52%, transparent);
+  background-clip: padding-box;
+}
+body:not(.admin-page) .topic-filter-panel #tag-filter::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--primary) 72%, transparent);
+  background-clip: padding-box;
+}
+
+/* On all stories, statistics and topic selection swap their vertical order
+   inside the sidebar. */
+body:not(.admin-page) .home-feed-sidebar > .articles-sidebar-stats {
+  padding-top: 0;
+  border-top: 0;
+}
+body:not(.admin-page) .home-feed-sidebar > .feed-stats {
+  padding-top: 0;
+  border-top: 0;
+}
+body[data-page="articles"] .articles-page-intro {
+  margin-top: 18px;
+}
+body[data-page="articles"] .articles-page-intro > div:first-child {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+/* A single page-level entrance animation avoids a composited seam while the
+   hero illustration is fading and translating. */
+body:not(.admin-page) .hero-art {
+  animation: none !important;
+  background-size: cover;
+}
+body:not(.admin-page) :is(.hero-art, .solar-scene, .solar-scene svg) {
+  width: 100%;
+  height: 100%;
+}
+
+/* Coverless articles keep their return control and title clear of the sticky
+   site header instead of pulling the reading surface far upward. */
+body[data-page="article"] .article-title-block > .article-hero-nav {
+  width: 100%;
+  margin-bottom: 16px;
+}
+body[data-page="article"] .article-page > .article-hero:not(.has-cover) {
+  display: none;
+}
+body[data-page="article"] .article-page > .article-hero:not(.has-cover) + .article-reading-surface {
+  margin-top: 0 !important;
+}
+
+/* Two-column article previews use independent card heights and fill each
+   column continuously instead of aligning to the tallest card in a row. */
+body:not(.admin-page) #post-grid.masonry-layout {
+  grid-auto-rows: 1px;
+  grid-auto-flow: row dense;
+  row-gap: 0;
+  column-gap: 14px;
+  align-items: start;
+}
+body:not(.admin-page) #post-grid.masonry-layout > .post-card {
+  align-self: start;
+  height: max-content;
+  margin-bottom: 14px;
+}
+
+/* Animated shared sliders for account modes and Minecraft editions. */
+body:not(.admin-page) :is(.account-tabs, .segmented-control) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+body:not(.admin-page) :is(.account-tabs-thumb, .segmented-control-thumb) {
+  position: absolute;
+  z-index: 0;
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
+  width: 0;
+  border-radius: var(--radius);
+  background: var(--primary);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--ink) 16%, transparent);
+  transition: transform .3s cubic-bezier(.2, .82, .2, 1), width .3s cubic-bezier(.2, .82, .2, 1);
+  will-change: transform, width;
+}
+body:not(.admin-page) :is(.account-tab, .segment-button) {
+  position: relative;
+  z-index: 1;
+}
+body:not(.admin-page) .account-tab.active {
+  background: transparent !important;
+  color: var(--on-primary) !important;
+  box-shadow: none !important;
+  transform: none;
+}
+body:not(.admin-page) .segment-button.active {
+  background: transparent !important;
+  color: var(--on-primary) !important;
+  box-shadow: none !important;
+}
+
+/* Preview covers are decorative; the explicit read control owns navigation. */
+body:not(.admin-page) #post-grid .post-cover-button {
+  cursor: default;
+}
+body:not(.admin-page) #post-grid .post-cover-button:hover img {
+  transform: none;
+  filter: none;
+}
+
+/* Expanded material-select options follow the same rounded surface as the
+   menu itself, including the selected and keyboard-focused states. */
+body:not(.admin-page) .material-select-option {
+  border-radius: var(--radius) !important;
+}
+body:not(.admin-page) .material-select-option:hover,
+body:not(.admin-page) .material-select-option:focus-visible,
+body:not(.admin-page) .material-select-option[aria-selected="true"] {
+  border-radius: var(--radius) !important;
+}
+body:not(.admin-page) .material-select.material-select-up .material-select-menu {
+  top: auto;
+  bottom: calc(100% + 7px);
+}
+body:not(.admin-page) .profile-page-form :is(input, select, .material-select-trigger) {
+  border-radius: var(--radius) !important;
+}
+body:not(.admin-page) .profile-fold > summary,
+body:not(.admin-page) .profile-fold-control {
+  border-radius: var(--radius) !important;
+}
+body:not(.admin-page) .profile-page-form,
+body:not(.admin-page) .profile-fold-body {
+  overflow: visible;
+}
+body:not(.admin-page) .profile-fold[open] {
+  z-index: 30;
+}
+body:not(.admin-page) .profile-fold-body:has(.material-select.open) {
+  position: relative;
+  z-index: 35;
+}
+body:not(.admin-page) .profile-page-form .material-select.open {
+  z-index: 40;
+}
+body:not(.admin-page) .profile-page-form .material-select-menu {
+  z-index: 120;
+}
+
+/* Editable personal-page background and photo showcase. */
+body:not(.admin-page) .profile-visual-settings {
+  display: grid;
+  gap: 16px;
+}
+body:not(.admin-page) :is(.profile-background-editor, .profile-gallery-editor) {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, var(--outline) 20%, transparent);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+body:not(.admin-page) .profile-background-preview {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px dashed color-mix(in srgb, var(--outline) 42%, transparent);
+  border-radius: var(--radius);
+  background: var(--surface-low);
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+body:not(.admin-page) .profile-background-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body:not(.admin-page) :is(.profile-background-copy, .profile-gallery-editor-head) {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+body:not(.admin-page) :is(.profile-background-copy, .profile-gallery-editor-head) p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+body:not(.admin-page) .profile-gallery-editor-head {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+}
+body:not(.admin-page) .profile-visual-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+body:not(.admin-page) .profile-gallery-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+body:not(.admin-page) .profile-gallery-editor-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid color-mix(in srgb, var(--outline) 18%, transparent);
+  border-radius: var(--radius);
+  background: var(--surface-low);
+}
+body:not(.admin-page) .profile-gallery-editor-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body:not(.admin-page) .profile-gallery-remove {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, #17121f 78%, transparent);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+body:not(.admin-page) .profile-gallery-empty {
+  grid-column: 1 / -1;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: var(--surface-low);
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Background cropper. */
+body:not(.admin-page) .profile-background-crop-dialog {
+  width: min(860px, calc(100% - 28px));
+  max-height: calc(100dvh - 28px);
+  overflow: auto;
+  color: var(--ink);
+}
+body:not(.admin-page) .profile-background-crop-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+body:not(.admin-page) .profile-background-crop-head h2 {
+  margin: 6px 0 7px;
+  font-size: 26px;
+}
+body:not(.admin-page) .profile-background-crop-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+body:not(.admin-page) .profile-background-crop-head .dialog-close {
+  position: static;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+}
+body:not(.admin-page) .profile-background-crop-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #111;
+}
+body:not(.admin-page) .profile-background-crop-stage img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: none;
+  max-height: none;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+}
+body:not(.admin-page) .profile-background-crop-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+body:not(.admin-page) .profile-background-crop-controls label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+body:not(.admin-page) .profile-background-crop-controls input {
+  width: 100%;
+  accent-color: var(--primary);
+}
+body:not(.admin-page) .profile-background-crop-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+/* Public user page cover, birthday and gallery. */
+body:not(.admin-page) .user-detail-hero {
+  position: relative;
+  min-height: 290px;
+  overflow: hidden;
+  isolation: isolate;
+}
+body:not(.admin-page) .user-detail-background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  background: transparent;
+}
+body:not(.admin-page) .user-detail-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body:not(.admin-page) .user-detail-hero.has-background {
+  color: #fff;
+  background: #1d1b20;
+}
+body:not(.admin-page) .user-detail-hero.has-background:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(100deg, #17121fdd 6%, #17121fa8 55%, #17121f2e 100%);
+}
+body:not(.admin-page) .user-detail-hero.has-background :is(h1, p, strong) {
+  color: #fff;
+}
+body:not(.admin-page) .user-detail-hero > :not(.user-detail-background) {
+  position: relative;
+  z-index: 1;
+}
+body:not(.admin-page) .user-detail-gallery {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 20px;
+}
+body:not(.admin-page) .user-detail-gallery header h2 {
+  margin: 5px 0 0;
+}
+body:not(.admin-page) .user-profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+body:not(.admin-page) .user-profile-gallery.count-1 {
+  grid-template-columns: minmax(0, 1fr);
+}
+body:not(.admin-page) .user-profile-gallery.count-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+body:not(.admin-page) .user-profile-gallery-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--surface-low);
+  cursor: zoom-in;
+}
+body:not(.admin-page) .user-profile-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: transform .2s ease;
+}
+body:not(.admin-page) .user-profile-gallery-item:hover img {
+  transform: scale(1.02);
+}
+@media(max-width:760px) {
+  body:not(.admin-page) .profile-gallery-editor-head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body:not(.admin-page) .profile-background-crop-controls {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body:not(.admin-page) .profile-background-crop-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body:not(.admin-page) .profile-background-crop-actions button {
+    width: 100%;
+  }
+  body:not(.admin-page) .user-profile-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  body:not(.admin-page) .user-profile-gallery-item:first-child:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  body:not(.admin-page) :is(.account-tabs-thumb, .segmented-control-thumb) {
+    transition: none;
+  }
+}
+
+@media(orientation:portrait) {
+  body:not(.admin-page) .home-feed-sidebar .feed-stats > div {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  body:not(.admin-page) .home-feed-sidebar .feed-stats strong,
+  body:not(.admin-page) .home-feed-sidebar .feed-stats span {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Rounded chips keep their text inside the curved safe area at every radius preset. */
+body:not(.admin-page) :is(
+  .filter-tag,
+  .tag,
+  .status-chip,
+  .meta-chip,
+  .post-category-chip,
+  .article-category-chip,
+  .topic-toggle,
+  .category-segment,
+  .articles-layout-option,
+  .account-tab
+) {
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  padding-block: max(6px, calc(var(--radius-control) * .18)) !important;
+  padding-inline: max(10px, calc(var(--radius-control) * .32)) !important;
+  overflow-wrap: anywhere;
+}
+
+.footer-copyright-block {
+  display: grid;
+  justify-items: start;
+  gap: 5px;
+  min-width: 0;
+}
+.footer-open-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.footer-theme-prefix {
+  flex: 0 0 auto;
+  color: var(--muted);
+  white-space: nowrap;
+}
+@font-face {
+  font-family: "Big John";
+  src: url('/big-john.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.footer-theme-name {
+  color: var(--primary);
+  font-family: "Big John", var(--font-display, sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .01em;
+}
+@media(max-width:620px) {
+  .footer-open-source-link {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
+}
+@media(max-width:760px) {
+  body:not(.admin-page) .page-back-shell {
+    width: calc(100% - 32px);
+    padding-top: 12px;
+  }
+  body:not(.admin-page) .articles-page-side {
+    width: 100%;
+    justify-items: stretch;
+  }
+  body[data-page="articles"] .articles-page-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  body[data-page="articles"] .articles-page-intro > div:first-child {
+    width: 100%;
+    min-width: 0;
+    flex-basis: auto;
+  }
+  body[data-page="article"] .article-page > .article-hero:not(.has-cover) {
+    display: none;
+  }
+  body[data-page="article"] .article-page > .article-hero:not(.has-cover) + .article-reading-surface {
+    margin-top: 0 !important;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  body:not(.admin-page) .page-back-button {
+    transition: none;
+  }
+}
+
+/* Compact public-profile composition: biography, showcase, then stats. */
+body:not(.admin-page) .user-detail-layout {
+  align-items: start;
+}
+body:not(.admin-page) .user-detail-primary {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  min-width: 0;
+}
+body:not(.admin-page) .user-detail-bio {
+  align-self: start;
+  min-height: 0;
+  gap: 8px;
+  padding: 20px 22px;
+}
+body:not(.admin-page) .user-detail-gallery {
+  align-self: start;
+  margin-top: 0;
+  padding: 18px 20px;
+}
+body:not(.admin-page) .user-detail-summary {
+  align-self: start;
+}
+@media(max-width:760px) {
+  body:not(.admin-page) .user-detail-bio {
+    padding: 17px 18px;
+  }
+  body:not(.admin-page) .user-detail-gallery {
+    padding: 16px;
+  }
+}
+
+/* Keep the public header above route content and profile-page effects. */
+body:not(.admin-page) > .topbar {
+  z-index: 1200 !important;
+  isolation: isolate;
+}
+body[data-page="profile"] .profile-page-view,
+body[data-page="profile"] .profile-page-form {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+/* Selected and expandable navigation controls follow the same radius managed
+   from the site appearance panel. */
+body:not(.admin-page) :is(
+  .profile-menu-item,
+  .profile-popover-summary,
+  .article-toc-link,
+  .article-toc > header > :is(mdui-icon, svg, .material-symbols-rounded),
+  .announcement-detail-card .admin-announcement-en,
+  .announcement-detail-card .admin-announcement-en > summary
+) {
+  border-radius: var(--radius) !important;
+}
+
+body.admin-page .admin-announcement-en,
+body.admin-page .admin-announcement-en > summary {
+  border-radius: var(--radius) !important;
+}
+
+/* These two navigation controls change state without motion. */
+body:not(.admin-page) #sidebar-toggle,
+body:not(.admin-page) #language-toggle,
+body:not(.admin-page) #sidebar-toggle :is(svg, mdui-icon, .material-symbols-rounded),
+body:not(.admin-page) #language-toggle :is(svg, mdui-icon, .material-symbols-rounded) {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+body:not(.admin-page) #sidebar-toggle:hover,
+body:not(.admin-page) #language-toggle:hover,
+body:not(.admin-page) #sidebar-toggle:is(.active, .sidebar-open),
+body:not(.admin-page) #language-toggle :is(svg, mdui-icon, .material-symbols-rounded),
+body:not(.admin-page) #sidebar-toggle:hover :is(svg, mdui-icon, .material-symbols-rounded),
+body:not(.admin-page) #language-toggle:hover :is(svg, mdui-icon, .material-symbols-rounded) {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Pointer focus keeps the selected control styling without adding an outline.
+   Tab navigation restores the existing :focus-visible treatment above. */
+html:not([data-focus-modality="keyboard"]) body:not(.admin-page) :focus-visible {
+  outline: none !important;
+}
+
+/* Touch scrolling keeps native motion without disabling the page glass. */
+@media (hover: none), (pointer: coarse) {
+  html {
+    scroll-behavior: auto;
+  }
+  body:not(.admin-page) .season-particles {
+    animation: none !important;
+  }
+}
+
+@media(orientation:portrait) {
+  body:not(.admin-page)[data-ui="material3"] > .topbar {
+    padding-inline: 14px !important;
+  }
+  body:not(.admin-page) .topbar > #sidebar-toggle {
+    position: relative !important;
+    inset: auto !important;
+    flex: 0 0 44px;
+    width: 44px !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    margin: 0 !important;
+  }
+  body:not(.admin-page) .topic-filter-panel.is-collapsed #tag-filter {
+    max-height: calc(5 * 36px);
+  }
+}

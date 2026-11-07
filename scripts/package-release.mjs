@@ -7,32 +7,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const version = JSON.parse(await fs.readFile(path.join(root, "package.json"), "utf8")).version;
 const staging = path.join(root, "dist", `meterial-extra-${version}`);
 const archive = path.join(root, "dist", `meterial-extra-${version}.tar.gz`);
-const entries = [
-  ".dockerignore",
-  ".gitignore",
-  "API_TEMPLATE.md",
-  "BRAND_ASSET_LICENSE.md",
-  "CODE_OF_CONDUCT.md",
-  "CONTRIBUTING.md",
-  "DEPLOYMENT.md",
-  "Dockerfile",
-  "LICENSE",
-  "README.md",
-  "README_zh_CN.md",
-  "RELEASE_NOTES_v0.1.0.md",
-  "SECURITY.md",
-  "config.example.js",
-  "config.js",
-  "index.html",
-  "nginx.conf",
-  "package.json",
-  "run.ps1",
-  "run.sh",
-  "docs",
-  "public",
-  "scripts",
-  "src"
-];
+const entries = [".dockerignore", ".env.example", ".gitignore", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "Dockerfile", "LICENSE", "README.md", "SECURITY.md", "compose.yaml", "package.json", "run.ps1", "run.sh", "app", "docs", "scripts"];
 
 await fs.rm(path.join(root, "dist"), { recursive: true, force: true });
 await fs.mkdir(staging, { recursive: true });

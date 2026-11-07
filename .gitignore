@@ -6,3 +6,8 @@ node_modules/
 *.log
 artifacts/
 dist/
+data/
+.env
+app/__pycache__/
+data-test/
+*.pyc

@@ -1,0 +1,14 @@
+services:
+  meterial-extra:
+    build: .
+    container_name: meterial-extra
+    env_file: .env
+    environment:
+      DATA_DIR: /data
+      ADMIN_BIND_HOST: 0.0.0.0
+    ports:
+      - "8080:8080"
+      - "127.0.0.1:8081:8081"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped

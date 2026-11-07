@@ -1,0 +1,7 @@
+{
+  "privacy": {"title":"隐私说明","title_en":"Privacy","version":"demo-1","effective_at":"2026-01-01","body":"本模板只提供演示数据结构。部署者应根据实际业务补充隐私政策。"},
+  "terms": {"title":"使用条款","title_en":"Terms","version":"demo-1","effective_at":"2026-01-01","body":"这是一个用于演示的内容站点模板。请在生产环境中替换示例文字并完善条款。"},
+  "copyright": {"title":"版权说明","title_en":"Copyright","version":"demo-1","effective_at":"2026-01-01","body":"示例文章、图片和用户信息均为虚构内容。"},
+  "disclaimer": {"title":"免责声明","title_en":"Disclaimer","version":"demo-1","effective_at":"2026-01-01","body":"模板不对部署者自定义内容、第三方服务或生产数据负责。"},
+  "cookies": {"title":"Cookie 说明","title_en":"Cookies","version":"demo-1","effective_at":"2026-01-01","body":"示例应用使用必要的会话 Cookie。请按你的部署环境更新说明。"}
+}

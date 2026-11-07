@@ -1,0 +1,103 @@
+/* Material 3 friend directory */
+.friends-page{display:grid;gap:18px}
+.friends-hero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:clamp(24px,4vw,40px);border-radius:var(--radius);background:color-mix(in srgb,var(--primary-container) 38%,var(--surface-low));border:1px solid color-mix(in srgb,var(--primary) 18%,var(--outline))}
+.friends-hero h1{font-size:clamp(34px,5vw,52px);line-height:1.1;margin:8px 0 12px}.friends-hero p{max-width:650px;margin:0;color:var(--muted);font-size:14px;line-height:1.8}.friends-hero .filled-button{flex:0 0 auto}
+.friends-toolbar{display:grid;grid-template-columns:minmax(220px,1fr) auto;align-items:end;gap:14px;padding:18px;border-radius:var(--radius)}
+.friends-toolbar .library-search{min-width:0}.friends-toolbar label{font-size:12px;font-weight:700}.friends-toolbar input{width:100%}
+.friends-summary{display:flex;align-items:baseline;gap:6px;padding:0 8px 11px;color:var(--muted);font-size:12px}.friends-summary strong{color:var(--primary);font-size:24px}
+.friend-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.friend-card{display:grid;grid-template-columns:52px minmax(0,1fr) auto;align-items:center;gap:13px;min-width:0;padding:16px;border-radius:var(--radius);background:color-mix(in srgb,var(--primary) 3%,var(--surface));border:1px solid color-mix(in srgb,var(--primary) 16%,var(--outline));transition:transform .18s,border-color .18s,box-shadow .18s}
+.friend-card:hover,.friend-card:focus-visible{transform:translateY(-2px);border-color:var(--primary);box-shadow:0 8px 22px color-mix(in srgb,var(--primary) 14%,transparent);outline:none}
+.friend-avatar{position:relative;display:grid;place-items:center;width:52px;height:52px;overflow:hidden;border-radius:var(--radius);background:var(--primary-container);color:var(--primary);font-size:20px;font-weight:800}.friend-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--surface)}
+.friend-copy{min-width:0}.friend-copy strong,.friend-copy p,.friend-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.friend-copy strong{font-size:14px}.friend-copy p{margin:5px 0;color:var(--muted);font-size:11px;line-height:1.5}.friend-copy small{color:var(--primary);font-size:10px}.friend-arrow{color:var(--primary);font-size:18px}
+.friend-loading,.friend-empty{grid-column:1/-1;padding:38px;border-radius:var(--radius);background:var(--surface-low);color:var(--muted);text-align:center}
+.friend-pagination{margin-top:0}
+.friend-application-dialog textarea{min-height:88px;resize:vertical}
+.friend-privacy-note{margin:0;padding:10px 12px;border-radius:var(--radius-control);background:var(--primary-container);color:var(--muted);font-size:11px;line-height:1.6}
+@media(max-width:980px){.friend-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:670px){.friends-hero{align-items:flex-start;flex-direction:column}.friends-hero .filled-button{width:100%}.friends-toolbar{grid-template-columns:1fr auto}.friends-toolbar label{grid-column:1/-1}.friend-grid{grid-template-columns:1fr}.friend-summary{padding-bottom:8px}}
+
+/* Daily notes and about-page guestbook */
+.thoughts-page{display:grid;gap:18px}
+.thoughts-hero{padding:clamp(24px,4vw,40px);border-radius:var(--radius);background:color-mix(in srgb,var(--primary-container) 34%,var(--surface-low));border:1px solid color-mix(in srgb,var(--primary) 18%,var(--outline))}
+.thoughts-hero h1{font-size:clamp(34px,5vw,52px);line-height:1.1;margin:8px 0 12px}.thoughts-hero p{max-width:700px;margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+.thoughts-timeline{position:relative;display:grid;gap:12px;max-width:860px;margin-inline:auto;padding-left:24px}.thoughts-timeline:before{content:"";position:absolute;left:7px;top:12px;bottom:12px;width:2px;border-radius:2px;background:color-mix(in srgb,var(--primary) 24%,var(--outline))}
+.thought-card{position:relative;display:grid;grid-template-columns:minmax(0,1fr);padding:20px 22px;border-radius:var(--radius);background:color-mix(in srgb,var(--primary) 3%,var(--surface));border:1px solid color-mix(in srgb,var(--primary) 16%,var(--outline));box-shadow:0 3px 12px color-mix(in srgb,var(--primary) 7%,transparent)}
+.thought-marker{position:absolute;left:-24px;top:25px;width:14px;height:14px;border:3px solid var(--surface);border-radius:50%;background:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+.thought-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.thought-meta time{color:var(--muted);font-size:11px}.thought-card p{margin:12px 0 0;color:var(--ink);font-size:15px;line-height:1.85;white-space:pre-wrap;overflow-wrap:anywhere}
+.thought-photo{display:block;max-width:100%;margin-top:13px;overflow:hidden;border:1px solid color-mix(in srgb,var(--outline) 16%,transparent);border-radius:var(--radius);background:var(--surface-low)}
+.thought-photo img{display:block;width:100%;max-height:620px;object-fit:contain}
+.about-messages{margin-top:18px;padding:clamp(20px,4vw,32px);border-radius:var(--radius)}.about-messages .comment-form{margin-top:8px}.about-messages .comment-list{margin-top:16px}
+@media(max-width:670px){.thoughts-timeline{padding-left:20px}.thought-card{padding:17px}.thought-marker{left:-20px;width:12px;height:12px}}
+
+/* Animated title illustrations for the friend directory and daily-notes pages. */
+.friends-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,205px) auto;align-items:center;gap:22px;overflow:hidden}
+.friends-hero-copy,.thoughts-hero-copy{min-width:0}
+.friends-motion-art{width:min(100%,205px);justify-self:center;pointer-events:none;filter:drop-shadow(0 10px 20px color-mix(in srgb,var(--primary) 12%,transparent))}
+.friends-motion-art svg,.thoughts-motion-art svg{display:block;width:100%;height:auto;overflow:visible}
+.friend-orbit,.friend-spark,.thought-paper,.thought-pencil,.thought-bubble,.thought-spark{transform-box:fill-box;transform-origin:center}
+.friend-orbit-a{animation:friendFloat 4.8s ease-in-out infinite}
+.friend-orbit-b{animation:friendFloat 5.6s -1.7s ease-in-out infinite reverse}
+.friend-orbit-c{animation:friendFloat 4.2s -2.2s ease-in-out infinite}
+.friend-network-line{stroke-dasharray:5 8;animation:friendNetwork 5s linear infinite}
+.friend-spark{animation:friendSpark 2.8s ease-in-out infinite}
+.thoughts-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,205px);align-items:center;gap:24px;overflow:hidden}
+.thoughts-motion-art{width:min(100%,205px);justify-self:end;pointer-events:none;filter:drop-shadow(0 10px 20px color-mix(in srgb,var(--primary) 12%,transparent))}
+.thought-paper{animation:thoughtPaper 5.4s ease-in-out infinite}
+.thought-pencil{animation:thoughtPencil 3.8s ease-in-out infinite}
+.thought-bubble-a{animation:thoughtBubble 4.2s ease-in-out infinite}
+.thought-bubble-b{animation:thoughtBubble 5s -1.7s ease-in-out infinite reverse}
+.thought-spark{animation:thoughtSpark 2.7s ease-in-out infinite}
+@keyframes friendFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes friendNetwork{to{stroke-dashoffset:-52}}
+@keyframes friendSpark{0%,100%{opacity:.45;transform:rotate(0) scale(.9)}50%{opacity:1;transform:rotate(45deg) scale(1.12)}}
+@keyframes thoughtPaper{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-4px) rotate(.6deg)}}
+@keyframes thoughtPencil{0%,100%{transform:translate(0,0) rotate(0)}45%{transform:translate(4px,-3px) rotate(4deg)}70%{transform:translate(-2px,2px) rotate(-2deg)}}
+@keyframes thoughtBubble{0%,100%{opacity:.5;transform:translateY(0) scale(.92)}50%{opacity:1;transform:translateY(-7px) scale(1.06)}}
+@keyframes thoughtSpark{0%,100%{opacity:.4;transform:rotate(0) scale(.85)}50%{opacity:1;transform:rotate(35deg) scale(1.1)}}
+@media(max-width:760px){.friends-hero{grid-template-columns:minmax(0,1fr) 140px;gap:14px}.friends-hero-copy{grid-column:1/-1}.friends-motion-art{width:140px;justify-self:start}.friends-hero .filled-button{justify-self:end}.thoughts-hero{grid-template-columns:minmax(0,1fr) 130px;gap:10px}.thoughts-motion-art{width:130px;align-self:end;margin-bottom:-16px;opacity:.82}}
+@media(max-width:520px){.friends-hero{grid-template-columns:1fr}.friends-motion-art{grid-row:2;width:150px}.friends-hero .filled-button{width:100%;justify-self:stretch}.thoughts-hero{position:relative;display:block;padding-right:120px}.thoughts-motion-art{position:absolute;right:8px;bottom:8px;width:112px;margin:0;opacity:.7}.thoughts-hero-copy{position:relative;z-index:1}}
+@media(prefers-reduced-motion:reduce){.friends-motion-art *,.thoughts-motion-art *{animation:none!important}}
+.thought-actions{display:flex;justify-content:flex-end;margin-top:13px}.thought-like{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:7px 12px;border:1px solid color-mix(in srgb,var(--outline) 20%,transparent);border-radius:999px;background:var(--surface-low);color:var(--muted);font:700 11px/1.2 inherit;cursor:pointer;transition:background .18s,color .18s,border-color .18s,transform .18s}.thought-like svg{width:17px;height:17px}.thought-like:hover:not(:disabled){transform:translateY(-1px);border-color:var(--primary);background:var(--primary-container);color:var(--primary)}.thought-like.liked{background:color-mix(in srgb,var(--primary-container) 82%,var(--surface));border-color:color-mix(in srgb,var(--primary) 48%,var(--outline));color:var(--primary)}.thought-like.liked .icon-outline{display:none}.thought-like.liked .icon-filled{display:block}.thought-like:disabled{opacity:.58;cursor:wait}
+
+/* Everyday moments use a Material 3 masonry feed inspired by an editorial journal. */
+.thoughts-timeline{display:block;max-width:none;padding:0;column-count:3;column-gap:14px}.thoughts-timeline:before{display:none}.thought-card{display:inline-block;width:100%;margin:0 0 14px;break-inside:avoid;padding:20px;border-radius:var(--radius);background:color-mix(in srgb,var(--primary-container) 24%,var(--surface-low));box-shadow:0 4px 16px color-mix(in srgb,var(--primary) 9%,transparent);transition:transform .2s,box-shadow .2s,border-color .2s}.thought-card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--primary) 36%,var(--outline));box-shadow:0 10px 26px color-mix(in srgb,var(--primary) 14%,transparent)}.thought-marker{display:none}.thought-card p{font-size:14px;line-height:1.8}.thought-photo{margin-top:14px;border-radius:var(--radius)}.thought-photo img{max-height:none}.thought-meta{padding-bottom:2px}
+@media(max-width:1040px){.thoughts-timeline{column-count:2}}@media(max-width:670px){.thoughts-timeline{column-count:1}.thought-card{padding:17px}.thought-photo img{max-height:none}}
+
+.thought-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}
+.thought-gallery.count-1{grid-template-columns:1fr}
+.thought-gallery .gallery-item{display:block;overflow:hidden;aspect-ratio:1;border:1px solid color-mix(in srgb,var(--outline) 16%,transparent);border-radius:var(--radius);background:var(--surface-low)}
+.thought-gallery.count-1 .gallery-item{aspect-ratio:auto;max-height:520px}
+.thought-gallery .gallery-item img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.thought-gallery.count-1 .gallery-item img{height:auto;max-height:520px;object-fit:contain}
+.thought-gallery .gallery-item:hover img{transform:scale(1.025)}
+.thought-gallery.count-3 .gallery-item:first-child{grid-column:span 2}
+@media(max-width:670px){.thought-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.thought-gallery.count-3 .gallery-item:first-child{grid-column:span 2}}
+
+/* Fill the journal from left to right instead of stacking an entire column first. */
+.thoughts-timeline{display:block!important;column-count:auto!important;column-gap:0!important;padding:0!important}
+.thoughts-columns{display:grid;grid-template-columns:repeat(var(--thought-columns,3),minmax(0,1fr));gap:14px;align-items:start;width:100%}
+.thoughts-columns[data-thought-columns="2"]{--thought-columns:2}.thoughts-columns[data-thought-columns="1"]{--thought-columns:1}
+.thoughts-column{display:grid;gap:14px;align-content:start;min-width:0}
+.daily-canvas,.daily-orbit-ring,.daily-note-card,.daily-photo-card,.daily-like-badge,.daily-check,.daily-spark,.daily-dot,.daily-camera-dot{transform-box:fill-box;transform-origin:center}
+.daily-canvas{animation:dailyCanvasBreathe 6s ease-in-out infinite}
+.daily-orbit-ring{animation:dailyOrbit 18s linear infinite}
+.daily-note-card{animation:dailyNoteFloat 5.2s ease-in-out infinite}
+.daily-photo-card{animation:dailyPhotoFloat 4.6s -1.4s ease-in-out infinite}
+.daily-like-badge{animation:dailyLikePop 3.2s -.8s ease-in-out infinite}
+.daily-check{animation:dailyCheckIn 4.2s -.4s ease-in-out infinite}
+.daily-spark{animation:dailySpark 2.8s ease-in-out infinite}
+.daily-dot{animation:dailyDot 3.6s ease-in-out infinite}.daily-dot.second{animation-delay:-1.8s}
+.daily-camera-dot{animation:dailyCamera 2.6s ease-in-out infinite}
+@keyframes dailyCanvasBreathe{0%,100%{opacity:.76;transform:scale(.985)}50%{opacity:1;transform:scale(1)}}
+@keyframes dailyOrbit{to{transform:rotate(360deg)}}
+@keyframes dailyNoteFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}}
+@keyframes dailyPhotoFloat{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+@keyframes dailyLikePop{0%,60%,100%{transform:scale(.9);opacity:.65}72%{transform:scale(1.18);opacity:1}84%{transform:scale(1);opacity:1}}
+@keyframes dailyCheckIn{0%,45%,100%{transform:scale(.88);opacity:.62}58%{transform:scale(1.12);opacity:1}}
+@keyframes dailySpark{0%,100%{opacity:.35;transform:rotate(0) scale(.82)}50%{opacity:1;transform:rotate(38deg) scale(1.13)}}
+@keyframes dailyDot{0%,100%{opacity:.35;transform:translateY(0) scale(.8)}50%{opacity:.9;transform:translateY(-6px) scale(1.05)}}
+@keyframes dailyCamera{0%,100%{opacity:.45}50%{opacity:1;filter:drop-shadow(0 0 5px var(--tertiary))}}
+@media(prefers-reduced-motion:reduce){.thoughts-motion-art *{animation:none!important}}
+.thoughts-column .thought-card{display:block!important;width:100%;margin:0!important;break-inside:auto}
+@media(max-width:670px){.thoughts-columns{grid-template-columns:1fr;gap:12px}.thoughts-column{gap:12px}}

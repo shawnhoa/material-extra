@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="zh-CN" data-app-loading="true">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+  <script>(function(){var m=window.matchMedia?window.matchMedia("(prefers-color-scheme: dark)"):null;function s(){try{var t=localStorage.getItem("blog-theme");return t==="dark"||t==="light"?t:""}catch(e){return ""}}function a(){var t=s()||(m&&m.matches?"dark":"light");document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;var c=document.querySelector('meta[name="theme-color"]');if(c)c.content=t==="dark"?"#141218":"#6750a4"}a();if(m){var f=function(){if(!s())a()};m.addEventListener?m.addEventListener("change",f):m.addListener(f)}document.documentElement.dataset.appLoading="true";})();</script>
+  <style>html[data-app-loading="true"]{background:var(--surface,#fbfcfa)}#app-loading{position:fixed;top:var(--header-height,76px);left:0;right:0;z-index:40;display:grid;justify-items:center;gap:12px;padding:clamp(34px,10vh,110px) 24px 0;color:var(--theme-primary-light,var(--term-accent,#6750a4));pointer-events:none;transition:opacity .28s ease,visibility .28s ease}html[data-theme="dark"] #app-loading{color:var(--theme-primary-dark,color-mix(in srgb,var(--term-accent,#6750a4) 36%,#e4ece6))}html[data-app-loading="false"] #app-loading{opacity:0;visibility:hidden}.loading-content{display:grid;justify-items:center;gap:14px;font:700 13px/1.4 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.08em}.loading-logo{width:86px;height:86px;border-radius:24px;object-fit:contain;filter:drop-shadow(0 10px 18px color-mix(in srgb,currentColor 22%,transparent));animation:loadingFloat 1.35s ease-in-out infinite}.loading-progress{width:min(280px,72vw);height:5px;overflow:hidden;border-radius:999px;background:color-mix(in srgb,currentColor 18%,transparent)}.loading-progress span{display:block;width:40%;height:100%;border-radius:inherit;background:currentColor;animation:loadingProgress 1.25s ease-in-out infinite}.loading-dots{display:none}@keyframes loadingFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}@keyframes loadingProgress{0%{transform:translateX(-115%)}55%,100%{transform:translateX(285%)}}</style>
+  <meta name="theme-color" content="#6750a4"><title>StarIsle的小屋</title>
+  <link id="site-favicon" rel="icon" type="image/svg+xml" href="/brand.svg"><link rel="apple-touch-icon" href="/brand.svg">
+  <link rel="stylesheet" href="/style.css?v=20261105an"><link rel="stylesheet" href="/solar.css?v=20261105-theme-roles"><link rel="stylesheet" href="/libraries.css?v=20261105z"><link rel="stylesheet" href="/article-material.css?v=20261105-vbs-m3-2"><link rel="stylesheet" href="/about-material.css?v=20261106-character-video"><link rel="stylesheet" href="/friends.css?v=20261105s"><link rel="stylesheet" href="/theme-complete.css?v=20261105-admin-workspace">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
+</head>
+<body class="sidebar-collapsed" data-ui="material3">
+  <a class="m3-skip-link" href="#main-content" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
+  <div id="app-loading" role="status" aria-label="页面正在加载"><div class="loading-content"><img class="loading-logo" src="/brand.svg" alt=""><span>准备你的小屋</span><span class="loading-progress" aria-hidden="true"><span></span></span></div></div>
+  <div class="festival-foreground" id="festival-foreground" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark" id="brand-mark">S</span><span class="brand-logo hidden" id="brand-logo" role="img" aria-label="星屿笔记 Logo"><svg viewBox="4 2 112 112" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M67.68,16.4L105.12,47.6A8 8 0 0 1 108,53.75L108,84A22 22 0 0 1 86,106L34,106A22 22 0 0 1 12,84L12,53.75A8 8 0 0 1 14.88,47.6L52.32,16.4A12 12 0 0 1 67.68,16.4ZM42,52L42,52A6 6 0 0 1 48,58L48,64A3 3 0 0 0 51,67L69,67A3 3 0 0 0 72,64L72,58A6 6 0 0 1 78,52L78,52A6 6 0 0 1 84,58L84,88A6 6 0 0 1 78,94L78,94A6 6 0 0 1 72,88L72,82A3 3 0 0 0 69,79L51,79A3 3 0 0 0 48,82L48,88A6 6 0 0 1 42,94L42,94A6 6 0 0 1 36,88L36,58A6 6 0 0 1 42,52Z"/></svg></span><img id="brand-logo-image" class="brand-logo hidden" alt="Logo"><span id="brand-name">StarIsle的小屋</span></a>
+    <div class="header-actions"><button class="header-control" id="theme-toggle" title="切换深浅色" aria-label="切换深浅色" data-no-icon><mdui-icon name="brightness_low"></mdui-icon></button><a class="header-control header-icon-button" id="announcement-open" href="/announcements" data-route="announcements" title="网站公告" aria-label="网站公告"><mdui-icon name="campaign"></mdui-icon></a><a class="header-control header-icon-button travellings-header travellings-link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力" aria-label="开往-友链接力"><mdui-icon name="train" aria-hidden="true"></mdui-icon></a><button class="text-button" id="account-open" aria-label="登录或注册" data-icon="people">登录 / 注册</button><div class="profile-menu" id="profile-menu-shell"><button class="profile-avatar-button hidden" id="profile-open" title="个人资料" aria-label="个人资料" aria-haspopup="menu" aria-expanded="false" aria-controls="profile-popover" data-no-icon><span class="default-user-avatar" id="profile-open-fallback" aria-hidden="true"></span><img class="hidden" id="profile-open-image" alt="用户头像"></button><div class="profile-popover hidden" id="profile-popover" role="menu" aria-labelledby="profile-open"><div class="profile-popover-summary"><strong id="profile-menu-name">用户</strong><small id="profile-menu-email"></small></div><a class="profile-menu-item" id="profile-menu-profile" href="/profile" role="menuitem"><mdui-icon name="manage_accounts"></mdui-icon><span data-zh="个人资料" data-en="Your profile">个人资料</span></a><button class="profile-menu-item danger-text" id="profile-menu-logout" type="button" role="menuitem" data-no-icon><mdui-icon name="logout"></mdui-icon><span data-zh="退出登录" data-en="Log out">退出登录</span></button></div></div></div>
+  </header>
+  <div class="oauth-notice hidden" id="oauth-notice" role="status" aria-live="polite"></div>
+  <aside class="sidebar-shell">
+    <button class="icon-button menu-toggle" id="sidebar-toggle" aria-controls="site-navigation" type="button" aria-label="展开或收起侧栏" aria-expanded="true" data-no-icon><mdui-icon name="menu"></mdui-icon></button>
+  <nav id="site-navigation" class="nav-links" aria-label="主导航">
+    <a href="/" data-route="home" aria-label="首页" data-icon="home">首页</a><a href="/archive" data-route="archive" aria-label="归档" data-icon="archive">归档</a><a href="/minecraft" data-route="minecraft" aria-label="Minecraft 版本库" data-icon="cube">Minecraft 版本库</a><a href="/mirrors" data-route="mirrors" aria-label="系统镜像库" data-icon="server">镜像库</a><a href="/thoughts" data-route="thoughts" aria-label="日常" data-icon="format">日常</a><a href="/support" data-route="support" aria-label="投喂与支持" data-icon="heart">投喂</a><a href="/friends" data-route="friends" aria-label="友情链接" data-icon="people">友链</a><a href="/about" data-route="about" aria-label="关于" data-icon="person">关于</a>
+    <div class="m3-secondary-nav"><a class="m3-nav-utility" href="/announcements" data-route="announcements" data-no-icon><mdui-icon name="campaign"></mdui-icon><span data-zh="网站公告" data-en="Announcements">网站公告</span></a><a class="m3-nav-utility travellings-link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" data-no-icon><mdui-icon name="train"></mdui-icon><span data-zh="开往 · 友链接力" data-en="Travellings">开往 · 友链接力</span></a></div>
+    <div class="sidebar-language-placement"><button class="header-control sidebar-language-button" id="language-toggle" aria-label="切换中英文" data-no-icon><mdui-icon name="translate"></mdui-icon><span>EN</span></button></div>
+  </nav>
+  </aside>
+  <main id="main-content" tabindex="-1" class="page-transition container">
+    <section id="hero" class="hero">
+      <div class="hero-copy"><span class="eyebrow" id="season-badge">小屋日常</span><span class="eyebrow" id="hero-eyebrow">PERSONAL NOTES · 2026</span><h1 id="hero-title">把生活写成一间安静的房间</h1><p id="hero-bio"></p><a class="filled-button" href="/articles" id="hero-cta">浏览文章 <span>→</span></a><div class="server-runtime-card" id="server-runtime-card" aria-live="polite"><span class="server-status-dot loading" id="server-status-dot" aria-hidden="true"></span><div class="server-runtime-main"><span>SERVER STATUS</span><strong id="server-status-label">正在读取服务器状态…</strong></div><div class="server-runtime-metric"><span data-zh="运行时长" data-en="Uptime">运行时长</span><strong id="server-uptime">—</strong></div></div></div>
+      <div class="hero-art" aria-hidden="true"><div class="season-particles"></div><div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="window"><span></span><span></span><span></span><span></span></div><div class="floating-star star-one">✦</div><div class="floating-star star-two">✦</div></div>
+    </section>
+    <div class="section-heading home-latest-heading" id="home-posts-heading"><div><span class="eyebrow">LATEST STORIES</span><h2 id="posts-heading">最近写了什么</h2></div><span class="post-count" id="post-count"></span></div>
+    <section id="home-carousel" class="home-carousel hidden" aria-labelledby="home-carousel-title">
+      <div class="home-carousel-heading"><div><span class="eyebrow">FEATURED STORIES</span><h2 id="home-carousel-title" data-zh="精选文章" data-en="Featured stories">精选文章</h2></div><div class="carousel-controls"><button class="icon-button" id="carousel-prev" type="button" aria-label="上一篇文章" title="上一篇文章" data-no-icon><mdui-icon name="chevron_left"></mdui-icon></button><div class="carousel-dots" id="carousel-dots"></div><button class="icon-button" id="carousel-next" type="button" aria-label="下一篇文章" title="下一篇文章" data-no-icon><mdui-icon name="chevron_right"></mdui-icon></button></div></div>
+      <div class="home-carousel-track" id="home-carousel-track" aria-live="polite"></div>
+      <div class="carousel-progress" role="progressbar" aria-label="轮播倒计时" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="carousel-progress-bar"></span></div>
+    </section>
+    <section id="toolbar" class="blog-toolbar">
+      <div class="blog-toolbar-left">
+        <form id="search-form" class="library-search" aria-label="搜索文章"><label for="search-input" data-zh="搜索文章" data-en="Search stories">搜索文章</label><div class="input-action-row"><input id="search-input" type="search" placeholder="搜索标题、正文或标签"><button class="filled-button" aria-label="搜索" data-no-icon data-zh="搜索" data-en="Search">搜索</button></div></form>
+        <div class="category-slider-panel"><span class="category-slider-title" data-zh="分类" data-en="Category">分类</span><div class="category-segmented" id="category-filter-control"><span class="category-segmented-thumb" id="category-filter-thumb" aria-hidden="true"></span><div class="category-segmented-options" id="category-filter" role="group" aria-label="按分类筛选"><button class="category-segment active" type="button" data-category="" data-no-icon aria-pressed="true">全部分类</button></div></div></div>
+      </div>
+    </section>
+    <section id="posts-view" class="section">
+      <header class="articles-page-intro surface hidden" id="articles-page-intro">
+        <div><span class="eyebrow">ALL STORIES</span><h1 data-zh="全部文章" data-en="All stories">全部文章</h1><p data-zh="浏览全部文章，并使用搜索、分类与话题筛选快速找到内容。" data-en="Browse every story and use search, categories, and topics to find what you need.">浏览全部文章，并使用搜索、分类与话题筛选快速找到内容。</p></div>
+        <div class="articles-page-side"><div class="articles-page-stat"><strong id="articles-total">0</strong><span data-zh="篇文章" data-en="stories">篇文章</span></div></div>
+      </header>
+      <div class="home-feed-layout">
+        <div class="home-feed-main">
+          <div class="feed-heading-row">
+            <div class="articles-list-controls" id="articles-list-controls">
+              <div class="articles-layout-slider" id="articles-layout-slider" role="group" aria-label="文章列表显示方式"><span class="articles-layout-thumb" aria-hidden="true"></span><button class="articles-layout-option active" type="button" data-article-layout="double" data-no-icon aria-label="双列显示" title="双列显示" aria-pressed="true"><mdui-icon name="grid_view"></mdui-icon></button><button class="articles-layout-option" type="button" data-article-layout="single" data-no-icon aria-label="单列显示" title="单列显示" aria-pressed="false"><mdui-icon name="view_agenda"></mdui-icon></button></div>
+            </div>
+          </div>
+          <div class="post-grid" id="post-grid"><div class="loading" data-zh="正在读取文章…" data-en="Loading stories…">正在读取文章…</div></div>
+          <nav class="pagination article-pagination" id="pagination" aria-label="文章分页"></nav>
+        </div>
+        <aside class="home-feed-sidebar surface" aria-label="文章话题与网站统计">
+          <section class="topic-filter-panel" aria-labelledby="topic-filter-title">
+            <span class="topic-filter-title" id="topic-filter-title" data-zh="话题选择" data-en="Topics">话题选择</span>
+            <div id="tag-filter" class="tag-row"></div>
+          </section>
+          <section class="feed-stats" aria-label="网站统计">
+            <div><strong id="site-post-total">0</strong><span data-zh="篇文章" data-en="Stories">篇文章</span></div>
+            <div><strong id="site-word-total">0k</strong><span data-zh="全站字数" data-en="Total words">全站字数</span></div>
+            <div><strong id="site-view-total">0</strong><span data-zh="总阅读数" data-en="Total views">总阅读数</span></div>
+          </section>
+        </aside>
+      </div>
+    </section>
+    <section id="archive-view" class="section hidden"><div class="section-heading"><div><span class="eyebrow">ARCHIVE</span><h2 data-zh="按时间浏览" data-en="Browse by date">按时间浏览</h2></div></div><div class="archive-summary" id="archive-summary"><div><span data-zh="总文章数" data-en="Total stories">总文章数</span><strong id="archive-total">—</strong></div><div><span data-zh="最近更新" data-en="Last updated">最近更新</span><strong id="archive-latest-update">—</strong></div></div><div id="archive-list" class="archive-list"></div></section>
+    <section id="announcements-page-view" class="announcements-page section hidden" aria-labelledby="announcements-page-title">
+      <header class="announcements-page-hero surface"><div><span class="eyebrow">SITE NOTICE</span><h1 id="announcements-page-title" data-zh="网站公告" data-en="Site announcements">网站公告</h1><p data-zh="查看网站维护、功能更新、社区通知与条款变更。" data-en="Maintenance, feature updates, community notices, and policy changes.">查看网站维护、功能更新、社区通知与条款变更。</p></div><mdui-icon name="campaign" aria-hidden="true"></mdui-icon></header>
+      <div class="announcement-page-list" id="announcement-page-list"><div class="empty-state" data-zh="正在读取公告…" data-en="Loading announcements…">正在读取公告…</div></div>
+    </section>
+    <section id="minecraft-view" class="library-page section hidden" aria-labelledby="minecraft-heading">
+      <header class="library-hero surface">
+        <div class="library-hero-copy"><span class="eyebrow">MINECRAFT VERSION LIBRARY</span><h1 id="minecraft-heading" data-zh="探索每一个 Minecraft 版本" data-en="Explore every Minecraft version">探索每一个 Minecraft 版本</h1><p data-zh="聚合 Java 版与基岩版版本目录，支持正式版、测试版、版本搜索和下载信息查看。" data-en="Browse Java and Bedrock versions with release, testing, search, and download details.">聚合 Java 版与基岩版版本目录，支持正式版、测试版、版本搜索和下载信息查看。</p></div>
+        <div class="library-source-badge"><span class="material-symbols-rounded" aria-hidden="true">verified</span><span data-zh="数据来源" data-en="Sources">数据来源</span><strong id="minecraft-source-name">Mojang · MC版本库</strong></div>
+      </header>
+      <section class="library-controls surface" aria-label="Minecraft 版本筛选">
+        <div class="segmented-control" role="group" aria-label="游戏版本">
+          <button type="button" class="segment-button active" data-edition="java" data-no-icon>Java 版</button>
+          <button type="button" class="segment-button" data-edition="bedrock" data-no-icon>基岩版</button>
+        </div>
+        <div class="library-filter-grid">
+          <form class="library-search" id="minecraft-search-form"><label for="minecraft-search" data-zh="搜索版本" data-en="Search versions">搜索版本</label><div class="input-action-row"><input id="minecraft-search" type="search" autocomplete="off" placeholder="26.70、1.21.8…"><button class="filled-button" type="submit" data-no-icon data-zh="搜索" data-en="Search">搜索</button></div></form>
+          <label class="library-field" for="minecraft-channel"><span data-zh="版本通道" data-en="Release channel">版本通道</span><select id="minecraft-channel"><option value="all">全部版本</option><option value="release">正式版</option><option value="snapshot">测试版</option><option value="legacy">历史版本</option></select></label>
+          <label class="library-field hidden" id="minecraft-platform-field" for="minecraft-platform"><span data-zh="基岩版平台" data-en="Bedrock platform">基岩版平台</span><select id="minecraft-platform"><option value="windows">Windows</option><option value="android">Android APK</option></select></label>
+          <label class="library-field hidden" id="minecraft-build-field" for="minecraft-build"><span data-zh="构建类型" data-en="Build type">构建类型</span><select id="minecraft-build"><option value="">全部构建</option><option value="UWP">UWP</option><option value="GDK">GDK</option></select></label>
+        </div>
+        <div class="library-meta"><span id="minecraft-summary" aria-live="polite" data-zh="正在读取版本目录…" data-en="Loading version catalog…">正在读取版本目录…</span><a id="minecraft-source-link" href="https://www.mcappx.com/dev-docs/data-source/" target="_blank" rel="noopener" data-zh="查看数据接口" data-en="View data API">查看数据接口</a></div>
+      </section>
+      <div class="library-content-grid">
+        <section class="library-results surface" aria-labelledby="minecraft-results-heading"><div class="library-section-head"><div><span class="eyebrow">VERSIONS</span><h2 id="minecraft-results-heading" data-zh="版本列表" data-en="Version list">版本列表</h2></div><span id="minecraft-count" class="count-pill">0</span></div><div id="minecraft-list" class="version-list"><div class="library-loading" data-zh="正在连接版本数据源…" data-en="Connecting to the version source…">正在连接版本数据源…</div></div><nav id="minecraft-pagination" class="pagination library-pagination" aria-label="Minecraft 版本分页"></nav></section>
+        <aside id="minecraft-detail" class="library-detail surface" aria-live="polite"><span class="eyebrow">VERSION DETAIL</span><h2 data-zh="选择一个版本" data-en="Select a version">选择一个版本</h2><p data-zh="从左侧版本列表中选择版本以查看发布时间、构建类型、系统架构和下载信息。" data-en="Choose a version from the list to view its release date, build type, architectures, and downloads.">从左侧版本列表中选择版本以查看发布时间、构建类型、系统架构和下载信息。</p></aside>
+      </div>
+    </section>
+    <section id="mirrors-view" class="library-page section hidden" aria-labelledby="mirrors-heading">
+      <header class="library-hero mirror-hero surface">
+        <div class="library-hero-copy"><span class="eyebrow">OPEN SOURCE MIRROR LIBRARY</span><h1 id="mirrors-heading" data-zh="为你的系统找到更快的镜像" data-en="Find a faster mirror for your system">为你的系统找到更快的镜像</h1><p data-zh="按操作系统、发行版、版本与架构筛选，并比较四个国内公共镜像站。" data-en="Filter by operating system, distribution, version, and architecture across four public mirrors.">按操作系统、发行版、版本与架构筛选，并比较四个国内公共镜像站。</p></div>
+        <div class="library-source-badge"><span class="material-symbols-rounded" aria-hidden="true">public</span><span data-zh="覆盖镜像站" data-en="Mirrors">覆盖镜像站</span><strong>4</strong></div>
+      </header>
+      <section class="library-controls surface" aria-label="系统镜像筛选">
+        <div class="library-filter-grid mirror-filter-grid">
+          <label class="library-field" for="mirror-search"><span data-zh="搜索系统" data-en="Search systems">搜索系统</span><input id="mirror-search" type="search" placeholder="Ubuntu、Fedora、BSD…" autocomplete="off"></label>
+          <label class="library-field" for="mirror-type"><span data-zh="系统类型" data-en="System type">系统类型</span><select id="mirror-type"><option value="">全部类型</option><option value="linux">Linux</option><option value="bsd">BSD</option><option value="windows">Windows</option><option value="macos">macOS</option></select></label>
+          <label class="library-field" for="mirror-system"><span data-zh="系统名称" data-en="Distribution">系统名称</span><select id="mirror-system"></select></label>
+          <label class="library-field" for="mirror-version"><span data-zh="版本选择" data-en="Version">版本选择</span><select id="mirror-version"></select></label>
+          <label class="library-field" for="mirror-arch"><span data-zh="系统架构" data-en="Architecture">系统架构</span><select id="mirror-arch"></select></label>
+        </div>
+        <div class="library-meta"><span id="mirror-summary" aria-live="polite">正在读取镜像目录…</span><span data-zh="实时可用性由“检测”按钮按需查询" data-en="Use Check to verify live availability">实时可用性由“检测”按钮按需查询</span></div>
+      </section>
+      <div class="library-content-grid mirror-content-grid">
+        <section class="library-results surface" aria-labelledby="mirror-results-heading"><div class="library-section-head"><div><span class="eyebrow">MIRROR OPTIONS</span><h2 id="mirror-results-heading" data-zh="镜像选项" data-en="Mirror options">镜像选项</h2></div><span id="mirror-count" class="count-pill">4</span></div><div id="mirror-list" class="mirror-list"><div class="library-loading">正在读取镜像目录…</div></div></section>
+        <aside id="mirror-detail" class="library-detail surface mirror-detail" aria-live="polite"><span class="eyebrow">SYSTEM INFO</span><h2 data-zh="选择镜像站" data-en="Choose a mirror">选择镜像站</h2><p data-zh="选择左侧镜像站可复制目录地址、访问镜像主页或检查当前版本的实时可用性。" data-en="Choose a mirror to copy its directory URL, open the mirror, or check live availability.">选择左侧镜像站可复制目录地址、访问镜像主页或检查当前版本的实时可用性。</p></aside>
+      </div>
+    </section>
+    <section id="support-view" class="support-page section hidden" aria-labelledby="support-heading">
+      <div class="support-hero surface">
+        <div class="support-copy"><span class="eyebrow" id="support-eyebrow">BUY ME A COFFEE</span><h1 id="support-heading">如果这些内容帮到了你</h1><p id="support-body">你的支持会用于服务器维护、域名续费和持续创作。</p><div class="support-pills"><span><span class="material-symbols-rounded" aria-hidden="true">server</span><span data-zh="服务器维护" data-en="Hosting">服务器维护</span></span><span><span class="material-symbols-rounded" aria-hidden="true">edit_note</span><span data-zh="持续创作" data-en="Ongoing writing">持续创作</span></span><span><span class="material-symbols-rounded" aria-hidden="true">favorite</span><span data-zh="完全自愿" data-en="Always optional">完全自愿</span></span></div></div>
+        <div class="support-art" aria-hidden="true"><svg viewBox="0 0 360 260"><defs><linearGradient id="support-cup" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--primary)"/><stop offset="1" stop-color="var(--tertiary)"/></linearGradient></defs><rect x="18" y="18" width="324" height="224" rx="52" fill="var(--primary-container)"/><circle cx="278" cy="66" r="30" fill="var(--surface)" opacity=".72"/><path d="M76 96h166v54c0 49-34 79-83 79s-83-30-83-79Z" fill="url(#support-cup)"/><path d="M242 112h19c33 0 46 21 46 40s-16 42-46 42h-23" fill="none" stroke="var(--tertiary)" stroke-width="17" stroke-linecap="round"/><path d="M118 66c-19-18 18-25 0-43m56 43c-19-18 18-25 0-43" fill="none" stroke="var(--surface)" stroke-width="9" stroke-linecap="round" opacity=".86"/><path d="M96 208h142" stroke="var(--surface)" stroke-width="10" stroke-linecap="round" opacity=".58"/></svg></div>
+      </div>
+      <div class="support-grid">
+        <article class="support-method surface"><div class="support-method-head"><span class="support-brand-logo support-brand-alipay" role="img" aria-label="支付宝品牌标志"></span><div><span class="eyebrow">ALIPAY</span><h2>支付宝</h2></div></div><div class="support-qr" id="support-alipay-qr"><img id="support-alipay-image" class="hidden" alt="支付宝收款码"><div class="support-qr-empty" id="support-alipay-empty"><span class="material-symbols-rounded" aria-hidden="true">qr_code_2</span><p data-zh="管理员尚未配置支付宝收款码" data-en="Alipay payment QR has not been configured">管理员尚未配置支付宝收款码</p></div><a class="support-scan-hint hidden" id="support-alipay-hint" href="https://qr.alipay.com/fkx19643uecmszrdtiqgebb" target="_blank" rel="noopener"><span class="material-symbols-rounded" aria-hidden="true">qr_code_scanner</span><span data-zh="打开支付宝扫一扫" data-en="Open Alipay">打开支付宝扫一扫</span></a></div></article>
+        <article class="support-method surface"><div class="support-method-head"><span class="support-brand-logo support-brand-wechat" role="img" aria-label="微信品牌标志"></span><div><span class="eyebrow">WECHAT PAY</span><h2>微信支付</h2></div></div><div class="support-qr" id="support-wechat-qr"><img id="support-wechat-image" class="hidden" alt="微信收款码"><div class="support-qr-empty" id="support-wechat-empty"><span class="material-symbols-rounded" aria-hidden="true">qr_code_2</span><p data-zh="管理员尚未配置微信收款码" data-en="WeChat Pay QR has not been configured">管理员尚未配置微信收款码</p></div><a class="support-scan-hint hidden" id="support-wechat-hint" href="weixin://"><span class="material-symbols-rounded" aria-hidden="true">qr_code_scanner</span><span data-zh="打开微信扫一扫" data-en="Open WeChat">打开微信扫一扫</span></a></div></article>
+        <article class="support-method surface"><div class="support-method-head"><span class="support-brand-logo support-brand-paypal" role="img" aria-label="PayPal 品牌标志"></span><div><span class="eyebrow">PAYPAL</span><h2>PayPal</h2></div></div><div class="support-paypal-panel"><p data-zh="使用 PayPal 余额、银行卡或支持的本地支付方式，安全地向作者提供支持。" data-en="Support the author securely with PayPal balance, a card, or an eligible local payment method.">使用 PayPal 余额、银行卡或支持的本地支付方式，安全地向作者提供支持。</p><a class="filled-button hidden" id="support-paypal-link" href="#" target="_blank" rel="noopener" data-no-icon><span data-zh="前往 PayPal 捐款" data-en="Donate with PayPal">前往 PayPal 捐款</span><span aria-hidden="true">↗</span></a><div class="support-paypal-empty" id="support-paypal-empty"><span class="material-symbols-rounded" aria-hidden="true">link_off</span><p data-zh="管理员尚未配置 PayPal 收款链接" data-en="A PayPal donation link has not been configured">管理员尚未配置 PayPal 收款链接</p></div></div></article>
+      </div>
+      <p class="support-note" id="support-note">打赏完全自愿。感谢你的支持。</p>
+    </section>
+    <section id="friends-view" class="friends-page section hidden" aria-labelledby="friends-heading">
+      <header class="friends-hero surface">
+        <div class="friends-hero-copy"><span class="eyebrow">FRIEND LINKS</span><h1 id="friends-heading" data-zh="友情链接" data-en="Friend links">友情链接</h1><p data-zh="来自朋友们的独立博客与个人空间。交换链接，也交换持续创作的勇气。" data-en="Independent blogs and personal spaces from friends. Share links and the courage to keep creating.">来自朋友们的独立博客与个人空间。交换链接，也交换持续创作的勇气。</p></div>
+        <div class="friends-motion-art" aria-hidden="true"><svg viewBox="0 0 220 140" focusable="false"><defs><linearGradient id="friend-motion-gradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--primary)"/><stop offset="1" stop-color="var(--tertiary)"/></linearGradient></defs><rect x="12" y="8" width="196" height="124" rx="34" fill="var(--primary-container)" opacity=".82"/><path class="friend-network-line" d="M62 70C81 44 119 43 151 61M67 78C89 105 128 109 160 79" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round"/><g class="friend-orbit friend-orbit-a"><circle cx="55" cy="69" r="23" fill="url(#friend-motion-gradient)"/><circle cx="55" cy="63" r="7" fill="var(--surface)"/><path d="M42 83c2-9 8-13 13-13s12 4 14 13" fill="var(--surface)"/></g><g class="friend-orbit friend-orbit-b"><circle cx="165" cy="70" r="25" fill="var(--surface)"/><path d="M152 76l13-11 13 11v15a4 4 0 0 1-4 4h-18a4 4 0 0 1-4-4Z" fill="var(--primary)"/><path d="M158 80h14v-10h-14Z" fill="var(--tertiary)" opacity=".8"/></g><g class="friend-orbit friend-orbit-c"><circle cx="112" cy="38" r="17" fill="var(--surface)"/><path d="M103 38a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm9-5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="var(--primary)" fill-rule="evenodd"/></g><g class="friend-spark"><path d="M95 100l3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" fill="var(--tertiary)"/></g></svg></div>
+        <button class="filled-button" id="friend-apply-open" type="button" data-no-icon data-zh="申请友链" data-en="Apply for a link">申请友链</button>
+      </header>
+      <div class="friends-toolbar surface"><form class="library-search" id="friend-search-form" role="search" aria-label="搜索友情链接"><label for="friend-search" data-zh="搜索友链" data-en="Search friends">搜索友链</label><div class="input-action-row"><input id="friend-search" type="search" autocomplete="off" placeholder="名称、简介或域名"><button class="filled-button" type="submit" data-no-icon data-zh="搜索" data-en="Search">搜索</button></div></form><div class="friends-summary"><strong id="friend-count">0</strong><span data-zh="位朋友" data-en="friends">位朋友</span></div></div>
+      <div class="friend-grid" id="friend-grid"><div class="friend-loading" data-zh="正在读取友链…" data-en="Loading friends…">正在读取友链…</div></div>
+      <nav class="pagination friend-pagination" id="friend-pagination" aria-label="友链分页"></nav>
+    </section>
+    <section id="thoughts-view" class="thoughts-page section hidden" aria-labelledby="thoughts-heading">
+      <header class="thoughts-hero surface"><div class="thoughts-hero-copy"><span class="eyebrow">EVERYDAY MOMENTS</span><h1 id="thoughts-heading" data-zh="日常" data-en="Everyday">日常</h1><p data-zh="分享日常记录、拍照打卡、生活片段和此刻心情。" data-en="A diary of everyday moments, photo check-ins, life fragments, and current moods.">分享日常记录、拍照打卡、生活片段和此刻心情。</p></div><div class="thoughts-motion-art" aria-hidden="true"><svg viewBox="0 0 220 150" focusable="false"><defs><linearGradient id="thought-motion-gradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--primary-container)"/><stop offset="1" stop-color="color-mix(in srgb,var(--tertiary) 20%,var(--surface))"/></linearGradient></defs><g class="thought-paper"><path d="M44 30h122a16 16 0 0 1 16 16v73a16 16 0 0 1-16 16H44a16 16 0 0 1-16-16V46a16 16 0 0 1 16-16Z" fill="url(#thought-motion-gradient)" stroke="var(--primary)" stroke-opacity=".22"/><path d="M54 58h78M54 78h96M54 98h70" fill="none" stroke="var(--primary)" stroke-width="4" stroke-linecap="round" opacity=".7"/><circle cx="159" cy="98" r="18" fill="var(--surface)" opacity=".86"/><path d="M150 98h18M159 89v18" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round"/></g><g class="thought-pencil"><path d="M139 26l25 25-47 47-28 8 8-28Z" fill="var(--primary)"/><path d="m164 51 8-8a11 11 0 0 0-16-16l-8 8Z" fill="var(--tertiary)"/><path d="m89 106 12-4 5 5-9 7Z" fill="var(--surface)"/></g><g class="thought-bubble thought-bubble-a"><circle cx="35" cy="30" r="10" fill="var(--tertiary)" opacity=".7"/><circle cx="18" cy="15" r="5" fill="var(--primary)" opacity=".48"/></g><g class="thought-bubble thought-bubble-b"><circle cx="188" cy="123" r="8" fill="var(--primary)" opacity=".62"/><circle cx="205" cy="104" r="4" fill="var(--tertiary)" opacity=".58"/></g><path class="thought-spark" d="M190 23l3 8 8 3-8 3-3 8-3-8-8-3 8-3Z" fill="var(--tertiary)"/></svg></div></header>
+      <div class="thoughts-timeline" id="thoughts-list"><div class="friend-loading" data-zh="正在读取日常…" data-en="Loading everyday moments…">正在读取日常…</div></div>
+    </section>
+    <section id="about-view" class="about-band about-page hidden" aria-labelledby="about-heading">
+      <div class="about-hero">
+        <div class="about-identity">
+          <div class="about-person">
+            <div class="default-avatar about-avatar" id="about-avatar">S</div>
+            <img id="about-avatar-image" class="about-avatar hidden" alt="头像">
+            <div class="about-handle">
+              <strong id="about-name">星屿作者 · StarIsle</strong>
+              <span data-zh="折腾、记录，再把过程讲清楚" data-en="Tinkering, documenting, and explaining the process">折腾、记录，再把过程讲清楚</span>
+            </div>
+          </div>
+          <span class="eyebrow" id="about-eyebrow">ABOUT THIS JOURNAL</span>
+          <h1 id="about-heading">你好，我是星屿作者。</h1>
+          <div class="about-identity-rule" aria-hidden="true"><span></span><i></i></div>
+          <div class="about-traits" id="about-traits" aria-label="兴趣与生活标签">
+            <span data-zh="网站部署" data-en="Website deployment">网站部署</span>
+            <span data-zh="AI 应用" data-en="AI applications">AI 应用</span>
+            <span data-zh="系统刷写" data-en="OS tinkering">系统刷写</span>
+            <span data-zh="硬件拆解" data-en="Hardware teardown">硬件拆解</span>
+            <span data-zh="单片机烧录" data-en="Microcontroller flashing">单片机烧录</span>
+            <span data-zh="日常记录" data-en="Everyday notes">日常记录</span>
+            <span data-zh="吃遍天下" data-en="Taste the world">吃遍天下</span>
+          </div>
+        </div>
+        <div class="about-character-column">
+          <div class="about-character-stage" id="about-character-stage">
+            <div class="about-character" id="about-character" role="button" tabindex="0" aria-label="和紫发爱心角色互动" aria-describedby="about-character-hint">
+              <img id="about-character-fallback" class="about-character-fallback" alt="" aria-hidden="true">
+              <div class="about-character-frame-player" id="about-character-frame-player" role="img" aria-label="紫发星屿作者抱着紫色爱心的动态人物插画" data-frame-count="61" data-frame-columns="8" data-frame-rows="8"></div>
+              <span class="about-character-frame-glow" aria-hidden="true"></span>
+              <span class="about-character-bubble" aria-live="polite">
+                <span class="about-bubble-kicker" aria-hidden="true"><i></i><span data-zh="灵感便签" data-en="IDEA NOTES">灵感便签</span></span>
+                <span class="about-bubble-meta">
+                  <span class="about-bubble-avatar" aria-hidden="true">S</span>
+                  <span class="about-bubble-speaker">星屿作者 · StarIsle</span>
+                  <span class="about-bubble-status" data-zh="刚刚" data-en="now">刚刚</span>
+                </span>
+                <span class="about-bubble-copy">
+                  <span class="about-bubble-idle" data-zh="很高兴认识你" data-en="Nice to meet you">很高兴认识你</span>
+                  <span class="about-bubble-active hidden" id="about-bubble-active"></span>
+                </span>
+                <span class="about-bubble-hint" data-zh="点击继续聊天" data-en="Tap to keep chatting">点击继续聊天</span>
+              </span>
+              <span class="about-character-spark spark-a" aria-hidden="true">✦</span>
+              <span class="about-character-spark spark-b" aria-hidden="true">✦</span>
+            </div>
+          </div>
+          <div class="about-character-actions">
+            <button class="text-button about-greet-button" id="about-character-action" type="button" data-no-icon>
+              <span class="material-symbols-rounded" aria-hidden="true">waving_hand</span>
+              <span data-zh="打个招呼" data-en="Say hello">打个招呼</span>
+            </button>
+            <span class="about-character-hint" id="about-character-hint" data-zh="点击或轻触角色" data-en="Click or tap the character">点击或轻触角色</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content" id="about-body"></div>
+
+      <section class="about-platforms surface" aria-labelledby="about-platforms-title">
+        <div class="about-section-heading">
+          <div>
+            <span class="about-section-index" aria-hidden="true">02</span>
+            <span class="eyebrow">FIND ME ELSEWHERE</span>
+            <h2 id="about-platforms-title" data-zh="在各个地方碰面" data-en="Meet me elsewhere">在各个地方碰面</h2>
+          </div>
+          <p data-zh="技术折腾、视频、日常和公开代码。" data-en="Tech experiments, videos, everyday life, and public code.">技术折腾、视频、日常和公开代码。</p>
+        </div>
+        <div class="about-platform-grid">
+          <a class="about-platform" href="mailto:hello@example.invalid"><span class="about-platform-icon brand-email" aria-hidden="true"></span><span><strong data-zh="邮箱" data-en="Email">邮箱</strong><small>hello@example.invalid</small></span><span class="about-platform-arrow" aria-hidden="true">↗</span></a>
+          <a class="about-platform" href="https://example.com/video" target="_blank" rel="noopener"><span class="about-platform-icon brand-bilibili" aria-hidden="true"></span><span><strong data-zh="哔哩哔哩" data-en="Bilibili">哔哩哔哩</strong><small>@starisle</small></span><span class="about-platform-arrow" aria-hidden="true">↗</span></a>
+          <a class="about-platform" href="https://v.douyin.com/demoShort/" target="_blank" rel="noopener"><span class="about-platform-icon brand-douyin" aria-hidden="true"></span><span><strong data-zh="抖音" data-en="Douyin">抖音</strong><small data-zh="短视频与日常" data-en="Short videos & daily life">短视频与日常</small></span><span class="about-platform-arrow" aria-hidden="true">↗</span></a>
+          <a class="about-platform" href="https://example.com/social" target="_blank" rel="noopener"><span class="about-platform-icon brand-x" aria-hidden="true"></span><span><strong>X</strong><small>@starisle105</small></span><span class="about-platform-arrow" aria-hidden="true">↗</span></a>
+          <a class="about-platform" href="https://example.com/microblog" target="_blank" rel="noopener"><span class="about-platform-icon brand-weibo" aria-hidden="true"></span><span><strong data-zh="微博" data-en="Weibo">微博</strong><small data-zh="日常与动态" data-en="Everyday updates">日常与动态</small></span><span class="about-platform-arrow" aria-hidden="true">↗</span></a>
+          <a class="about-platform" href="https://github.com/examplea" target="_blank" rel="noopener"><span class="about-platform-icon brand-github" aria-hidden="true"></span><span><strong>GitHub</strong><small>@starislea</small></span><span class="about-platform-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="about-messages surface" aria-labelledby="about-messages-title">
+        <div class="about-section-heading about-messages-heading">
+          <div>
+            <span class="about-section-index" aria-hidden="true">03</span>
+            <span class="eyebrow">GUESTBOOK</span>
+            <h2 id="about-messages-title" data-zh="留句话再走吧" data-en="Leave a note">留句话再走吧</h2>
+          </div>
+          <span class="count-pill" id="about-comment-count">0</span>
+        </div>
+        <form class="comment-form" id="about-comment-form">
+          <textarea rows="2" maxlength="2000" placeholder="登录后留下你的留言"></textarea>
+          <div class="comment-image-previews" data-comment-image-previews></div>
+          <div class="comment-compose-actions">
+            <label class="comment-image-picker"><span class="material-symbols-rounded" aria-hidden="true">add_photo_alternate</span><span data-zh="添加图片 · 可点击或拖入" data-en="Add images · click or drop">添加图片</span><input class="hidden" type="file" accept="image/jpeg,image/png,image/gif,image/webp" data-comment-image-input multiple><input type="hidden" data-comment-image-urls></label>
+            <span class="comment-image-status" data-comment-image-status role="status"></span>
+            <button class="filled-button" type="submit" data-no-icon data-zh="发布留言" data-en="Post message">发布留言</button>
+          </div>
+        </form>
+        <div class="comment-list" id="about-comment-thread"></div>
+        <nav class="pagination comment-pagination" id="about-comment-pagination" aria-label="留言分页"></nav>
+      </section>
+    </section>
+
+    <section id="profile-page-view" class="profile-page-view section hidden" aria-labelledby="profile-page-title">
+      <header class="profile-page-hero">
+        <div><span class="eyebrow">ACCOUNT CENTER</span><h1 id="profile-page-title" data-zh="个人资料" data-en="Your profile">个人资料</h1><p data-zh="管理头像、个人介绍和第三方登录账号。" data-en="Manage your avatar, profile, and connected sign-in accounts.">管理头像、个人介绍和第三方登录账号。</p></div>
+        <a class="tonal-button profile-page-back" href="/" data-no-icon><span class="material-symbols-rounded" aria-hidden="true">arrow_back</span><span data-zh="返回首页" data-en="Back home">返回首页</span></a>
+      </header>
+      <div class="profile-page-content" id="profile-page-content"></div>
+    </section>
+    <section id="policy-page-view" class="policy-page-view section hidden" aria-labelledby="policy-page-title">
+      <header class="policy-page-hero surface">
+        <div><span class="eyebrow">LEGAL &amp; PRIVACY</span><h1 id="policy-page-title">法律条款与政策</h1><p class="policy-page-dates"><span data-zh="生效时间：" data-en="Effective: ">生效时间：</span><time id="policy-effective-date">—</time><span aria-hidden="true"> · </span><span data-zh="更新时间：" data-en="Updated: ">更新时间：</span><time id="policy-updated-date">—</time></p></div>
+        <a class="tonal-button" href="/" data-no-icon><span class="material-symbols-rounded" aria-hidden="true">arrow_back</span><span data-zh="返回首页" data-en="Back home">返回首页</span></a>
+      </header>
+      <article class="policy-page-content surface" id="policy-page-content"></article>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-main container">
+      <div class="footer-grid">
+        <section class="footer-column"><h2 data-zh="服务" data-en="Services">服务</h2><ul><li><a href="/articles" data-zh="全部文章" data-en="All stories">全部文章</a></li><li><a href="/archive" data-zh="文章归档" data-en="Archive">文章归档</a></li><li><a href="/thoughts" data-zh="日常" data-en="Everyday">日常</a></li><li><a href="/support" data-zh="投喂与支持" data-en="Support">投喂与支持</a></li></ul></section>
+        <section class="footer-column"><h2 data-zh="导航" data-en="Navigation">导航</h2><ul><li><a href="/" data-zh="首页" data-en="Home">首页</a></li><li><a href="/minecraft" data-zh="Minecraft 版本库" data-en="Minecraft versions">Minecraft 版本库</a></li><li><a href="/mirrors" data-zh="系统镜像库" data-en="System mirrors">系统镜像库</a></li><li><a href="/about" data-zh="关于本站" data-en="About">关于本站</a></li><li><a class="travellings-link footer-nav-travellings" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往—友链接力"><mdui-icon name="train" aria-hidden="true"></mdui-icon><span>开往</span></a></li></ul></section>
+        <section class="footer-column"><h2 data-zh="条款与政策" data-en="Legal">条款与政策</h2><ul><li><a href="/terms" data-zh="服务条款与条件" data-en="Terms &amp; Conditions">服务条款与条件</a></li><li><a href="/privacy" data-zh="隐私政策" data-en="Privacy Policy">隐私政策</a></li><li><a href="/cookies" data-zh="Cookie 政策" data-en="Cookie Policy">Cookie 政策</a></li><li><a href="/copyright" data-zh="版权声明" data-en="Copyright Notice">版权声明</a></li><li><a href="/disclaimer" data-zh="免责声明" data-en="Disclaimer">免责声明</a></li></ul></section>
+        <section class="footer-column footer-friends"><h2 data-zh="友链" data-en="Friends">友链</h2><div id="footer-friend-links" class="footer-friend-links"><a href="/friends" data-zh="浏览友链" data-en="Browse friends">浏览友链</a></div></section>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span id="copyright">© 2026 StarIsle</span>
+      <div class="footer-legal-meta" aria-label="许可与备案信息">
+        <a class="footer-meta-link footer-cc-license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="license noopener" title="Creative Commons BY-NC-SA 4.0" aria-label="Creative Commons BY-NC-SA 4.0 许可"><span class="footer-cc-icons" aria-hidden="true"><svg class="footer-cc-icon" viewBox="0 0 30 30" aria-hidden="true"><path d="M14.972 0c4.196 0 7.769 1.465 10.715 4.393A14.426 14.426 0 0128.9 9.228C29.633 11.04 30 12.964 30 15c0 2.054-.363 3.978-1.085 5.772a13.77 13.77 0 01-3.2 4.754 15.417 15.417 0 01-4.983 3.322A14.932 14.932 0 0114.973 30c-1.982 0-3.88-.38-5.692-1.14a15.087 15.087 0 01-4.875-3.293c-1.437-1.437-2.531-3.058-3.281-4.862A14.71 14.71 0 010 15c0-1.982.38-3.888 1.138-5.719a15.062 15.062 0 013.308-4.915C7.303 1.456 10.812 0 14.972 0zm.055 2.706c-3.429 0-6.313 1.196-8.652 3.589a12.896 12.896 0 00-2.72 4.031 11.814 11.814 0 00-.95 4.675c0 1.607.316 3.156.95 4.646a12.428 12.428 0 002.72 3.992 12.362 12.362 0 003.99 2.679c1.483.616 3.037.924 4.662.924 1.607 0 3.164-.312 4.675-.937a12.954 12.954 0 004.084-2.705c2.339-2.286 3.508-5.152 3.508-8.6 0-1.66-.304-3.231-.91-4.713a11.994 11.994 0 00-2.651-3.965c-2.412-2.41-5.314-3.616-8.706-3.616zm-.188 9.803l-2.01 1.045c-.215-.445-.477-.758-.79-.937-.312-.178-.602-.268-.87-.268-1.34 0-2.01.884-2.01 2.652 0 .803.17 1.446.509 1.928.34.482.84.724 1.5.724.876 0 1.492-.43 1.85-1.286l1.847.937a4.407 4.407 0 01-1.634 1.728c-.696.42-1.464.63-2.303.63-1.34 0-2.42-.41-3.242-1.233-.821-.82-1.232-1.964-1.232-3.428 0-1.428.416-2.562 1.246-3.401.83-.84 1.879-1.26 3.147-1.26 1.858 0 3.188.723 3.992 2.17zm8.652 0l-1.983 1.045c-.214-.445-.478-.758-.79-.937-.313-.178-.613-.268-.897-.268-1.34 0-2.01.884-2.01 2.652 0 .803.17 1.446.51 1.928.338.482.838.724 1.5.724.874 0 1.49-.43 1.847-1.286l1.875.937a4.606 4.606 0 01-1.66 1.728c-.696.42-1.455.63-2.277.63-1.357 0-2.441-.41-3.253-1.233-.814-.82-1.22-1.964-1.22-3.428 0-1.428.415-2.562 1.246-3.401.83-.84 1.879-1.26 3.147-1.26 1.857 0 3.18.723 3.965 2.17z" fill="currentColor"/></svg><svg class="footer-cc-icon" viewBox="0 0 30 30" aria-hidden="true"><path d="M14.973 0c4.213 0 7.768 1.446 10.66 4.34C28.544 7.25 30 10.803 30 15c0 4.215-1.43 7.723-4.287 10.526C22.678 28.51 19.098 30 14.973 30c-4.054 0-7.571-1.474-10.553-4.42C1.474 22.633 0 19.107 0 15S1.474 7.34 4.42 4.34C7.313 1.446 10.83 0 14.973 0zm.054 2.706c-3.41 0-6.295 1.196-8.652 3.589-2.447 2.5-3.67 5.402-3.67 8.706 0 3.321 1.214 6.196 3.642 8.624 2.429 2.429 5.322 3.642 8.679 3.642 3.339 0 6.25-1.222 8.732-3.67 2.358-2.267 3.536-5.133 3.536-8.598 0-3.41-1.197-6.311-3.589-8.705-2.392-2.392-5.285-3.588-8.678-3.588zm4.018 8.57v6.134H17.33v7.286h-4.66V17.41h-1.714v-6.134a.93.93 0 01.28-.683.933.933 0 01.684-.281h6.161c.25 0 .474.093.67.28a.912.912 0 01.294.684zM12.91 7.42c0-1.41.696-2.116 2.09-2.116s2.09.705 2.09 2.116c0 1.393-.697 2.09-2.09 2.09-1.393 0-2.09-.697-2.09-2.09z" fill="currentColor"/></svg><svg class="footer-cc-icon" viewBox="0 0 30 30" aria-hidden="true"><path d="M14.973 0c4.214 0 7.768 1.446 10.66 4.339C28.544 7.232 30 10.786 30 15c0 4.215-1.429 7.723-4.287 10.527C22.678 28.51 19.097 30 14.973 30c-4.072 0-7.59-1.482-10.553-4.446C1.474 22.607 0 19.09 0 15c0-4.107 1.474-7.66 4.42-10.66C7.313 1.446 10.83 0 14.973 0zM3.375 10.956c-.446 1.232-.67 2.58-.67 4.045 0 3.321 1.214 6.196 3.642 8.624 2.447 2.412 5.34 3.617 8.679 3.617 3.375 0 6.285-1.223 8.733-3.67.875-.839 1.561-1.714 2.061-2.626l-5.651-2.518a3.866 3.866 0 01-1.433 2.317c-.76.598-1.657.943-2.693 1.031v2.304h-1.74v-2.304c-1.661-.017-3.18-.615-4.554-1.794l2.063-2.089c.981.91 2.098 1.366 3.348 1.366.517 0 .96-.116 1.326-.349.366-.231.55-.615.55-1.151 0-.376-.135-.68-.402-.911l-1.447-.617-1.767-.804-2.384-1.044-7.661-3.427zm11.652-8.278c-3.41 0-6.295 1.206-8.652 3.616-.59.59-1.143 1.26-1.66 2.01l5.732 2.571a3.513 3.513 0 011.42-1.888c.695-.473 1.508-.737 2.437-.79V5.893h1.741v2.304c1.376.071 2.625.535 3.75 1.392L17.84 11.6c-.84-.59-1.697-.884-2.572-.884-.464 0-.88.09-1.245.267-.366.179-.55.483-.55.911 0 .125.045.25.134.375l1.902.858 1.313.59 2.41 1.07 7.687 3.429c.25-1.054.375-2.125.375-3.214 0-3.447-1.196-6.349-3.588-8.707-2.375-2.41-5.27-3.616-8.68-3.616z" fill="currentColor"/></svg><svg class="footer-cc-icon" viewBox="0 0 30 30" aria-hidden="true"><path d="M14.973 0c4.196 0 7.75 1.455 10.66 4.366C28.544 7.26 30 10.804 30 15c0 4.197-1.43 7.714-4.287 10.553C22.696 28.518 19.115 30 14.973 30c-4.054 0-7.571-1.473-10.553-4.42C1.474 22.634 0 19.108 0 15c0-4.088 1.474-7.633 4.42-10.633C7.33 1.455 10.848 0 14.973 0zm.054 2.706c-3.41 0-6.295 1.205-8.652 3.616-2.447 2.483-3.67 5.375-3.67 8.678 0 3.34 1.214 6.214 3.642 8.625 2.429 2.43 5.322 3.643 8.679 3.643 3.339 0 6.25-1.223 8.732-3.67 2.358-2.285 3.536-5.151 3.536-8.598 0-3.428-1.197-6.321-3.589-8.678-2.375-2.412-5.268-3.616-8.678-3.616zM8.33 12.884c.286-1.84 1.026-3.264 2.223-4.273 1.196-1.008 2.651-1.513 4.366-1.513 2.356 0 4.232.76 5.625 2.277 1.393 1.517 2.09 3.464 2.09 5.839 0 2.304-.724 4.219-2.17 5.745-1.447 1.526-3.321 2.29-5.626 2.29-1.696 0-3.16-.508-4.392-1.527-1.233-1.018-1.973-2.464-2.224-4.339H12c.09 1.822 1.187 2.733 3.295 2.733 1.053 0 1.902-.456 2.544-1.366.644-.91.965-2.126.965-3.643 0-1.59-.294-2.799-.883-3.63-.59-.83-1.437-1.245-2.545-1.245-2.001 0-3.126.884-3.375 2.651h1.098l-2.973 2.973-2.973-2.973H8.33z" fill="currentColor"/></svg></span></a>
+        <a class="footer-meta-link footer-registration-link" href="https://icp.gov.moe/?keyword=00000000" target="_blank" rel="noopener" aria-label="萌国 ICP 备案 00000000 号"><img class="footer-registration-icon" src="/moe-icp-icon.svg" width="16" height="16" alt=""><span>萌ICP备00000000号</span></a>
+        
+        <span class="footer-registration-pending" id="miit-icp-slot" aria-label="工信部 ICP 备案位置，待审批" data-zh="工信部 ICP 备案 · 待审批" data-en="MIIT ICP filing · Pending">工信部 ICP 备案 · 待审批</span>
+        <span class="footer-registration-pending" id="public-security-slot" aria-label="公安联网备案位置，待审批" data-zh="公安联网备案 · 待审批" data-en="Public security filing · Pending">公安联网备案 · 待审批</span>
+        <span id="footer-note">基于独立内容站点 · Material 3</span>
+      </div>
+      <div class="footer-policy-links"><a href="/terms" data-zh="条款" data-en="Terms">条款</a><a href="/privacy" data-zh="隐私" data-en="Privacy">隐私</a><a href="/cookies" data-zh="Cookie" data-en="Cookies">Cookie</a><a href="/copyright" data-zh="版权" data-en="Copyright">版权</a><a href="/disclaimer" data-zh="免责" data-en="Disclaimer">免责</a></div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="返回顶部" title="返回顶部" data-no-icon><mdui-icon name="arrow_upward"></mdui-icon></button>
+  <aside class="cookie-consent hidden" id="cookie-consent" role="dialog" aria-live="polite" aria-labelledby="cookie-consent-title">
+    <span class="cookie-consent-icon material-symbols-rounded" aria-hidden="true">cookie</span>
+    <div class="cookie-consent-copy"><strong id="cookie-consent-title" data-zh="Cookie 与本地存储" data-en="Cookies and local storage">Cookie 与本地存储</strong><p data-zh="本站使用必要的 Cookie 和本地存储维持登录状态与界面偏好。你可以查看 Cookie 政策了解详情。" data-en="This site uses essential cookies and local storage for sign-in and interface preferences. Read the Cookie Policy for details.">本站使用必要的 Cookie 和本地存储维持登录状态与界面偏好。你可以查看 Cookie 政策了解详情。</p></div>
+    <a class="text-button" href="/cookies" data-no-icon data-zh="Cookie 政策" data-en="Cookie Policy">Cookie 政策</a>
+    <div class="cookie-consent-actions"><button class="outlined-button" id="cookie-essential" type="button" data-no-icon data-zh="仅必要" data-en="Essential only">仅必要</button><button class="filled-button" id="cookie-accept" type="button" data-no-icon data-zh="接受" data-en="Accept">接受</button></div>
+  </aside>
+  <dialog class="reader-dialog account-dialog" id="account-dialog" aria-labelledby="account-dialog-title">
+    <div class="account-close-row"><button class="dialog-close" data-zh="关闭" data-en="Close" type="button" data-close data-icon="close">关闭</button></div>
+    <div id="account-forms">
+      <div class="account-tabs"><button class="account-tab active" data-zh="登录" data-en="Log in" type="button" data-mode="login" aria-pressed="true" data-icon="people">登录</button><button class="account-tab" data-zh="注册" data-en="Register" type="button" data-mode="register" aria-pressed="false" data-icon="person">注册</button></div>
+      <form id="user-login-form" novalidate><h2 id="account-dialog-title" data-zh="欢迎回来" data-en="Welcome back">欢迎回来</h2><label><span data-zh="用户名或邮箱" data-en="Username or email">用户名或邮箱</span><input name="identity" autocomplete="username" required></label><label><span data-zh="密码" data-en="Password">密码</span><input name="password" type="password" autocomplete="current-password" required></label><button class="forgot-password-button" id="forgot-password" type="button" data-no-icon data-zh="忘记密码？" data-en="Forgot password?">忘记密码？</button><button class="filled-button" data-zh="登录" data-en="Log in" data-icon="people">登录</button></form>
+      <label class="auth-agreement" id="login-agreement-row"><input type="checkbox" id="login-agreement"><span><span data-zh="我已阅读并同意" data-en="I have read and agree to the">我已阅读并同意</span> <a href="/terms" data-zh="服务条款与条件" data-en="Terms &amp; Conditions">服务条款与条件</a>、<a href="/privacy" data-zh="隐私政策" data-en="Privacy Policy">隐私政策</a>、<a href="/cookies" data-zh="Cookie 政策" data-en="Cookie Policy">Cookie 政策</a><span data-zh="和" data-en="and">和</span> <a href="/disclaimer" data-zh="免责声明" data-en="Disclaimer">免责声明</a></span></label>
+      <form id="user-register-form" class="hidden"><h2 id="register-dialog-title" data-zh="创建账号" data-en="Create an account">创建账号</h2><label><span data-zh="用户名" data-en="Username">用户名</span><input name="username" minlength="2" autocomplete="username" required></label><label><span data-zh="邮箱" data-en="Email">邮箱</span><input id="register-email" name="email" type="email" autocomplete="email" required></label><div class="email-code-row"><label><span data-zh="邮箱验证码" data-en="Email verification code">邮箱验证码</span><input name="email_code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" required></label><button class="tonal-button" data-zh="获取验证码" data-en="Get code" type="button" id="send-email-code" data-icon="send">获取验证码</button></div><label><span data-zh="密码" data-en="Password">密码</span><input name="password" type="password" minlength="8" autocomplete="new-password" required></label><div id="turnstile-widget"></div><button class="filled-button" data-zh="注册并登录" data-en="Register and log in" data-icon="people">注册并登录</button></form>
+      <form id="user-reset-form" class="hidden"><h2 id="reset-dialog-title" data-zh="重置密码" data-en="Reset password">重置密码</h2><p class="reset-password-note" data-zh="填写账号邮箱并获取验证码，验证通过后设置新密码。" data-en="Enter your account email, verify the code, and choose a new password.">填写账号邮箱并获取验证码，验证通过后设置新密码。</p><label><span data-zh="账号邮箱" data-en="Account email">账号邮箱</span><input id="reset-email" name="email" type="email" autocomplete="email" required></label><div class="email-code-row"><label><span data-zh="邮箱验证码" data-en="Email verification code">邮箱验证码</span><input name="email_code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" required></label><button class="tonal-button" data-zh="获取验证码" data-en="Get code" type="button" id="send-reset-code" data-icon="send">获取验证码</button></div><label><span data-zh="新密码" data-en="New password">新密码</span><input name="password" type="password" minlength="8" autocomplete="new-password" required></label><label><span data-zh="确认新密码" data-en="Confirm new password">确认新密码</span><input name="confirm_password" type="password" minlength="8" autocomplete="new-password" required></label><div id="reset-turnstile-widget"></div><button class="filled-button" data-zh="重置密码" data-en="Reset password" data-icon="save">重置密码</button><button class="text-button" id="reset-back-login" type="button" data-no-icon data-zh="返回登录" data-en="Back to log in">返回登录</button></form>
+      <label class="auth-agreement" id="register-agreement-row"><input type="checkbox" id="register-agreement"><span><span data-zh="我已阅读并同意" data-en="I have read and agree to the">我已阅读并同意</span> <a href="/terms" data-zh="服务条款与条件" data-en="Terms &amp; Conditions">服务条款与条件</a>、<a href="/privacy" data-zh="隐私政策" data-en="Privacy Policy">隐私政策</a>、<a href="/cookies" data-zh="Cookie 政策" data-en="Cookie Policy">Cookie 政策</a><span data-zh="和" data-en="and">和</span> <a href="/disclaimer" data-zh="免责声明" data-en="Disclaimer">免责声明</a></span></label>
+      <div class="oauth-login-panel" id="oauth-login-panel"><div class="oauth-login-divider"><span data-zh="或使用第三方账号" data-en="Or continue with">或使用第三方账号</span></div><div class="oauth-login-grid"><button class="oauth-login-button github" type="button" data-no-icon data-oauth-login="github" disabled aria-disabled="true"><span class="oauth-provider-mark github" aria-hidden="true"></span><span>GitHub</span></button><button class="oauth-login-button qq" type="button" data-no-icon data-oauth-login="qq" disabled aria-disabled="true"><span class="oauth-provider-mark qq" aria-hidden="true"></span><span>QQ</span></button></div><p class="oauth-consent-hint" data-zh="勾选上方协议后，才能继续使用第三方登录。" data-en="Accept the policies above to continue with a third-party account.">勾选上方协议后，才能继续使用第三方登录。</p></div>
+      <div role="alert" aria-live="polite" class="form-error" id="account-error" role="alert"></div><div class="email-code-status" id="email-code-status" role="status" aria-live="polite"></div>
+    </div>
+    <form id="profile-form" class="profile-page-form hidden"><h2 id="profile-dialog-title" data-zh="个人资料" data-en="Your profile">个人资料</h2><p class="moderation-note hidden" id="profile-moderation-status" role="status"></p><div class="profile-avatar-editor"><div class="profile-avatar-preview" id="profile-avatar-preview"><span id="profile-avatar-fallback">S</span><img id="profile-avatar-image" class="hidden" alt="用户头像"></div><div class="profile-avatar-copy"><strong data-zh="用户头像" data-en="Profile picture">用户头像</strong><p class="avatar-note" data-zh="支持 JPG、PNG、GIF 或 WebP，最大 4 MB。" data-en="JPG, PNG, GIF or WebP, up to 4 MB.">支持 JPG、PNG、GIF 或 WebP，最大 4 MB。</p><button class="tonal-button" id="choose-avatar" type="button" data-icon="upload" data-zh="选择头像" data-en="Choose picture">选择头像</button><input class="hidden" id="avatar-file" type="file" accept="image/jpeg,image/png,image/gif,image/webp"><span class="avatar-upload-status" id="avatar-upload-status" role="status" aria-live="polite"></span></div></div><label><span data-zh="个性签名" data-en="Bio">个性签名</span><input name="signature" maxlength="120"></label><label><span data-zh="性别" data-en="Gender">性别</span><select name="gender"><option value="保密" data-zh="保密" data-en="Prefer not to say">保密</option><option value="女" data-zh="女" data-en="Female">女</option><option value="男" data-zh="男" data-en="Male">男</option><option value="其他" data-zh="其他" data-en="Other">其他</option></select></label><label><span data-zh="生日" data-en="Birthday">生日</span><input type="date" name="birthday"></label><div class="form-error" id="profile-error" role="alert"></div><button class="filled-button" data-zh="保存资料" data-en="Save profile" data-icon="save">保存资料</button><button class="text-button" data-zh="退出登录" data-en="Log out" type="button" id="user-logout" data-icon="logout">退出登录</button><button class="text-button danger-text" data-zh="注销账号" data-en="Delete account" type="button" id="user-delete" data-icon="delete">注销账号</button><p class="avatar-note" data-zh="注销后，你的账号、评论和此账号的点赞记录将被永久删除。" data-en="Deleting your account permanently removes your account, comments, and likes.">注销后，你的账号、评论和此账号的点赞记录将被永久删除。</p></form>
+    <section class="oauth-account-settings hidden" id="oauth-account-settings" aria-labelledby="oauth-account-settings-title">
+      <div class="oauth-account-heading"><span class="eyebrow">CONNECTED ACCOUNTS</span><h3 id="oauth-account-settings-title" data-zh="已绑定账号" data-en="Connected accounts">已绑定账号</h3><p data-zh="绑定后可直接使用第三方账号登录。解绑不会删除邮箱账号。" data-en="Use these providers to sign in. Unbinding does not remove your email account.">绑定后可直接使用第三方账号登录。解绑不会删除邮箱账号。</p></div>
+      <div class="oauth-account-list">
+        <div class="oauth-account-row"><span class="oauth-provider-mark github" aria-hidden="true"></span><div><strong>GitHub</strong><small id="github-connection-status">未绑定</small></div><button class="tonal-button" type="button" data-no-icon data-oauth-account="github">绑定</button></div>
+        <div class="oauth-account-row"><span class="oauth-provider-mark qq" aria-hidden="true"></span><div><strong>QQ</strong><small id="qq-connection-status">未绑定</small></div><button class="tonal-button" type="button" data-no-icon data-oauth-account="qq">绑定</button></div>
+      </div>
+    </section>
+    <section id="public-profile-panel" class="public-profile-panel hidden" aria-live="polite">
+      <div class="public-profile-heading"><div class="profile-avatar-preview" id="public-profile-avatar"><span id="public-profile-fallback">U</span><img id="public-profile-image" class="hidden" alt="用户头像"></div><div><span class="eyebrow">USER PROFILE</span><h2 id="public-profile-name" data-zh="用户资料" data-en="User profile">用户资料</h2><p id="public-profile-signature" class="profile-signature"></p></div></div>
+      <div class="profile-status-row" id="public-profile-status"></div>
+      <dl class="profile-stats"><div><dt data-zh="加入时间" data-en="Joined">加入时间</dt><dd id="public-profile-joined">—</dd></div><div><dt data-zh="公开评论" data-en="Comments">公开评论</dt><dd id="public-profile-comments">0</dd></div></dl>
+      <div class="public-profile-actions"><button class="tonal-button" id="report-user-button" type="button" data-no-icon data-zh="举报用户" data-en="Report user">举报用户</button><button class="text-button" id="public-profile-close" type="button" data-no-icon data-zh="返回" data-en="Back">返回</button></div>
+      <p class="form-error" id="public-profile-error" role="alert"></p>
+    </section>
+  </dialog>
+  <dialog class="reader-dialog account-dialog oauth-bind-dialog" id="oauth-bind-dialog" aria-labelledby="oauth-bind-title">
+  <form class="oauth-bind-form" id="oauth-bind-form">
+    <div class="account-close-row"><button class="dialog-close" type="button" id="oauth-bind-cancel" aria-label="取消绑定" data-no-icon>×</button></div>
+    <span class="eyebrow">FIRST-TIME SIGN IN</span><h2 id="oauth-bind-title" data-zh="绑定邮箱账号" data-en="Bind an email account">绑定邮箱账号</h2>
+    <p class="reset-password-note" id="oauth-bind-intro">首次使用第三方账号登录，需要验证邮箱并与现有账号关联。</p>
+    <input type="hidden" name="oauth_token" id="oauth-bind-token">
+    <label><span data-zh="邮箱" data-en="Email">邮箱</span><input id="oauth-bind-email" name="email" type="email" autocomplete="email" required></label>
+    <div class="email-code-row"><label><span data-zh="邮箱验证码" data-en="Email verification code">邮箱验证码</span><input id="oauth-bind-code" name="email_code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" required></label><button class="tonal-button" data-zh="获取验证码" data-en="Get code" type="button" id="send-oauth-code" data-no-icon>获取验证码</button></div>
+    <div class="oauth-bind-turnstile" id="oauth-bind-turnstile-widget"></div>
+    <p class="avatar-note" data-zh="邮箱已注册时会绑定到原账号；未注册时会创建新的邮箱账号。验证码 10 分钟内有效。" data-en="If the email is registered, the provider is linked to that account. Otherwise a new email account is created. The code expires in 10 minutes.">邮箱已注册时会绑定到原账号；未注册时会创建新的邮箱账号。验证码 10 分钟内有效。</p>
+    <div class="form-error" id="oauth-bind-status" role="alert" aria-live="polite"></div>
+    <button class="filled-button" type="submit" data-no-icon data-zh="验证并继续" data-en="Verify and continue">验证并继续</button>
+  </form>
+  </dialog>
+  <dialog class="reader-dialog account-dialog report-dialog" id="report-dialog" aria-labelledby="report-dialog-title">
+    <div class="account-close-row"><button class="dialog-close" type="button" data-report-close aria-label="关闭举报窗口" data-icon="close"></button></div>
+    <form id="report-form"><span class="eyebrow">COMMUNITY SAFETY</span><h2 id="report-dialog-title" data-zh="提交举报" data-en="Submit a report">提交举报</h2><p class="report-intro" data-zh="举报无需登录。请选择最符合的原因，管理员会查看相关内容并对违规账号进行处置。" data-en="No login is required. Choose the closest reason and an administrator will review the content.">举报无需登录。请选择最符合的原因，管理员会查看相关内容并对违规账号进行处置。</p><input id="report-target-type" type="hidden"><input id="report-target-id" type="hidden"><label><span data-zh="举报原因" data-en="Reason">举报原因</span><select id="report-reason" required><option value="" data-zh="请选择" data-en="Choose one">请选择</option><option value="spam" data-zh="垃圾信息或广告" data-en="Spam or advertising">垃圾信息或广告</option><option value="harassment" data-zh="骚扰或攻击" data-en="Harassment or abuse">骚扰或攻击</option><option value="hate" data-zh="仇恨言论" data-en="Hate speech">仇恨言论</option><option value="privacy" data-zh="泄露隐私" data-en="Privacy violation">泄露隐私</option><option value="impersonation" data-zh="冒充他人" data-en="Impersonation">冒充他人</option><option value="other" data-zh="其他违规行为" data-en="Other violation">其他违规行为</option></select></label><label><span data-zh="补充说明（可选）" data-en="Additional details (optional)">补充说明（可选）</span><textarea id="report-details" rows="4" maxlength="1000" placeholder="请描述具体问题，帮助管理员判断。"></textarea></label><div class="report-form-actions"><button class="filled-button" type="submit" data-no-icon><span data-zh="提交举报" data-en="Submit report">提交举报</span></button><button class="text-button" type="button" data-report-close data-no-icon><span data-zh="取消" data-en="Cancel">取消</span></button></div><p class="form-error" id="report-status" role="status" aria-live="polite"></p></form>
+  </dialog>
+  <dialog class="reader-dialog account-dialog friend-application-dialog" id="friend-application-dialog" aria-labelledby="friend-application-title">
+    <div class="account-close-row"><button class="dialog-close" type="button" data-friend-close aria-label="关闭友链申请窗口" data-icon="close"></button></div>
+    <form id="friend-application-form"><span class="eyebrow">FRIEND APPLICATION</span><h2 id="friend-application-title" data-zh="申请友情链接" data-en="Apply for a friend link">申请友情链接</h2><p class="report-intro" data-zh="管理员审批通过后，你的网站会显示在友链页面。请先在自己的网站上添加本站链接。" data-en="Your site will appear after approval. Please add this site to your own friend links first.">管理员审批通过后，你的网站会显示在友链页面。请先在自己的网站上添加本站链接。</p><label><span data-zh="网站名称" data-en="Site name">网站名称</span><input name="name" maxlength="80" required></label><label><span data-zh="网站地址" data-en="Website URL">网站地址</span><input name="url" type="url" maxlength="500" placeholder="https://example.com" required></label><label><span data-zh="联系邮箱" data-en="Contact email">联系邮箱</span><input name="email" type="email" maxlength="254" required></label><label><span data-zh="头像地址（可选）" data-en="Avatar URL (optional)">头像地址（可选）</span><input name="avatar" type="url" maxlength="1000" placeholder="https://example.com/avatar.png"></label><label><span data-zh="网站简介（可选）" data-en="Description (optional)">网站简介（可选）</span><textarea name="description" rows="3" maxlength="240" placeholder="用一两句话介绍你的网站"></textarea></label><p class="friend-privacy-note" data-zh="联系邮箱仅用于管理员核对友链申请，不会公开显示。" data-en="Your contact email is visible only to administrators for review.">联系邮箱仅用于管理员核对友链申请，不会公开显示。</p><div class="report-form-actions"><button class="filled-button" type="submit" data-no-icon data-zh="提交申请" data-en="Submit application">提交申请</button><button class="text-button" type="button" data-friend-close data-no-icon data-zh="取消" data-en="Cancel">取消</button></div><p class="form-error" id="friend-application-status" role="status" aria-live="polite"></p></form>
+  </dialog>
+  <dialog class="reader-dialog travellings-dialog" id="travellings-dialog" aria-labelledby="travellings-dialog-title">
+    <div class="travellings-dialog-icon" aria-hidden="true"><mdui-icon name="train"></mdui-icon></div>
+    <span class="eyebrow">TRAVELLINGS · NEXT STOP</span>
+    <h2 id="travellings-dialog-title">即将前往下一站</h2>
+    <p>正在准备前往“开往”友链专列。倒计时结束后，将在当前标签页进入下一站。</p>
+    <div class="travellings-countdown" id="travellings-countdown" role="progressbar" aria-label="开往跳转倒计时" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span id="travellings-countdown-bar"></span></div>
+    <div class="travellings-countdown-copy"><strong id="travellings-countdown-seconds">5</strong><span>秒后出发</span></div>
+    <p class="travellings-disclaimer">温馨提示：本站不保证跳转后网站的安全性、内容准确性与持续可用性。请在访问第三方网站时自行判断，并注意保护个人信息。</p>
+    <div class="travellings-dialog-actions"><button class="text-button" id="travellings-cancel" type="button" data-no-icon>留在本站</button><button class="filled-button" id="travellings-continue" type="button" data-no-icon>立即前往</button></div>
+  </dialog>
+  <script src="/icons.js?v=20261105m"></script><script src="/material-select.js?v=20261104b"></script><script src="/solar.js?v=20261105-theme-roles"></script><script src="/app.js?v=20261106-character-video"></script>
+</body>
+</html>
+
+
+

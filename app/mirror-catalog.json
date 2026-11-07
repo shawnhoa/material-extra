@@ -1,0 +1,10 @@
+{
+  "mirrors": [
+    {"id":"northstar","name":"Northstar Mirror","base":"https://mirror.example.invalid"},
+    {"id":"paperplane","name":"Paperplane Mirror","base":"https://mirror2.example.invalid"}
+  ],
+  "systems": [
+    {"id":"aurora","name":"Aurora Linux","type":"linux","path":"{version}/{arch}/","versions":[{"id":"rolling","name":"Rolling","codename":"rolling"}],"architectures":[{"id":"x86_64","name":"x86_64","token":"x86_64"},{"id":"arm64","name":"ARM64","token":"aarch64"}]},
+    {"id":"harbor","name":"Harbor BSD","type":"bsd","path":"{version}/{arch}/","versions":[{"id":"14","name":"14","codename":"stable"}],"architectures":[{"id":"x86_64","name":"x86_64","token":"amd64"}]}
+  ]
+}

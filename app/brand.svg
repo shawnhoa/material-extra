@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Star Isle Notes</title>
+  <rect width="128" height="128" rx="28" fill="#52688f"/>
+  <path d="m64 18 10.7 28.3L104 36 93.7 64l28.3 10.7L93.7 85.3 104 113 74.7 102.7 64 131 53.3 102.7 24 113l10.3-27.7L6 74.7 34.3 64 24 36l29.3 10.3L64 18Z" fill="#f3d18b" transform="translate(0 -10)"/>
+  <circle cx="64" cy="64" r="16" fill="#fff8e7"/>
+</svg>

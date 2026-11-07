@@ -1,10 +1,8 @@
 #!/usr/bin/env sh
 set -eu
-
-cd "$(dirname "$0")"
-command -v node >/dev/null 2>&1 || {
-  echo "Node.js 18 or newer is required." >&2
-  exit 1
-}
-
-exec node scripts/serve.mjs
+export DATA_DIR="${DATA_DIR:-./data}"
+export PORT="${PORT:-8080}"
+export ADMIN_PORT="${ADMIN_PORT:-8081}"
+if [ -f .env ]; then set -a; . ./.env; set +a; fi
+mkdir -p "$DATA_DIR"
+exec python3 app/blog.py

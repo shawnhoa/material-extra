@@ -1,0 +1,698 @@
+[
+  {
+    "key": "lichun",
+    "label": "立春",
+    "label_en": "Beginning of Spring",
+    "title": "春天从一枚新芽开始",
+    "title_en": "Spring begins with a single bud",
+    "description": "把好奇种下，让新的故事慢慢生长。",
+    "description_en": "Plant a little curiosity and give new stories room to grow.",
+    "season": "spring",
+    "animation": "lichun",
+    "palette": {
+      "sky1": "#e2f4cf",
+      "sky2": "#a9d8be",
+      "back": "#7aa78a",
+      "front": "#397761",
+      "sun": "#ffdc8a",
+      "accent": "#32694d"
+    }
+  },
+  {
+    "key": "yushui",
+    "label": "雨水",
+    "label_en": "Rain Water",
+    "title": "听雨落下，等万物醒来",
+    "title_en": "Listen to the rain, wait for the world to wake",
+    "description": "雨丝轻叩窗沿，思绪也有了清新的回声。",
+    "description_en": "Rain taps the window and gives each thought a fresh echo.",
+    "season": "spring",
+    "animation": "yushui",
+    "palette": {
+      "sky1": "#d8edf3",
+      "sky2": "#9bc5d3",
+      "back": "#6aada3",
+      "front": "#3e7f7a",
+      "sun": "#e6e8b9",
+      "accent": "#356b7e"
+    }
+  },
+  {
+    "key": "jingzhe",
+    "label": "惊蛰",
+    "label_en": "Awakening of Insects",
+    "title": "春雷之后，灵感苏醒",
+    "title_en": "After spring thunder, ideas awaken",
+    "description": "藏了一冬的念头，开始闪烁自己的微光。",
+    "description_en": "Ideas tucked away all winter begin to glow.",
+    "season": "spring",
+    "animation": "jingzhe",
+    "palette": {
+      "sky1": "#cfe4d2",
+      "sky2": "#8ab7ac",
+      "back": "#739c73",
+      "front": "#386a56",
+      "sun": "#f7d984",
+      "accent": "#526b36"
+    }
+  },
+  {
+    "key": "chunfen",
+    "label": "春分",
+    "label_en": "Spring Equinox",
+    "title": "把日光与心事平分",
+    "title_en": "Share the day between light and thought",
+    "description": "燕子掠过晴空，忙碌和留白恰好平衡。",
+    "description_en": "Swallows cross a bright sky; work and quiet find their balance.",
+    "season": "spring",
+    "animation": "chunfen",
+    "palette": {
+      "sky1": "#d8f2ec",
+      "sky2": "#a5d6d4",
+      "back": "#84b59e",
+      "front": "#4d8d79",
+      "sun": "#f5ce83",
+      "accent": "#2b7167"
+    }
+  },
+  {
+    "key": "qingming",
+    "label": "清明",
+    "label_en": "Pure Brightness",
+    "title": "风清景明，且行且记",
+    "title_en": "Clear skies, small walks, lasting notes",
+    "description": "柳枝轻摆，把沿途值得记住的事写下来。",
+    "description_en": "Willow branches sway; write down the things worth keeping.",
+    "season": "spring",
+    "animation": "qingming",
+    "palette": {
+      "sky1": "#e0ede4",
+      "sky2": "#accbc0",
+      "back": "#82a58b",
+      "front": "#55775b",
+      "sun": "#f3dfaa",
+      "accent": "#486c56"
+    }
+  },
+  {
+    "key": "guyu",
+    "label": "谷雨",
+    "label_en": "Grain Rain",
+    "title": "一场雨，养出新的答案",
+    "title_en": "A little rain brings new answers",
+    "description": "茶芽与细雨相逢，让想法慢慢舒展。",
+    "description_en": "Tea shoots meet fine rain and thoughts slowly unfurl.",
+    "season": "spring",
+    "animation": "guyu",
+    "palette": {
+      "sky1": "#dcebd2",
+      "sky2": "#a4c7a6",
+      "back": "#72966d",
+      "front": "#3c694e",
+      "sun": "#eed49a",
+      "accent": "#4f7040"
+    }
+  },
+  {
+    "key": "lixia",
+    "label": "立夏",
+    "label_en": "Beginning of Summer",
+    "title": "夏天来信，绿意正浓",
+    "title_en": "Summer arrives in a letter of green",
+    "description": "荷叶接住微风，日常开始有了明亮的节奏。",
+    "description_en": "Lotus leaves catch the breeze as everyday life finds a brighter rhythm.",
+    "season": "summer",
+    "animation": "lixia",
+    "palette": {
+      "sky1": "#d2efe1",
+      "sky2": "#84c8bd",
+      "back": "#64a491",
+      "front": "#327568",
+      "sun": "#ffdf88",
+      "accent": "#267464"
+    }
+  },
+  {
+    "key": "xiaoman",
+    "label": "小满",
+    "label_en": "Grain Buds",
+    "title": "小得盈满，刚刚好",
+    "title_en": "Just enough is a lovely kind of plenty",
+    "description": "麦穗渐满，给正在成长的事多一点耐心。",
+    "description_en": "Grain fills the ears; give growing things a little more time.",
+    "season": "summer",
+    "animation": "xiaoman",
+    "palette": {
+      "sky1": "#edf1c4",
+      "sky2": "#bfd28d",
+      "back": "#92ae65",
+      "front": "#657d37",
+      "sun": "#f5d76e",
+      "accent": "#61732c"
+    }
+  },
+  {
+    "key": "mangzhong",
+    "label": "芒种",
+    "label_en": "Grain in Ear",
+    "title": "种下热爱，收获日常",
+    "title_en": "Sow what you love, gather everyday moments",
+    "description": "金色麦浪之间，把认真留给眼前的小事。",
+    "description_en": "Between golden waves of wheat, give small things your full attention.",
+    "season": "summer",
+    "animation": "mangzhong",
+    "palette": {
+      "sky1": "#fff0c7",
+      "sky2": "#dfce87",
+      "back": "#b6ad61",
+      "front": "#8c813c",
+      "sun": "#f4bb60",
+      "accent": "#816127"
+    }
+  },
+  {
+    "key": "xiazhi",
+    "label": "夏至",
+    "label_en": "Summer Solstice",
+    "title": "把最长的日光留给热爱",
+    "title_en": "Give the longest daylight to what you love",
+    "description": "太阳沿着长长的弧线，照亮尚未写完的故事。",
+    "description_en": "The sun takes a long arc across stories still being written.",
+    "season": "summer",
+    "animation": "xiazhi",
+    "palette": {
+      "sky1": "#fff0bc",
+      "sky2": "#f3cd82",
+      "back": "#91b997",
+      "front": "#568d70",
+      "sun": "#ffc653",
+      "accent": "#90611f"
+    }
+  },
+  {
+    "key": "xiaoshu",
+    "label": "小暑",
+    "label_en": "Minor Heat",
+    "title": "荷风送来一段清凉",
+    "title_en": "A lotus breeze brings a cooler moment",
+    "description": "听水面轻响，让思绪在盛夏也保持轻盈。",
+    "description_en": "Listen to the water and keep your thoughts light through summer.",
+    "season": "summer",
+    "animation": "xiaoshu",
+    "palette": {
+      "sky1": "#d5efe9",
+      "sky2": "#8ec9cf",
+      "back": "#76afa3",
+      "front": "#3e7f78",
+      "sun": "#f4d991",
+      "accent": "#2d707e"
+    }
+  },
+  {
+    "key": "dashu",
+    "label": "大暑",
+    "label_en": "Major Heat",
+    "title": "盛夏深处，慢一点也好",
+    "title_en": "At the height of summer, take your time",
+    "description": "热浪轻晃，云影缓行，给日常留一口清风。",
+    "description_en": "Heat shimmers and clouds drift; leave a little room for a breeze.",
+    "season": "summer",
+    "animation": "dashu",
+    "palette": {
+      "sky1": "#ffe0b5",
+      "sky2": "#efb07f",
+      "back": "#9aa872",
+      "front": "#657b56",
+      "sun": "#ffb552",
+      "accent": "#a05c33"
+    }
+  },
+  {
+    "key": "liqiu",
+    "label": "立秋",
+    "label_en": "Beginning of Autumn",
+    "title": "一片叶子，先替秋天落笔",
+    "title_en": "A single leaf starts autumn's story",
+    "description": "暑意未尽，风里已经藏着新的篇章。",
+    "description_en": "Summer lingers, but the wind already carries a new chapter.",
+    "season": "autumn",
+    "animation": "liqiu",
+    "palette": {
+      "sky1": "#f8e2be",
+      "sky2": "#d5b98a",
+      "back": "#b49b69",
+      "front": "#8b784f",
+      "sun": "#f6c06d",
+      "accent": "#89612f"
+    }
+  },
+  {
+    "key": "chushu",
+    "label": "处暑",
+    "label_en": "End of Heat",
+    "title": "暑气渐退，心绪舒展",
+    "title_en": "As the heat fades, let your thoughts open",
+    "description": "流云慢慢散开，把清爽留给下一段旅程。",
+    "description_en": "Clouds slowly part and leave a clearer path for what comes next.",
+    "season": "autumn",
+    "animation": "chushu",
+    "palette": {
+      "sky1": "#ddece9",
+      "sky2": "#adcacb",
+      "back": "#9cb59b",
+      "front": "#6f8d75",
+      "sun": "#efce94",
+      "accent": "#547879"
+    }
+  },
+  {
+    "key": "bailu",
+    "label": "白露",
+    "label_en": "White Dew",
+    "title": "清晨的露，照见小小世界",
+    "title_en": "Morning dew holds a tiny world",
+    "description": "在草叶上的一滴光里，发现日常的细节。",
+    "description_en": "Find the details of everyday life in a drop of light on a blade of grass.",
+    "season": "autumn",
+    "animation": "bailu",
+    "palette": {
+      "sky1": "#e6eff0",
+      "sky2": "#b7d2d4",
+      "back": "#98afa1",
+      "front": "#6b8e7e",
+      "sun": "#f3d5a2",
+      "accent": "#50767a"
+    }
+  },
+  {
+    "key": "qiufen",
+    "label": "秋分",
+    "label_en": "Autumn Equinox",
+    "title": "一半丰盈，一半留白",
+    "title_en": "Half a season of plenty, half a page of quiet",
+    "description": "把收获收好，也把安静的时间留给自己。",
+    "description_en": "Keep what the season has given and save a little quiet for yourself.",
+    "season": "autumn",
+    "animation": "qiufen",
+    "palette": {
+      "sky1": "#f6e5cf",
+      "sky2": "#d8b49a",
+      "back": "#b29c77",
+      "front": "#846b50",
+      "sun": "#edb45d",
+      "accent": "#8c5738"
+    }
+  },
+  {
+    "key": "hanlu",
+    "label": "寒露",
+    "label_en": "Cold Dew",
+    "title": "露凉风轻，适合静读",
+    "title_en": "Cool dew and a light breeze, a day for reading",
+    "description": "薄雾穿过山谷，文字在清凉里慢慢沉淀。",
+    "description_en": "Mist crosses the valley while words settle into the cool air.",
+    "season": "autumn",
+    "animation": "hanlu",
+    "palette": {
+      "sky1": "#dbe7ed",
+      "sky2": "#a9bdcd",
+      "back": "#8a9f9d",
+      "front": "#58757b",
+      "sun": "#e4ceaa",
+      "accent": "#4f687f"
+    }
+  },
+  {
+    "key": "shuangjiang",
+    "label": "霜降",
+    "label_en": "Frost's Descent",
+    "title": "霜落枝头，故事有了轮廓",
+    "title_en": "Frost touches the branches and stories take shape",
+    "description": "银白描过叶缘，让纷杂的想法变得清晰。",
+    "description_en": "Silver traces the leaves and brings scattered thoughts into focus.",
+    "season": "autumn",
+    "animation": "shuangjiang",
+    "palette": {
+      "sky1": "#e8e8ef",
+      "sky2": "#bac4d4",
+      "back": "#a0a8a6",
+      "front": "#737b86",
+      "sun": "#f0d3b0",
+      "accent": "#686b85"
+    }
+  },
+  {
+    "key": "lidong",
+    "label": "立冬",
+    "label_en": "Beginning of Winter",
+    "title": "冬日有光，故事在屋里继续",
+    "title_en": "Winter light, and stories inside",
+    "description": "窗内灯火渐暖，为安静的时光添一点温度。",
+    "description_en": "A warm window adds a little comfort to the quieter hours.",
+    "season": "winter",
+    "animation": "lidong",
+    "palette": {
+      "sky1": "#dbe4ed",
+      "sky2": "#a7bacd",
+      "back": "#91a6ad",
+      "front": "#566e83",
+      "sun": "#ffd9a0",
+      "accent": "#5a6c85"
+    }
+  },
+  {
+    "key": "xiaoxue",
+    "label": "小雪",
+    "label_en": "Minor Snow",
+    "title": "第一场雪，轻轻落在日常里",
+    "title_en": "The first snow falls softly into everyday life",
+    "description": "细雪缓缓飘落，把世界的声音调低一点。",
+    "description_en": "Small snowflakes fall and turn the world's volume down.",
+    "season": "winter",
+    "animation": "xiaoxue",
+    "palette": {
+      "sky1": "#e8edf5",
+      "sky2": "#b6cce1",
+      "back": "#a6bbc8",
+      "front": "#6c8da5",
+      "sun": "#f6dbb5",
+      "accent": "#567b9d"
+    }
+  },
+  {
+    "key": "daxue",
+    "label": "大雪",
+    "label_en": "Major Snow",
+    "title": "雪落成诗，慢读一整个冬天",
+    "title_en": "Snow turns to verse; read slowly through winter",
+    "description": "远山渐白，故事在一层层雪色里安静展开。",
+    "description_en": "Distant hills turn white as stories unfold through layers of snow.",
+    "season": "winter",
+    "animation": "daxue",
+    "palette": {
+      "sky1": "#e9eff7",
+      "sky2": "#a7c0d9",
+      "back": "#9ab3cc",
+      "front": "#5b7d9b",
+      "sun": "#f5d7a5",
+      "accent": "#4c7098"
+    }
+  },
+  {
+    "key": "dongzhi",
+    "label": "冬至",
+    "label_en": "Winter Solstice",
+    "title": "长夜尽头，总有一盏暖灯",
+    "title_en": "A warm light waits at the end of the longest night",
+    "description": "白昼虽短，团聚与希望可以很长。",
+    "description_en": "The day may be short; togetherness and hope need not be.",
+    "season": "winter",
+    "animation": "dongzhi",
+    "palette": {
+      "sky1": "#c8d4e6",
+      "sky2": "#839cbe",
+      "back": "#7892ac",
+      "front": "#405775",
+      "sun": "#ffd18b",
+      "accent": "#626295"
+    }
+  },
+  {
+    "key": "xiaohan",
+    "label": "小寒",
+    "label_en": "Minor Cold",
+    "title": "岁寒天清，把热爱慢慢写",
+    "title_en": "Clear cold days, and time to write what you love",
+    "description": "冰枝映着微光，心里的温度不必随风降低。",
+    "description_en": "Ice catches a little light; keep the things you love warm.",
+    "season": "winter",
+    "animation": "xiaohan",
+    "palette": {
+      "sky1": "#d9eaf1",
+      "sky2": "#9cbfd4",
+      "back": "#8fb1c0",
+      "front": "#587f99",
+      "sun": "#e9dab6",
+      "accent": "#3f718c"
+    }
+  },
+  {
+    "key": "dahan",
+    "label": "大寒",
+    "label_en": "Major Cold",
+    "title": "寒意深处，等一枝梅开",
+    "title_en": "Deep in the cold, wait for a plum blossom",
+    "description": "最冷的时节里，新的春天已经悄悄准备。",
+    "description_en": "In the coldest days, a new spring is already taking shape.",
+    "season": "winter",
+    "animation": "dahan",
+    "palette": {
+      "sky1": "#dce1ed",
+      "sky2": "#9babc8",
+      "back": "#8d9eb6",
+      "front": "#52647f",
+      "sun": "#f1c4c3",
+      "accent": "#7c587a"
+    }
+  },
+  {
+    "key": "spring-festival",
+    "label": "春节",
+    "label_en": "Spring Festival",
+    "title": "灯火团圆，新岁启程",
+    "title_en": "Lanterns, reunions, and a new year begins",
+    "description": "红灯映雪，烟花照亮归家的路，把新岁的祝愿写进第一页。",
+    "description_en": "Red lanterns glow through the snow as fireworks light the road home.",
+    "season": "winter",
+    "category": "traditional",
+    "animation": "spring-festival",
+    "palette": {
+      "sky1": "#6f1722",
+      "sky2": "#c74739",
+      "back": "#9d332f",
+      "front": "#63262b",
+      "sun": "#ffd77e",
+      "accent": "#d83b34"
+    }
+  },
+  {
+    "key": "lantern-festival",
+    "label": "元宵节",
+    "label_en": "Lantern Festival",
+    "title": "花灯映月，人间团圆",
+    "title_en": "Lanterns and moonlight gather people together",
+    "description": "一盏盏花灯升起，谜语、笑声与月色一起落入夜色。",
+    "description_en": "Lanterns rise into the night, carrying riddles, laughter, and moonlight.",
+    "season": "winter",
+    "category": "traditional",
+    "animation": "lantern-festival",
+    "palette": {
+      "sky1": "#252455",
+      "sky2": "#735081",
+      "back": "#4e4670",
+      "front": "#302d59",
+      "sun": "#ffe8ae",
+      "accent": "#e79645"
+    }
+  },
+  {
+    "key": "dragon-boat-festival",
+    "label": "端午节",
+    "label_en": "Dragon Boat Festival",
+    "title": "鼓声逐浪，粽叶飘香",
+    "title_en": "Drums across the water and the fragrance of zongzi",
+    "description": "龙舟划开碧水，艾草与粽香把仲夏的祝福送到岸边。",
+    "description_en": "Dragon boats cross green water as mugwort and zongzi carry summer blessings.",
+    "season": "summer",
+    "category": "traditional",
+    "animation": "dragon-boat-festival",
+    "palette": {
+      "sky1": "#c9eeea",
+      "sky2": "#76bebd",
+      "back": "#69a29a",
+      "front": "#2f7375",
+      "sun": "#f8d778",
+      "accent": "#9b342f"
+    }
+  },
+  {
+    "key": "qixi",
+    "label": "七夕",
+    "label_en": "Qixi Festival",
+    "title": "星河为桥，心意相逢",
+    "title_en": "A bridge of stars brings hearts together",
+    "description": "银河横过夜空，让相隔的星光在这一晚温柔相会。",
+    "description_en": "Across the Milky Way, distant lights meet in a gentle reunion.",
+    "season": "summer",
+    "category": "traditional",
+    "animation": "qixi",
+    "palette": {
+      "sky1": "#1b1d4d",
+      "sky2": "#60477f",
+      "back": "#3f456e",
+      "front": "#272c55",
+      "sun": "#eee7ff",
+      "accent": "#d989b5"
+    }
+  },
+  {
+    "key": "mid-autumn-festival",
+    "label": "中秋节",
+    "label_en": "Mid-Autumn Festival",
+    "title": "月满人间，桂香入梦",
+    "title_en": "A full moon, autumn fragrance, and dreams of home",
+    "description": "一轮圆月升起，桂花香里装着团聚、思念与远方。",
+    "description_en": "Under a full moon, osmanthus carries reunion, longing, and distance.",
+    "season": "autumn",
+    "category": "traditional",
+    "animation": "mid-autumn-festival",
+    "palette": {
+      "sky1": "#182744",
+      "sky2": "#536c8e",
+      "back": "#3b4b62",
+      "front": "#20334d",
+      "sun": "#ffe5a5",
+      "accent": "#d49a42"
+    }
+  },
+  {
+    "key": "double-ninth",
+    "label": "重阳节",
+    "label_en": "Double Ninth Festival",
+    "title": "登高望远，菊香满径",
+    "title_en": "Climb high, look far, and follow the chrysanthemums",
+    "description": "秋山染金，菊花沿路盛开，把问候送给牵挂的人。",
+    "description_en": "Golden autumn hills and chrysanthemums carry greetings to those we miss.",
+    "season": "autumn",
+    "category": "traditional",
+    "animation": "double-ninth",
+    "palette": {
+      "sky1": "#f1dda8",
+      "sky2": "#c9aa6c",
+      "back": "#938d57",
+      "front": "#60653b",
+      "sun": "#f3b95d",
+      "accent": "#9b5d2e"
+    }
+  },
+  {
+    "key": "new-year",
+    "label": "元旦",
+    "label_en": "New Year's Day",
+    "title": "新年的第一束光",
+    "title_en": "The first light of a new year",
+    "description": "烟火越过午夜，新的日历从此刻翻开，愿每段旅程都有光。",
+    "description_en": "Fireworks cross midnight as a new calendar opens with light for every journey.",
+    "season": "winter",
+    "category": "world",
+    "animation": "new-year",
+    "palette": {
+      "sky1": "#101a3b",
+      "sky2": "#43588c",
+      "back": "#293a62",
+      "front": "#17284d",
+      "sun": "#fff3b0",
+      "accent": "#e7bb4c"
+    }
+  },
+  {
+    "key": "valentines-day",
+    "label": "情人节",
+    "label_en": "Valentine's Day",
+    "title": "把喜欢写成一场花开",
+    "title_en": "Let affection bloom into flowers",
+    "description": "玫瑰色的风经过这里，每一颗心意都有温柔的回声。",
+    "description_en": "A rose-colored breeze passes by, giving every feeling a gentle echo.",
+    "season": "spring",
+    "category": "world",
+    "animation": "valentines-day",
+    "palette": {
+      "sky1": "#ffd9e4",
+      "sky2": "#e9a3c2",
+      "back": "#c981a5",
+      "front": "#8d5375",
+      "sun": "#fff1c9",
+      "accent": "#d33f70"
+    }
+  },
+  {
+    "key": "labor-day",
+    "label": "劳动节",
+    "label_en": "International Workers' Day",
+    "title": "认真生活，也认真休息",
+    "title_en": "Work with care, and rest with care",
+    "description": "每一份踏实的努力都值得被看见，也别忘了留时间照顾自己。",
+    "description_en": "Every honest effort deserves recognition; remember to make time for rest.",
+    "season": "spring",
+    "category": "world",
+    "animation": "labor-day",
+    "palette": {
+      "sky1": "#e1ead4",
+      "sky2": "#a9c68a",
+      "back": "#7d9c70",
+      "front": "#4d6f50",
+      "sun": "#f7d66b",
+      "accent": "#bd5b35"
+    }
+  },
+  {
+    "key": "earth-day",
+    "label": "世界地球日",
+    "label_en": "Earth Day",
+    "title": "让每一次呼吸更清澈",
+    "title_en": "Breathe clearer with every choice",
+    "description": "山川与海洋共享同一颗蓝色星球，让绿色的选择从今天开始。",
+    "description_en": "Mountains and oceans share one blue planet; let greener choices begin today.",
+    "season": "spring",
+    "category": "world",
+    "animation": "earth-day",
+    "palette": {
+      "sky1": "#c7eeeb",
+      "sky2": "#7bc4ad",
+      "back": "#609d84",
+      "front": "#2e755d",
+      "sun": "#ffd878",
+      "accent": "#397f69"
+    }
+  },
+  {
+    "key": "halloween",
+    "label": "万圣节",
+    "label_en": "Halloween",
+    "title": "月光之下，奇想出没",
+    "title_en": "When moonlight lets imagination roam",
+    "description": "南瓜灯亮起，蝙蝠掠过月亮，今夜的故事带一点神秘。",
+    "description_en": "Jack-o'-lanterns glow and bats cross the moon; tonight's stories carry a little mystery.",
+    "season": "autumn",
+    "category": "world",
+    "animation": "halloween",
+    "palette": {
+      "sky1": "#21162f",
+      "sky2": "#633350",
+      "back": "#4b3045",
+      "front": "#2c1d38",
+      "sun": "#ffc65e",
+      "accent": "#ec6d2e"
+    }
+  },
+  {
+    "key": "christmas",
+    "label": "圣诞节",
+    "label_en": "Christmas",
+    "title": "星光落在温柔的冬夜",
+    "title_en": "Starlight settles over a gentle winter night",
+    "description": "树梢点亮彩灯，雪花落向窗前，把祝福装进小小的礼物盒。",
+    "description_en": "Lights glow on the tree as snow settles by the window and blessings fill small gifts.",
+    "season": "winter",
+    "category": "world",
+    "animation": "christmas",
+    "palette": {
+      "sky1": "#102841",
+      "sky2": "#386875",
+      "back": "#28525c",
+      "front": "#17433e",
+      "sun": "#fff3c2",
+      "accent": "#c6413e"
+    }
+  }
+]

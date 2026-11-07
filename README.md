@@ -1,172 +1,84 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/images/wordmark-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="./docs/images/wordmark-light.png">
-    <img src="./docs/images/wordmark-light.png" width="560" alt="Meterial Extra">
-  </picture>
-</p>
-
-<p align="center">An open Material-inspired theme and frontend framework for expressive content.</p>
-
-<p align="center">English | <a href="./README_zh_CN.md">简体中文</a></p>
-
 # Meterial Extra
 
-**Meterial Extra** is an open, dependency-free Material-inspired theme and frontend framework for expressive personal sites, documentation hubs, journals, and curated story collections.
+一个基于 Material 3 的个人内容站点模板，包含访客网站、独立管理端和轻量 Python 服务端。界面与数据均为重新生成的演示内容，不包含原部署实例的文章、用户、图片、账号、接口地址或服务器配置。
 
-The public repository contains a fresh demo, reusable design tokens, responsive navigation, theme controls, and sample components. It does not contain the private content, branding, account data, uploads, or deployment configuration of any production site.
+<p align="center">
+  <a href="https://github.com/shawnhoa/meterial-extra/releases/tag/v0.1.0">下载 v0.1.0</a> ·
+  <a href="https://github.com/shawnhoa/meterial-extra">源代码</a>
+</p>
 
-## Open-source scope
+## 预览
 
-| Included | Not included |
-| --- | --- |
-| Responsive layouts and generated pages | Private production APIs or admin endpoints |
-| Theme, navigation, filters, search, and palette controls | Databases, accounts, sessions, or credentials |
-| API request adapter and configuration examples | Original articles, private images, or uploaded media |
-| Runtime, deployment, and packaging scripts | Any production server secret |
+线上部署示例：[星屿笔记站点所有者的实例](https://shawnho.top/)。该站点内容与本仓库无关，不会被复制到演示数据中。仓库预览图展示的是重新生成的演示界面。
 
-The generated template includes Home, Article Catalog, Archive, Friend Links, Announcements, About, Components, and Palette pages.
+![桌面端演示](./docs/images/demo-desktop.png)
 
-## Live examples
+![移动端演示](./docs/images/demo-mobile.png)
 
-- [GitHub Pages demo](https://shawnhoa.github.io/meterial-extra/)
-- [Production deployment example](https://shawnho.top/)
+## 功能
 
-The production example demonstrates Meterial Extra in a real public site. Its private content and server configuration are not part of this repository.
+- Material 3 风格访客端，支持文章归档、搜索、分类、标签、公告、友链和个人资料页。
+- 独立管理端，支持文章编辑、站点外观配置、公告维护、评论审核、用户管理、举报与友链申请处理。
+- 多主题、明暗模式、中英文界面和响应式布局。
+- Python 标准库 HTTP 服务端，数据保存在单独的数据目录；图片上传与富文本内容提供服务端校验。
+- Docker Compose 部署和 Windows、Linux/macOS 启动脚本。
 
-## Preview
+## 快速开始
 
-<table>
-  <tr>
-    <td width="72%"><img src="./docs/images/demo-desktop.png" alt="Meterial Extra desktop demo"></td>
-    <td width="28%"><img src="./docs/images/demo-mobile.png" alt="Meterial Extra mobile demo in Chinese"></td>
-  </tr>
-</table>
+需要 Python 3.10+。Linux/macOS：
 
-## Production deployment example
-
-[ShawnHo's Cottage](https://shawnho.top/) is linked as a public deployment example. Its internal API, article database, source images, and uploads are not included. All repository screenshots use regenerated demonstration content.
-
-## Highlights
-
-- Material-inspired color roles and elevation
-- Four palettes, light/dark modes, and adjustable corner styles
-- Fixed desktop rail with a compact portrait header
-- Responsive story cards, topic filters, search, and statistics
-- Keyboard-friendly controls and reduced-motion support
-- No runtime dependencies and no build step
-- Small JavaScript API for integrations
-- Ready-to-use GitHub Pages workflow
-- Deployment recipes for static hosting, Nginx, and Docker
-- English and Simplified Chinese demo interface
-
-## Preview locally
-
-```bash
-git clone https://github.com/shawnhoa/meterial-extra.git
-cd meterial-extra
-npm start
-```
-
-Windows:
-
-```powershell
-.\run.ps1
-```
-
-Linux/macOS:
-
-```bash
+```sh
+cp .env.example .env
 sh run.sh
 ```
 
-Then open `http://localhost:4173`.
+Windows PowerShell：
 
-Any static server works. The project can also be deployed by serving the repository root.
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for GitHub Pages, static hosting, Nginx, and Docker instructions.
-
-## API configuration
-
-The public repository contains interface templates only. Private production endpoints, account data, uploaded images, and articles are not included. Read [API_TEMPLATE.md](API_TEMPLATE.md), copy the structure from `config.example.js` into `config.js`, and adapt `src/js/api.js` to your public response shapes.
-
-Never put secrets, database credentials, private admin tokens, or internal management endpoints in frontend configuration.
-
-The generated `config.example.js` contains endpoint placeholders only. No real service address is required to run the demo.
-
-## Package a release
-
-```bash
-npm run package
+```powershell
+Copy-Item .env.example .env
+.\run.ps1
 ```
 
-The generated archive in `dist/` contains the source, runtime server, deployment configuration, API templates, and generated demo content.
+先在 `.env` 中设置 `ADMIN_USERNAME` 与至少 16 位的 `ADMIN_PASSWORD`。访客端默认监听 `http://localhost:8080`，管理端默认监听 `http://localhost:8081/admin`。本地脚本将管理端绑定到回环地址；生产部署应通过 HTTPS 反向代理和访问控制保护管理端。
 
-Release assets are also available from [GitHub Releases](https://github.com/shawnhoa/meterial-extra/releases/tag/v0.1.0).
+## Docker
 
-## Use the framework
-
-1. Copy `src/css/tokens.css` and `src/css/theme.css`.
-2. Copy the component styles you need from `src/css/site.css`.
-3. Import `src/js/theme.js` for palette and navigation state.
-4. Replace `src/data/demo.js` with content from your own API.
-5. Connect your own endpoint using `config.example.js` and [API_TEMPLATE.md](API_TEMPLATE.md).
-
-The public browser API is available as:
-
-```js
-MeterialExtra.setPalette("rose");
-MeterialExtra.setColorMode("dark");
-MeterialExtra.setRadius("rounded");
-MeterialExtra.openNavigation(true);
+```sh
+cp .env.example .env
+docker compose up --build -d
 ```
 
-## Project structure
+Compose 将应用数据写入本地 `./data`，并只把管理端映射到本机回环接口。部署前请设置强管理员密码；需要远程管理时，请在反向代理层配置 HTTPS 与访问控制，并为数据目录设置备份和访问权限。
+
+## 配置
+
+环境变量见 [`.env.example`](./.env.example)。管理密码、SMTP 凭据、OAuth 密钥和验证码服务密钥只能放在本地 `.env` 或部署环境中，不能写入前端代码或提交到仓库。模板不配置任何第三方服务账号；未配置时，相应能力保持关闭。
+
+API 路由是此模板前后端配套使用的示例接口。对接自有服务时请从 `app/blog.py`、`app/app.js` 与 `app/admin.js` 中按需修改。
+
+## 项目结构
 
 ```text
-public/assets/       Brand-safe demo logo and rendered theme wordmark
-src/css/             Tokens, theme system, and demo component styles
-src/data/            Generated demonstration content only
-src/js/              Navigation and theme interaction
-scripts/serve.mjs    Dependency-free local preview server
-scripts/package-release.mjs   Portable source archive builder
-config.js            Public runtime configuration
-API_TEMPLATE.md      Endpoint and response-shape template
+app/                 访客端、管理端、主题资源与 Python 服务端
+data/                运行时数据目录（不纳入版本控制）
+run.sh               Linux/macOS 启动脚本
+run.ps1              Windows 启动脚本
+compose.yaml         Docker Compose 配置
+Dockerfile           容器构建文件
 ```
 
-## Palettes
+## 生产部署实例
 
-| Palette | Character |
-| --- | --- |
-| Lilac | Calm editorial violet |
-| Rose | Warm publication accent |
-| Ocean | Technical blue-green |
-| Moss | Quiet natural green |
+本主题的部署实例可由项目所有者自行引用真实站点与截图。该站点仅作为外观和部署参考，任何站点专属文字、接口、图片与用户数据都不属于本模板。
 
-All palettes support light and dark color modes.
+## 版本
 
-## Font and branding notice
+### v0.1.0
 
-The Meterial Extra wordmark uses the included **Big John Regular** font. The project owner has confirmed that the font is free for commercial use and redistribution with no copyright dispute.
-
-The font keeps its author attribution to Ion Lucin. See [BRAND_ASSET_LICENSE.md](BRAND_ASSET_LICENSE.md). Theme code is MIT licensed; the font remains the author's separately attributed typeface work.
+- 从阿里云部署项目的访客端与管理端结构整理出通用模板。
+- 清除原实例的专属内容、外部身份信息、运行配置和用户数据。
+- 提供本地启动、容器部署及源码归档包。
 
 ## License
 
-Source code and documentation are released under the [MIT License](LICENSE).
-
-The MIT license does not grant rights to third-party trademarks, the Big John font, or any separately identified brand asset.
-
-## Star History
-
-<a href="https://star-history.com/#shawnhoa/meterial-extra&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=shawnhoa/meterial-extra&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=shawnhoa/meterial-extra&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=shawnhoa/meterial-extra&type=Date" />
-  </picture>
-</a>
-
-## Contributing
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md). New demo content must be original, generic, and free of personal or production data.
+代码采用 MIT License。第三方字体、图标和依赖仍受各自许可约束，详见其上游项目。

@@ -1,0 +1,111 @@
+/* Solar scenes stay self-contained, including the admin preview. */
+/* Public color roles are defined once on :root[data-term] in theme-complete.css. */
+body:not(.admin-page)[data-term] .tonal-button{color:var(--primary)}body:not(.admin-page)[data-term] .tonal-button:hover{background:color-mix(in srgb,var(--primary) 22%,var(--surface))}
+.solar-scene{position:relative;width:100%;height:100%;min-height:0;overflow:hidden;border-radius:inherit;isolation:isolate;background:var(--term-sky1)}
+.solar-scene svg{display:block;width:100%;height:100%;min-height:0;overflow:hidden}
+.solar-scene-caption{position:absolute;left:24px;bottom:22px;display:flex;flex-direction:column;gap:5px;color:#fff;text-shadow:0 1px 10px #122c3666;pointer-events:none}
+.solar-scene-caption span{font-size:9px;letter-spacing:2.4px;font-weight:600}.solar-scene-caption strong{font-size:24px;font-weight:500;line-height:1.1}
+.solar-scene [class^="term-"]{transform-box:fill-box;transform-origin:center;animation-delay:var(--delay,0s)}
+.solar-scene .term-sun-halo{animation:term-sun-breathe 9s ease-in-out infinite}.solar-scene .term-rain{animation:term-rain-fall 2.8s linear infinite}.solar-scene .term-rain:nth-child(3n){animation-duration:3.7s}
+.solar-scene .term-wave{animation:term-wave-flow 6s ease-in-out infinite}.solar-scene .term-firefly{animation:term-firefly-float var(--duration,8s) ease-in-out infinite}.solar-scene .term-snow{animation:term-snow-soft var(--duration,11s) linear infinite}
+[data-term="lichun"] .term-sprout{transform-origin:center bottom;animation:lichun-unfurl 7s ease-in-out infinite}
+[data-term="yushui"] .term-ripple{animation:yushui-ripple 3.6s ease-out infinite}
+[data-term="jingzhe"] .term-lightning{animation:jingzhe-wake 9s ease-in-out infinite}
+[data-term="chunfen"] .term-swallow{animation:chunfen-flight var(--duration,10s) ease-in-out infinite}
+[data-term="qingming"] .term-willow{transform-origin:left top;animation:qingming-willow 8s ease-in-out infinite}[data-term="qingming"] .term-willow-leaf{animation:qingming-leaf 7s ease-in-out infinite}
+[data-term="guyu"] .term-leaf{transform-origin:center bottom;animation:guyu-tea 6s ease-in-out infinite}
+[data-term="lixia"] .term-lotus-leaf{animation:lixia-waterleaf 7s ease-in-out infinite}
+[data-term="xiaoman"] .term-wheat{transform-origin:center bottom;animation:xiaoman-grain 5s ease-in-out infinite}[data-term="xiaoman"] .term-grainlight{animation:xiaoman-light var(--duration,9s) ease-in-out infinite}
+[data-term="mangzhong"] .term-wheat{transform-origin:center bottom;animation:mangzhong-harvest 4s ease-in-out infinite}[data-term="mangzhong"] .term-seed{animation:mangzhong-seed var(--duration,8s) ease-in-out infinite}
+[data-term="xiazhi"] .term-sunrays{animation:xiazhi-rays 50s linear infinite}[data-term="xiazhi"] .term-dayarc{animation:xiazhi-daylight 18s linear infinite}
+[data-term="xiaoshu"] .term-lotus-flower{animation:xiaoshu-lotus 8s ease-in-out infinite}
+[data-term="dashu"] .term-heat{animation:dashu-shimmer 7s ease-in-out infinite}[data-term="dashu"] .term-summer-cloud{animation:dashu-cloud 17s ease-in-out infinite}
+[data-term="liqiu"] .term-autumnleaf{animation:liqiu-first-leaf var(--duration,12s) ease-in-out infinite}
+[data-term="chushu"] .term-clearing-cloud{animation:chushu-cloudbreak 16s ease-in-out infinite}[data-term="chushu"] .term-breeze{animation:chushu-breeze 8s ease-in-out infinite}
+[data-term="bailu"] .term-dew{animation:bailu-dew var(--duration,7s) ease-in-out infinite}[data-term="bailu"] .term-reed{transform-origin:center bottom;animation:bailu-reed 7s ease-in-out infinite}
+[data-term="qiufen"] .term-equinoctial-leaf{animation:qiufen-leaf var(--duration,12s) ease-in-out infinite}[data-term="qiufen"] .term-balance{animation:qiufen-balance 15s ease-in-out infinite}
+[data-term="hanlu"] .term-cold-mist{animation:hanlu-mist 18s ease-in-out infinite}[data-term="hanlu"] .term-cold-dew{animation:hanlu-dewdrop var(--duration,10s) ease-in-out infinite}
+[data-term="shuangjiang"] .term-frost{stroke-dasharray:50;animation:shuangjiang-crystal 10s ease-in-out infinite}
+[data-term="lidong"] .term-smoke{animation:lidong-smoke 9s ease-in-out infinite}[data-term="lidong"] .term-winter-wind{animation:lidong-wind 11s ease-in-out infinite}
+[data-term="xiaoxue"] .term-snow{animation:xiaoxue-flurry var(--duration,13s) linear infinite}
+[data-term="daxue"] .term-snow{animation:daxue-snow var(--duration,9s) linear infinite}[data-term="daxue"] .term-snowdrift{animation:daxue-drift 12s ease-in-out infinite}
+[data-term="dongzhi"] .term-window-glow{animation:dongzhi-warmth 6s ease-in-out infinite}[data-term="dongzhi"] .term-solstice-arc{stroke-dasharray:400;animation:dongzhi-dayarc 16s ease-in-out infinite}
+[data-term="xiaohan"] .term-ice-spark{animation:xiaohan-ice var(--duration,8s) ease-in-out infinite}[data-term="xiaohan"] .term-ice-line{stroke-dasharray:220;animation:xiaohan-freeze 10s ease-in-out infinite}
+[data-term="dahan"] .term-plum{animation:dahan-blossom 9s ease-in-out infinite}
+@keyframes term-sun-breathe{50%{opacity:.27;transform:scale(1.12)}}
+@keyframes term-rain-fall{from{transform:translate(10px,-60px);opacity:0}20%{opacity:1}to{transform:translate(-55px,180px);opacity:0}}
+@keyframes term-wave-flow{50%{transform:translateX(18px);opacity:.35}}
+@keyframes term-firefly-float{0%,100%{opacity:.2;transform:translate(0,0)}50%{opacity:.9;transform:translate(15px,-22px)}}
+@keyframes term-snow-soft{from{transform:translate(-8px,-90px);opacity:0}15%{opacity:.8}to{transform:translate(30px,180px);opacity:0}}
+@keyframes lichun-unfurl{50%{transform:rotate(5deg) scaleY(1.06)}}
+@keyframes yushui-ripple{from{transform:scale(.2);opacity:0}25%{opacity:.8}to{transform:scale(1.7);opacity:0}}
+@keyframes jingzhe-wake{0%,100%{opacity:.18}45%,60%{opacity:.8;transform:translateY(3px)}}
+@keyframes chunfen-flight{0%,100%{transform:translate(-16px,9px) rotate(-5deg)}50%{transform:translate(48px,-12px) rotate(4deg)}}
+@keyframes qingming-willow{50%{transform:rotate(4deg)}}@keyframes qingming-leaf{50%{transform:translate(7px,3px) rotate(5deg)}}
+@keyframes guyu-tea{50%{transform:rotate(-6deg) scale(1.03)}}
+@keyframes lixia-waterleaf{50%{transform:translateY(-5px) rotate(-2deg)}}
+@keyframes xiaoman-grain{50%{transform:rotate(5deg)}}@keyframes xiaoman-light{50%{opacity:.25;transform:translateY(-16px)}}
+@keyframes mangzhong-harvest{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(7deg)}}@keyframes mangzhong-seed{50%{transform:translate(20px,-30px) rotate(40deg);opacity:.25}}
+@keyframes xiazhi-rays{to{transform:rotate(360deg)}}@keyframes xiazhi-daylight{to{stroke-dashoffset:-140}}
+@keyframes xiaoshu-lotus{50%{transform:translateY(-3px) rotate(5deg) scale(1.04)}}
+@keyframes dashu-shimmer{0%,100%{opacity:.25;transform:skewX(-3deg)}50%{opacity:.65;transform:translateY(-12px) skewX(5deg)}}@keyframes dashu-cloud{50%{transform:translateX(30px)}}
+@keyframes liqiu-first-leaf{0%,100%{transform:translate(0,-12px) rotate(-10deg)}50%{transform:translate(25px,38px) rotate(32deg)}}
+@keyframes chushu-cloudbreak{50%{transform:translateX(55px);opacity:.45}}@keyframes chushu-breeze{50%{transform:translateX(26px);opacity:.2}}
+@keyframes bailu-dew{50%{opacity:.35;transform:scale(.8)}}@keyframes bailu-reed{50%{transform:rotate(-4deg)}}
+@keyframes qiufen-leaf{0%,100%{transform:translate(-12px,-7px) rotate(-12deg)}50%{transform:translate(20px,25px) rotate(24deg)}}@keyframes qiufen-balance{50%{transform:rotate(6deg)}}
+@keyframes hanlu-mist{0%,100%{opacity:.3;transform:translateX(-25px)}50%{opacity:.65;transform:translateX(25px)}}@keyframes hanlu-dewdrop{50%{transform:translateY(7px);opacity:.4}}
+@keyframes shuangjiang-crystal{0%,100%{stroke-dashoffset:40;opacity:.35}55%{stroke-dashoffset:0;opacity:.9}}
+@keyframes lidong-smoke{from{transform:translate(0,15px);opacity:0}40%{opacity:.7}to{transform:translate(-18px,-34px) scale(1.2);opacity:0}}@keyframes lidong-wind{50%{transform:translateX(30px);opacity:.25}}
+@keyframes xiaoxue-flurry{from{transform:translate(-12px,-70px);opacity:0}20%{opacity:.85}to{transform:translate(20px,210px);opacity:0}}
+@keyframes daxue-snow{from{transform:translate(28px,-90px);opacity:0}12%{opacity:1}to{transform:translate(-45px,240px);opacity:0}}@keyframes daxue-drift{50%{transform:translateX(8px) scaleY(1.05)}}
+@keyframes dongzhi-warmth{50%{opacity:.45;transform:scale(1.17)}}@keyframes dongzhi-dayarc{0%,100%{stroke-dashoffset:240;opacity:.4}50%{stroke-dashoffset:0;opacity:.85}}
+@keyframes xiaohan-ice{50%{transform:rotate(15deg) scale(.65);opacity:.3}}@keyframes xiaohan-freeze{from{stroke-dashoffset:220;opacity:.4}70%,to{stroke-dashoffset:0;opacity:.9}}
+@keyframes dahan-blossom{0%,100%{transform:scale(.84);opacity:.75}55%{transform:scale(1.04) rotate(8deg);opacity:1}}
+.solar-scene [class^="festival-"]{transform-box:fill-box;transform-origin:center;animation-delay:var(--delay,0s)}
+.festival-firework{animation:festival-firework 4.2s ease-out infinite}.festival-lantern{animation:festival-lantern-sway 5.8s ease-in-out infinite}.festival-spark{animation:festival-spark-fall 5.5s linear infinite}
+.festival-twinkle{animation:festival-twinkle 3.4s ease-in-out infinite}.festival-boat{animation:festival-boat-ride 7s ease-in-out infinite}.festival-oar{transform-origin:bottom center;animation:festival-oar-stroke 1.35s ease-in-out infinite}.festival-heart{animation:festival-heartbeat 3.2s ease-in-out infinite}.festival-heart-rise{animation:festival-heart-rise 7s ease-in-out infinite}
+.festival-moon{animation:festival-moon-glow 7s ease-in-out infinite}.festival-rabbit{animation:festival-rabbit-hop 4.6s ease-in-out infinite}.festival-star-river{stroke-dasharray:2 9;animation:festival-stars-flow 10s linear infinite}.festival-clock{animation:festival-clock-pulse 3.5s ease-in-out infinite}.festival-gear{animation:festival-gear-turn 18s linear infinite}
+.festival-ribbon{animation:festival-ribbon-wave 6s ease-in-out infinite}.festival-globe{animation:festival-globe-turn 28s linear infinite}.festival-bat{animation:festival-bat-flap 2.7s ease-in-out infinite}.festival-tree{animation:festival-tree-glow 5s ease-in-out infinite}.festival-gifts{animation:festival-gift-wiggle 4.5s ease-in-out infinite}.festival-chrysanthemum{animation:festival-flower-sway 5.6s ease-in-out infinite}.festival-couplet{animation:festival-glow 3.8s ease-in-out infinite}
+@keyframes festival-firework{0%,18%,100%{opacity:0;transform:scale(.35)}30%,62%{opacity:1;transform:scale(1)}84%{opacity:.1;transform:scale(1.18)}}
+@keyframes festival-lantern-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+@keyframes festival-spark-fall{from{transform:translateY(-45px);opacity:0}15%,80%{opacity:1}to{transform:translateY(80px);opacity:0}}
+@keyframes festival-twinkle{0%,100%{opacity:.25;transform:scale(.72)}50%{opacity:1;transform:scale(1.16)}}
+@keyframes festival-boat-ride{0%,100%{transform:translate(-9px,2px)}50%{transform:translate(12px,-2px)}}
+@keyframes festival-oar-stroke{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(12deg)}}
+@keyframes festival-heartbeat{0%,100%{transform:scale(.96)}18%{transform:scale(1.05)}30%{transform:scale(.99)}45%{transform:scale(1.03)}}
+@keyframes festival-heart-rise{from{transform:translateY(24px) scale(.7);opacity:0}20%,75%{opacity:.9}to{transform:translateY(-48px) scale(1.15);opacity:0}}
+@keyframes festival-moon-glow{0%,100%{opacity:.82}50%{opacity:1}}
+@keyframes festival-rabbit-hop{0%,100%{transform:translateY(0)}45%{transform:translateY(-12px)}58%{transform:translateY(-2px)}}
+@keyframes festival-stars-flow{to{stroke-dashoffset:-90}}
+@keyframes festival-clock-pulse{0%,100%{opacity:.72;transform:scale(.97)}50%{opacity:1;transform:scale(1.03)}}
+@keyframes festival-gear-turn{to{transform:rotate(360deg)}}
+@keyframes festival-ribbon-wave{0%,100%{opacity:.65}50%{opacity:1}}
+@keyframes festival-globe-turn{to{transform:rotate(360deg)}}
+@keyframes festival-bat-flap{0%,100%{transform:scaleY(.72) translateY(4px)}50%{transform:scaleY(1.08) translateY(-4px)}}
+@keyframes festival-tree-glow{0%,100%{filter:brightness(.9)}50%{filter:brightness(1.18)}}
+@keyframes festival-gift-wiggle{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(3deg)}}
+@keyframes festival-flower-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg)}}
+@keyframes festival-glow{0%,100%{opacity:.7}50%{opacity:1}}
+.theme-settings{padding:26px;border-radius:var(--radius);margin-bottom:22px}.theme-settings h2{margin:5px 0 8px;font-size:23px}.theme-settings>p{color:var(--muted);font-size:13px;line-height:1.7}
+.theme-selector-row{display:flex;align-items:end;gap:12px;margin:18px 0}.theme-selector-row label{display:flex;flex-direction:column;gap:8px;flex:1;min-width:0;font-size:13px;font-weight:600}.theme-selector-row select{width:100%;min-height:46px;min-width:0;border:1px solid var(--outline);border-radius:var(--radius-control);padding:10px 12px;background:var(--surface);color:var(--ink);font:inherit}
+.theme-preview-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:22px;align-items:center}.theme-preview{height:240px;min-width:0;border-radius:var(--radius);overflow:hidden}.theme-preview-copy h3{font-size:23px;line-height:1.5;margin:8px 0}.theme-preview-copy p{font-size:13px;line-height:1.8;color:var(--muted)}
+.theme-settings button[data-no-icon]{gap:8px}.theme-settings button:disabled{opacity:.6;cursor:wait}
+.admin-overview-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}.admin-page .admin-overview-actions button.icon-only,.admin-page .account-settings button.icon-only{width:auto!important;min-width:44px;height:auto;padding:10px 16px!important;gap:8px!important}.admin-page .admin-overview-actions button.icon-only::after,.admin-page .account-settings button.icon-only::after{content:attr(title);font-size:13px;font-weight:600;line-height:1.3;white-space:normal}.account-settings{margin-bottom:22px}.account-settings-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}.account-settings-head h2{margin:6px 0 0;font-size:23px}.account-current{color:var(--primary);background:var(--primary-container);border-radius:999px;padding:8px 13px;font-size:12px;font-weight:600;white-space:nowrap}.account-settings>p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.account-settings .field-hint{font-size:11px;font-weight:400}.account-settings-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.account-settings-actions .save-status{margin:0;flex:1;min-width:180px}.account-settings button:disabled{opacity:.6;cursor:wait}
+:root[data-theme="dark"] .admin-page .editor-form input,:root[data-theme="dark"] .admin-page .editor-form textarea{background:var(--surface);color:var(--ink);border-color:var(--outline)}
+:root[data-theme="dark"] .account-current{color:#eaddff}.account-settings .save-status.error{color:#b3261e}:root[data-theme="dark"] .account-settings .save-status.error{color:#ffb4ab}
+/* The close control participates in the dialog layout, even when it scrolls. */
+.account-dialog{padding-top:18px}.account-dialog .account-close-row{display:flex;justify-content:flex-end;margin:0 0 2px;position:sticky;top:0;z-index:4;pointer-events:none}
+.account-dialog .account-close-row .dialog-close.icon-only{position:static;pointer-events:auto;width:40px;min-width:40px;height:40px;min-height:40px;max-width:100%;padding:0!important;gap:0!important;flex-shrink:0}
+.account-dialog .account-close-row .dialog-close.icon-only::after{content:none;display:none}
+.account-dialog .account-tabs{position:static;margin:0 0 20px;padding:4px}
+#sidebar-toggle{width:44px;min-width:44px;padding:8px;justify-content:center}.menu-toggle .control-label{display:none}
+#sidebar-toggle>svg{transition:transform .22s ease;transform:rotate(0deg)}#sidebar-toggle.sidebar-open>svg{transform:rotate(90deg)}
+#sidebar-toggle .icon-filled{display:none}#sidebar-toggle.sidebar-open .icon-outline{display:none}#sidebar-toggle.sidebar-open .icon-filled{display:block}
+.hero-copy #season-badge{display:inline-block;margin-right:12px}.solar-scene-caption{max-width:calc(100% - 48px)}
+.article-page .back-link>svg{width:22px;height:22px;flex:none}.article-page .comment-form button.icon-only{width:auto;padding:10px 18px!important;gap:8px!important;height:auto}.article-page .comment-form button.icon-only::after{content:attr(title);font-size:14px}
+@media(max-width:600px){body:not(.admin-page) .topbar{display:grid;grid-template-columns:44px minmax(0,1fr);grid-template-rows:44px 40px;gap:6px 10px;height:106px;padding-block:8px}body:not(.admin-page) .topbar .brand{min-width:0}body:not(.admin-page) .topbar #brand-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}body:not(.admin-page) .header-actions{grid-column:1/-1;justify-content:flex-end;margin-left:0;min-width:0}body:not(.admin-page) .nav-links{top:106px!important}body:not(.admin-page){padding-left:0}}
+@media(min-width:760px) and (orientation:portrait){body:not(.admin-page).sidebar-collapsed .nav-links{display:none}}
+@media(max-width:760px){.admin-page .editor-layout{grid-template-columns:minmax(0,1fr)}.admin-page .post-sidebar{min-width:0}.admin-page .admin-overview{flex-wrap:wrap;gap:12px}.admin-page .admin-metrics{min-width:0;flex:1;gap:8px}.admin-page .admin-overview-actions{width:100%;justify-content:flex-start}.admin-page .rich-toolbar{flex-wrap:wrap}.admin-page .form-grid{grid-template-columns:minmax(0,1fr)}.admin-page .editor-form input,.admin-page .editor-form select{min-width:0;max-width:100%}.admin-page .post-sidebar #admin-post-list{max-width:100%}.admin-page .sidebar-post{flex:0 0 170px}.account-settings-head{align-items:flex-start;flex-direction:column}.account-settings-actions{align-items:flex-start;flex-direction:column}.account-settings-actions .filled-button{width:100%}}
+@media(max-width:600px){.admin-page .topbar{height:auto;min-height:100px;display:flex;flex-wrap:wrap;padding:12px 14px;gap:8px}.admin-page .topbar .brand{width:100%;min-width:0;font-size:16px}.admin-page .topbar .admin-label{margin:0 auto 0 0}.admin-page .topbar #visitor-link{margin:0}.admin-page .editor-head{flex-wrap:wrap}}
+@media(max-width:600px){.theme-settings{padding:20px}.theme-preview-grid{grid-template-columns:1fr;gap:12px}.theme-selector-row{flex-direction:column;align-items:stretch}.theme-preview{height:220px}.theme-preview-copy h3{font-size:21px}.solar-scene-caption{left:18px;bottom:18px}.solar-scene-caption strong{font-size:21px}.account-dialog{padding-top:14px}}
+@media(prefers-reduced-motion:reduce){.solar-scene *{animation:none!important;transition:none!important}}

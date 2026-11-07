@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+  <script>(function(){var m=window.matchMedia?window.matchMedia("(prefers-color-scheme: dark)"):null;function s(){try{var t=localStorage.getItem("blog-theme");return t==="dark"||t==="light"?t:""}catch(e){return ""}}function a(){var t=s()||(m&&m.matches?"dark":"light");document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}function f(){if(!s())a()}a();if(m){m.addEventListener?m.addEventListener("change",f):m.addListener(f)}})();</script>
+  <title>StarIsle 小屋 · 管理台</title><link rel="stylesheet" href="/style.css?v=20261107-lazy-pages-v20">
+  <link rel="stylesheet" href="/solar.css?v=20261107-lazy-pages-v20"><link rel="stylesheet" href="/article-material.css?v=20261107-lazy-pages-v20"><link rel="stylesheet" href="/theme-complete.css?v=20261107-lazy-pages-v20"><link rel="stylesheet" href="/admin-material.css?v=20261107-lazy-pages-v20">
+</head>
+<body class="admin-page" data-ui="admin-material3">
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-logo" role="img" aria-label="星屿笔记 Logo"><svg viewBox="4 2 112 112" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M67.68,16.4L105.12,47.6A8 8 0 0 1 108,53.75L108,84A22 22 0 0 1 86,106L34,106A22 22 0 0 1 12,84L12,53.75A8 8 0 0 1 14.88,47.6L52.32,16.4A12 12 0 0 1 67.68,16.4ZM42,52L42,52A6 6 0 0 1 48,58L48,64A3 3 0 0 0 51,67L69,67A3 3 0 0 0 72,64L72,58A6 6 0 0 1 78,52L78,52A6 6 0 0 1 84,58L84,88A6 6 0 0 1 78,94L78,94A6 6 0 0 1 72,88L72,82A3 3 0 0 0 69,79L51,79A3 3 0 0 0 48,82L48,88A6 6 0 0 1 42,94L42,94A6 6 0 0 1 36,88L36,58A6 6 0 0 1 42,52Z"/></svg></span><span>StarIsle 小屋 · 管理台</span></a>
+    <div class="admin-label">管理台 · 身份验证保护</div>
+    <button class="icon-button" id="theme-toggle" aria-label="切换深浅色" title="切换深浅色" data-icon="sun"><span id="theme-icon"></span></button>
+    <a class="text-button" id="admin-workspace-link" href="/admin-content" aria-label="打开内容工作台" data-no-icon>内容工作台</a>
+    <a class="text-button" id="visitor-link" href="/" aria-label="查看访客页" data-icon="home">查看访客页</a>
+  </header>
+  <main class="admin-shell container">
+    <section id="login-panel" class="login-panel surface"><span class="eyebrow">PRIVATE ADMIN SPACE</span><h1>星屿笔记 · 管理台</h1><p>用来管理文章、页面内容、社区互动和站点外观。所有编辑功能都使用与访客页面一致的主题与阅读样式。</p><button class="filled-button" id="enter-admin" aria-label="进入管理台" data-icon="edit">进入管理台</button></section>
+    <section id="editor-panel" class="editor-layout hidden">
+      <aside class="post-sidebar"><section class="post-directory surface"><div class="sidebar-head"><div><span class="eyebrow">YOUR STORIES</span><h2>文章目录</h2></div><button class="tonal-button" id="new-post" type="button" aria-label="新文章" data-no-icon><span class="material-symbols-rounded" aria-hidden="true">add</span><span>新文章</span></button></div><div id="admin-post-list"></div></section><button class="outlined-button content-comments-link" type="button" data-admin-jump="article-comments" data-no-icon>文章评论管理</button><button class="text-button logout-button" id="logout" type="button" aria-label="退出管理台" data-no-icon>退出管理台</button></aside>
+      <div class="editor-main">
+        <div class="admin-overview surface"><div><span class="eyebrow">COMMUNITY</span><strong id="registered-count">0</strong><small>注册用户</small></div><div class="admin-metrics"><span><b id="published-count">0</b> 发布</span><span><b id="view-count">0</b> 阅读</span><span><b id="comment-count">0</b> 评论</span><span><b id="like-count">0</b> 点赞</span></div><div class="admin-overview-actions"><button class="tonal-button" id="account-settings-toggle" type="button" aria-label="管理员账号设置" aria-controls="admin-account-form" aria-expanded="false" data-icon="person">管理员账号</button><button class="outlined-button" id="profile-edit-toggle" aria-label="编辑博客主信息" data-icon="edit">编辑博客主信息</button></div></div>
+        <header class="admin-page-heading"><div><span class="eyebrow">ADMINISTRATION</span><h1>站点管理</h1><p>内容创作、社区互动与站点设置</p></div><a class="filled-button" href="/admin-content" data-no-icon><span class="material-symbols-rounded" aria-hidden="true">edit_note</span><span>进入内容工作台</span></a></header>
+        <section class="admin-navigation" aria-label="管理入口"><div><h2>内容与社区</h2><nav class="admin-quick-nav" aria-label="内容与社区管理"><button type="button" data-admin-jump="announcements" data-icon="format">网站公告</button><button type="button" data-admin-jump="thoughts" data-icon="format">日常动态</button><button type="button" data-admin-jump="guestbook" data-icon="heart">留言管理</button><button type="button" data-admin-jump="reports" data-icon="flag">举报处理</button><button type="button" data-admin-jump="users" data-icon="people">用户账号</button><button type="button" data-admin-jump="friends" data-icon="send">友链审核</button></nav></div><div><h2>站点设置</h2><nav class="admin-quick-nav admin-settings-nav" aria-label="站点设置"><button type="button" data-admin-jump="site" data-icon="edit">站点与主题</button><button type="button" data-admin-jump="about" data-icon="person">关于页内容</button><button type="button" data-admin-jump="security" data-icon="person">账号安全</button></nav></div></section>
+        <form id="admin-account-form" class="surface editor-form account-settings">
+          <div class="account-settings-head"><div><span class="eyebrow">ACCOUNT SECURITY</span><h2>管理员账号设置</h2></div><span id="account-current-username" class="account-current">当前账号读取中…</span></div>
+          <p>修改后旧用户名和密码会立即失效，浏览器将要求使用新凭据重新登录。密码只保存为加密哈希。</p>
+          <div class="form-grid">
+            <label>管理员名称<input name="username" id="admin-username" minlength="3" maxlength="32" pattern="[A-Za-z0-9][A-Za-z0-9._-]{2,31}" autocomplete="username" required><span class="field-hint">3-32 位字母、数字、点、短横线或下划线</span></label>
+            <label>当前密码<input name="current_password" id="admin-current-password" type="password" autocomplete="current-password" required></label>
+            <label>新密码 <span class="field-hint">留空则不修改</span><input name="new_password" id="admin-new-password" type="password" minlength="8" maxlength="128" autocomplete="new-password"></label>
+            <label>确认新密码<input name="confirm_password" id="admin-confirm-password" type="password" minlength="8" maxlength="128" autocomplete="new-password"></label>
+          </div>
+          <div class="account-settings-actions"><button class="filled-button" id="save-admin-account" type="submit" aria-label="保存账号设置" data-icon="save">保存账号设置</button><p id="account-settings-status" class="save-status" role="status" aria-live="polite"></p></div>
+        </form>
+        <section class="theme-settings surface" aria-labelledby="theme-settings-title">
+          <span class="eyebrow">SEASONS · TRADITIONAL · WORLD</span><h2 id="theme-settings-title">首页节气与节日主题</h2>
+          <p>24 个节气与 12 个传统、世界节日均有独立文案、配色和动画。自动模式按北京时间节气切换；手动节日主题会保持到下一次修改。</p>
+          <form id="home-theme-form" class="theme-selector-row"><label for="home-theme-select">选择首页主题<select id="home-theme-select" name="theme"><option value="auto">自动随节气切换</option></select></label><button class="filled-button" id="save-home-theme" type="submit" data-no-icon><span>应用主题</span></button></form>
+          <div class="theme-preview-grid"><div id="home-theme-preview" class="theme-preview" aria-hidden="true"></div><div class="theme-preview-copy"><span class="eyebrow" id="home-theme-preview-label"></span><h3 id="home-theme-preview-title"></h3><p id="home-theme-preview-description"></p><p id="home-theme-active"></p></div></div>
+          <p id="home-theme-status" class="save-status" role="status" aria-live="polite"></p>
+        </section>
+        <section class="surface admin-announcements" aria-labelledby="admin-announcements-title">
+          <div class="sidebar-head"><div><span class="eyebrow">SITE ANNOUNCEMENTS</span><h2 id="admin-announcements-title">网站公告</h2></div><button class="outlined-button" type="button" id="refresh-announcements" aria-label="刷新公告" data-icon="refresh">刷新</button></div>
+          <p class="muted">手动发布维护、功能或社区通知。条款内容发生变化时，系统会自动生成公告。</p>
+          <form id="announcement-form" class="editor-form thought-editor-form">
+            <div class="form-grid"><label>中文标题<input name="title_zh" maxlength="120" required></label><label>英文标题<input name="title_en" maxlength="120"></label></div>
+            <label>中文内容<textarea name="body_zh" rows="4" maxlength="2000" required></textarea></label>
+            <label>英文内容<textarea name="body_en" rows="4" maxlength="2000"></textarea></label>
+            <label class="switch-row"><span><strong>立即发布</strong><small>关闭时保存为草稿，不会在首页显示</small></span><input name="published" id="announcement-published" type="checkbox" checked><span class="switch-ui"></span></label>
+            <div class="account-settings-actions"><button class="filled-button" id="save-announcement" type="submit" data-no-icon>发布公告</button><button class="text-button hidden" id="cancel-announcement-edit" type="button" data-no-icon>取消编辑</button><span class="save-status" id="announcement-editor-status" role="status"></span></div>
+          </form>
+          <div id="admin-announcement-list" class="admin-moderation-grid"><div class="admin-empty">正在读取公告…</div></div>
+        </section>
+        <form id="site-profile-form" class="surface editor-form hidden">
+          <h2>博客主信息与访客页面内容</h2>
+          <div class="form-grid">
+            <label>中文名称<input name="name"></label><label>英文名称<input name="name_en"></label><label>Logo 图片 URL<input name="logo_url" placeholder="https://…"></label><label>关于页头像 URL<input name="avatar_url" placeholder="https://…"></label>
+            <label>中文眉题<input name="eyebrow"></label><label>英文眉题<input name="eyebrow_en"></label><label>中文首页标题<input name="subtitle"></label><label>英文首页标题<input name="subtitle_en"></label>
+            <label>中文首页简介<textarea name="bio" rows="3"></textarea></label><label>英文首页简介<textarea name="bio_en" rows="3"></textarea></label><label>中文文章区标题<input name="posts_heading"></label><label>英文文章区标题<input name="posts_heading_en"></label><label>页脚版权文字<input name="copyright" placeholder="© 2026 StarIsle"></label>
+            <label>页脚中文文案<input name="footer_note"></label><label>页脚英文文案<input name="footer_note_en"></label><label>所在地<input name="location"></label><label>中文浏览按钮文案<input name="hero_cta"></label><label>英文浏览按钮文案<input name="hero_cta_en"></label>
+            <label>投喂页中文眉题<input name="support_eyebrow"></label><label>投喂页英文眉题<input name="support_eyebrow_en"></label><label>投喂页中文标题<input name="support_title"></label><label>投喂页英文标题<input name="support_title_en"></label><label>投喂页中文说明<textarea name="support_body" rows="3"></textarea></label><label>投喂页英文说明<textarea name="support_body_en" rows="3"></textarea></label><label>投喂页中文提示<textarea name="support_note" rows="2"></textarea></label><label>投喂页英文提示<textarea name="support_note_en" rows="2"></textarea></label><label>支付宝收款码 URL<input name="alipay_qr_url" placeholder="https://… 或 /uploads/…"></label><label>微信收款码 URL<input name="wechat_qr_url" placeholder="https://… 或 /uploads/…"></label><label>PayPal 收款链接<input name="paypal_url" type="url" placeholder="https://www.paypal.com/paypalme/…"></label>
+            <div class="qr-upload-row"><button class="tonal-button" type="button" data-qr-target="alipay_qr_url" data-no-icon>上传支付宝收款码</button><button class="tonal-button" type="button" data-qr-target="wechat_qr_url" data-no-icon>上传微信收款码</button><input class="hidden" id="qr-file-input" type="file" accept="image/jpeg,image/png,image/gif,image/webp"><span id="qr-upload-status" class="save-status" role="status" aria-live="polite"></span></div>
+          </div>
+          
+          <fieldset class="admin-appearance-builder" id="admin-appearance-builder">
+            <legend><span class="material-symbols-rounded" aria-hidden="true">palette</span><span><strong>界面外观</strong><small>保存后同步应用到访客页面和管理端</small></span></legend>
+            <div class="appearance-control-grid">
+              <label>主题主色<select name="ui_palette"><option value="seasonal">跟随节气主题</option><option value="forest">森林绿</option><option value="ocean">深海蓝</option><option value="violet">星云紫</option><option value="rose">山茶红</option><option value="amber">琥珀橙</option><option value="custom">自定义主色</option></select></label>
+              <label>自定义主色<input name="ui_accent" type="color" value="#32694d"></label>
+              <label>内容宽度<select name="ui_width"><option value="focus">专注阅读</option><option value="standard">标准</option><option value="wide">宽屏</option><option value="custom">自定义宽度</option></select></label>
+              <label>自定义宽度（px）<input name="ui_width_custom" type="number" min="900" max="1360" step="10" value="1120"></label>
+              <label>圆角风格<select name="ui_corner"><option value="soft">柔和</option><option value="rounded">圆润</option><option value="expressive">大圆角</option><option value="custom">自定义圆角</option></select></label>
+              <label>自定义圆角（px）<input name="ui_corner_custom" type="number" min="0" max="40" step="1" value="20"></label>
+              <label>卡片风格<select name="ui_card_style"><option value="tonal">色调填充</option><option value="elevated">轻量浮层</option><option value="outlined">描边卡片</option></select></label>
+              <label>信息密度<select name="ui_density"><option value="comfortable">舒适</option><option value="compact">紧凑</option><option value="airy">宽松</option></select></label>
+              <label>首屏布局<select name="ui_hero_layout"><option value="art">图文分栏</option><option value="focus">文字优先</option><option value="compact">紧凑首屏</option></select></label>
+              <label>动效强度<select name="ui_motion"><option value="full">完整动效</option><option value="subtle">轻微动效</option><option value="reduced">减少动效</option></select></label>
+            </div>
+            <div class="appearance-live-card" id="admin-appearance-preview" data-ui-width="standard" data-ui-corner="rounded" data-ui-card-style="tonal" data-ui-density="comfortable" data-ui-hero-layout="art" data-ui-motion="full">
+              <div><span class="eyebrow">APPEARANCE PREVIEW</span><strong>星屿笔记</strong><p>外观设置会在这里预览，并在保存后同步到访客页面。</p></div>
+              <span class="appearance-preview-card"><b>精选文章</b><small>卡片与圆角样式预览</small></span>
+            </div>
+          </fieldset>
+
+          <button class="filled-button" type="submit" aria-label="保存访客页内容" data-icon="save">保存访客页内容</button><div id="save-profile-status" class="save-status"></div>
+        </form>
+        <details class="surface about-admin-panel" id="about-admin-panel">
+          <summary>
+            <span class="about-admin-summary-copy">
+              <span class="eyebrow">ABOUT PAGE CONTENT</span>
+              <strong>关于页自定义内容</strong>
+              <small>编辑介绍、称呼和中英文互动对话，保存后立即同步到关于页。</small>
+            </span>
+            <span class="about-admin-summary-action"><mdui-icon name="edit" aria-hidden="true"></mdui-icon>编辑内容</span>
+          </summary>
+          <form id="about-page-admin-form" class="editor-form">
+            <section class="about-admin-section">
+              <header><div><span class="eyebrow">01 · PROFILE</span><h3>基础信息</h3></div><small>称呼、头像和关于页介绍</small></header>
+              <div class="form-grid">
+                <label>关于页眉题<input name="about_eyebrow"></label><label>关于页眉题（英文）<input name="about_eyebrow_en"></label>
+                <label>关于页标题<input name="about_heading"></label><label>关于页标题（英文）<input name="about_heading_en"></label>
+                <label>显示称呼<input name="about_name"></label><label>显示称呼（英文）<input name="about_name_en"></label>
+                <label>头像 URL<input name="avatar_url"></label>
+                <label>关于页简介<textarea name="about_body" rows="5"></textarea></label>
+                <label>关于页简介（英文）<textarea name="about_body_en" rows="5"></textarea></label>
+              </div>
+            </section>
+            <section class="about-admin-section">
+              <header><div><span class="eyebrow">02 · CONVERSATION</span><h3>互动对话</h3></div><small>动画角色的待机文案与轮播内容</small></header>
+              <div class="form-grid">
+                <label>待机文案<textarea name="about_dialog_idle" rows="2"></textarea></label><label>待机文案（英文）<textarea name="about_dialog_idle_en" rows="2"></textarea></label>
+                <label>互动对话（每行一条）<textarea name="about_dialogues_zh" rows="5"></textarea></label><label>互动对话（英文，每行一条）<textarea name="about_dialogues_en" rows="5"></textarea></label>
+              </div>
+            </section>
+            <section class="about-admin-section about-tag-settings">
+              <header><div><span class="eyebrow">03 · TAGS</span><h3>关于页标签</h3></div><small id="about-tag-count">0 / 12</small></header>
+              <p class="field-hint">添加兴趣或生活标签，可调整顺序；中英文可分别填写。</p>
+              <input type="hidden" name="about_tags" id="about-tag-data">
+              <div class="about-tag-compose">
+                <label><span>中文标签</span><input id="about-tag-zh" maxlength="24" placeholder="例如：硬件拆解"></label>
+                <label><span>英文标签</span><input id="about-tag-en" maxlength="36" placeholder="Hardware teardown"></label>
+                <button class="tonal-button" id="about-tag-add" type="button" data-no-icon><mdui-icon name="add" aria-hidden="true"></mdui-icon><span>添加标签</span></button>
+              </div>
+              <div class="about-tag-list" id="about-tag-list" aria-live="polite"></div>
+              <p class="about-tag-empty" id="about-tag-empty">还没有标签，可先添加一项。</p>
+              <p class="about-tag-status" id="about-tag-status" role="status"></p>
+            </section>
+            <div class="about-admin-actions">
+              <span class="save-status" id="about-page-save-status" role="status" aria-live="polite"></span>
+              <button class="filled-button" type="submit" data-no-icon><mdui-icon name="save" aria-hidden="true"></mdui-icon><span>保存关于页内容</span></button>
+            </div>
+          </form>
+        </details>
+        <div class="editor-head"><div><span class="eyebrow" id="editor-eyebrow">NEW STORY</span><h1 id="editor-title">写一篇新文章</h1></div><div class="editor-actions"><button class="tonal-button" id="carousel-post" type="button" data-no-icon hidden>加入首页轮播</button><button class="tonal-button" id="pin-post" type="button" data-no-icon hidden>置顶文章</button><button class="outlined-button" id="delete-post" aria-label="删除文章" data-no-icon hidden><mdui-icon name="delete" aria-hidden="true"></mdui-icon><span>删除文章</span></button><button class="filled-button" id="save-post" aria-label="保存文章" data-no-icon><mdui-icon name="save" aria-hidden="true"></mdui-icon><span>保存文章</span></button></div></div>
+        <form id="post-form" class="surface editor-form">
+          <label>标题<input id="post-title" maxlength="120" required></label><label>摘要<input id="post-excerpt" maxlength="180"></label>
+          <details class="post-settings"><summary><strong>文章设置</strong><span>封面、分类、作者与发布计划</span></summary><div class="post-settings-body">
+          <div class="post-cover-editor"><label>文章封面 URL<input id="post-cover-url" type="text" maxlength="1000" placeholder="/uploads/… 或 https://…"></label><div class="post-cover-actions"><button class="tonal-button" id="upload-post-cover" type="button" data-no-icon>上传封面</button><input class="hidden" id="post-cover-file" type="file" accept="image/jpeg,image/png,image/gif,image/webp"><button class="text-button" id="clear-post-cover" type="button" data-no-icon>移除封面</button></div><div class="post-cover-preview" id="post-cover-preview"><span data-zh="尚未设置封面" data-en="No cover selected">尚未设置封面</span><img class="hidden" alt="文章封面预览"></div><p class="save-status" id="post-cover-status" role="status"></p></div>
+          <div class="form-grid"><label>分类<input id="post-category" maxlength="60" placeholder="技术"></label><label>作者<input id="post-author" maxlength="60" placeholder="StarIsle"></label><label>URL slug<input id="post-slug" maxlength="100"></label><label>格式<select id="post-format"><option value="html">富文本 HTML</option><option value="markdown">Markdown</option></select></label><label>定时发布时间<input id="post-scheduled" type="datetime-local"></label></div>
+          </div></details>
+          <div class="editor-section-label"><strong>正文与预览</strong><small>窗口与字号保持同步，竖屏自动上下分屏</small></div>
+
+          <div class="editor-workspace">
+            <div class="editor-authoring" id="editor-import-zone">
+              <header class="editor-pane-heading"><strong>正文编辑</strong><small>固定字号 · 与预览等宽等高</small></header>
+              <div class="html-import-row">
+                <div><span class="eyebrow">HTML IMPORT</span><strong>导入完整 HTML 文件</strong><small>支持点击选择或直接拖入 .html / .htm 文件</small></div>
+                <button class="tonal-button" id="import-html-file" type="button" data-no-icon><mdui-icon name="upload_file"></mdui-icon><span>选择 HTML</span></button>
+                <input class="hidden" id="html-file-input" type="file" accept=".html,.htm,text/html">
+                <span class="save-status" id="html-import-status" role="status" aria-live="polite"></span>
+              </div>
+              <div class="editor-component-library" id="editor-component-library" aria-label="文章 UI 控件">
+                <div class="component-library-head"><strong>文章组件</strong><small>点击插入当前光标位置</small></div>
+                <div class="component-library-grid">
+                  <button type="button" data-editor-component="lead"><span class="material-symbols-rounded">format_quote</span><span>导语卡</span></button>
+                  <button type="button" data-editor-component="callout"><span class="material-symbols-rounded">info</span><span>提示卡</span></button>
+                  <button type="button" data-editor-component="warning"><span class="material-symbols-rounded">warning</span><span>警告卡</span></button>
+                  <button type="button" data-editor-component="step"><span class="material-symbols-rounded">format_list_numbered</span><span>步骤卡</span></button>
+                  <button type="button" data-editor-component="image-pair"><span class="material-symbols-rounded">view_column_2</span><span>双图对比</span></button>
+                  <button type="button" data-editor-component="code"><span class="material-symbols-rounded">terminal</span><span>命令块</span></button>
+                </div>
+              </div>
+              <div class="rich-toolbar" id="rich-toolbar">
+            <button type="button" data-command="undo" data-icon="undo" aria-label="撤销" title="撤销"></button><button type="button" data-command="redo" data-icon="redo" aria-label="重做" title="重做"></button><button type="button" data-command="bold" data-icon="bold" aria-label="粗体" title="粗体"></button><button type="button" data-command="italic" data-icon="italic" aria-label="斜体" title="斜体"></button><button type="button" data-command="underline" data-icon="underline" aria-label="下划线" title="下划线"></button><button type="button" data-command="strikeThrough" data-icon="strike" aria-label="删除线" title="删除线"></button><button type="button" data-block="h2" data-no-icon aria-label="二级标题" title="二级标题">H2</button><button type="button" data-block="h3" data-no-icon aria-label="三级标题" title="三级标题">H3</button><button type="button" data-block="h4" data-no-icon aria-label="四级标题" title="四级标题">H4</button><button type="button" data-command="insertUnorderedList" data-icon="format" aria-label="无序列表" title="无序列表"></button><button type="button" data-command="insertOrderedList" data-icon="numbered" aria-label="有序列表" title="有序列表"></button><button type="button" data-block="blockquote" data-icon="quote" aria-label="引用" title="引用"></button><button type="button" data-command="justifyLeft" data-icon="alignLeft" aria-label="左对齐" title="左对齐"></button><button type="button" data-command="justifyCenter" data-icon="alignCenter" aria-label="居中" title="居中"></button><button type="button" data-command="justifyRight" data-icon="alignRight" aria-label="右对齐" title="右对齐"></button><button type="button" id="insert-link" data-icon="link" aria-label="插入链接" title="插入链接"></button><button type="button" id="insert-inline-code" data-icon="code" aria-label="行内代码" title="行内代码"></button><button type="button" id="insert-code-block" data-icon="code" aria-label="代码块" title="代码块"></button><button type="button" data-command="removeFormat" data-icon="clearFormat" aria-label="清除格式" title="清除格式"></button><button type="button" id="insert-horizontal-rule" data-icon="rule" aria-label="分割线" title="分割线"></button>
+            <label class="color-control" title="文字颜色">A<input type="color" data-command="foreColor" value="#6750a4" aria-label="文字颜色"></label><label class="color-control" title="文字背景颜色">▣<input type="color" data-command="hiliteColor" value="#eaddff" aria-label="文字背景颜色"></label>
+            <button type="button" id="insert-file" aria-label="插入图片、视频或文件" title="插入图片、视频或文件" data-icon="upload">插入文件</button>
+            <input class="hidden" id="insert-file-input" type="file" accept="image/jpeg,image/png,image/gif,image/webp,video/mp4,video/webm,video/ogg,audio/mpeg,audio/wav,audio/ogg,application/pdf" multiple>
+          </div>
+              <div id="post-content" class="rich-editor article-content" contenteditable="true" data-placeholder="从这里开始写文章，或拖入 HTML 文件…"></div>
+              <div class="editor-drag-hint"><span class="material-symbols-rounded">drag_indicator</span><span>可将 HTML 文件或图片拖到此区域</span></div>
+              <div class="editor-media-tools hidden" id="editor-media-tools">
+                <div><span class="material-symbols-rounded">image</span><span><strong>已选择图片</strong><small>替换或编辑当前文章图片</small></span></div>
+                <button class="tonal-button" id="replace-editor-image" type="button" data-no-icon>替换图片</button>
+                <button class="text-button" id="edit-image-alt" type="button" data-no-icon>图片说明</button>
+                <button class="text-button danger-text" id="remove-editor-image" type="button" data-no-icon>移除</button>
+                <input class="hidden" id="replace-image-file" type="file" accept="image/jpeg,image/png,image/gif,image/webp">
+              </div>
+            </div>
+            <aside class="editor-preview-pane" aria-label="访客文章实时预览">
+              <header class="editor-pane-heading"><div><strong>文章预览</strong></div><div class="preview-pane-actions"><button class="outlined-button" id="toggle-preview-pane" type="button" aria-controls="editor-article-preview" aria-expanded="true" data-no-icon><span class="material-symbols-rounded">visibility_off</span><span>收起预览</span></button><button class="outlined-button" id="refresh-post-preview" type="button" data-no-icon>刷新</button></div></header>
+              <article class="editor-article-preview" id="editor-article-preview">
+                <div class="editor-preview-cover" id="editor-preview-cover"><img class="hidden" id="editor-preview-cover-image" alt="文章封面预览"></div>
+                <div class="editor-preview-surface">
+                  <span class="eyebrow">STORY PREVIEW</span>
+                  <div class="editor-preview-meta" id="editor-preview-meta">教程 · StarIsle</div>
+                  <h1 id="editor-preview-title">未命名文章</h1>
+                  <p class="editor-preview-excerpt" id="editor-preview-excerpt">文章摘要会显示在这里。</p>
+                  <div class="article-content" id="post-preview-content"></div>
+                </div>
+              </article>
+            </aside>
+          </div>
+          <section class="admin-toc-panel surface" aria-labelledby="admin-toc-title"><header><div><strong id="admin-toc-title">文章目录预览</strong><small>根据正文中的 H2 / H3 / H4 标题自动生成，点击可定位</small></div><button class="outlined-button" id="refresh-admin-toc" type="button" aria-label="刷新文章目录" data-no-icon><span class="material-symbols-rounded" aria-hidden="true">refresh</span><span>刷新</span></button></header><div class="admin-toc-list" id="admin-toc-list"><p>正在分析正文标题…</p></div></section>
+          <label>标签 <span class="field-hint">用逗号分隔</span><input id="post-tags" placeholder="技术, 随笔"></label>
+          <label class="switch-row"><span><strong>发布到博客</strong><small>关闭时保存为草稿</small></span><input id="post-published" type="checkbox"><span class="switch-ui"></span></label><div class="editor-footer-actions"><div class="save-status" id="save-status" role="status" aria-live="polite"></div><button class="filled-button" id="save-post-footer" type="button" data-no-icon>保存文章</button></div>
+        </form>
+        <section class="surface admin-thoughts" aria-labelledby="admin-thoughts-title"><div class="sidebar-head"><div><span class="eyebrow">EVERYDAY MOMENTS</span><h2 id="admin-thoughts-title">日常</h2></div><button class="outlined-button" id="refresh-thoughts" aria-label="刷新日常" data-icon="refresh">刷新</button></div><form id="admin-thought-form" class="editor-form thought-editor-form"><label>日常记录<textarea id="thought-content" rows="3" maxlength="500" placeholder="记录生活、心情或拍照打卡…"></textarea></label><div class="form-grid"><label>生活标签<input id="thought-mood" maxlength="20" value="日常"></label><label class="switch-row"><span><strong>公开发布</strong><small>关闭时仅管理员可见</small></span><input id="thought-published" type="checkbox" checked><span class="switch-ui"></span></label></div><div class="thought-image-editor"><div class="thought-image-copy"><strong>日常照片</strong><span class="field-hint">最多 9 张；JPG、PNG、GIF 或 WebP，单张最大 12 MB</span></div><input class="hidden" id="thought-image-file" type="file" accept="image/jpeg,image/png,image/gif,image/webp" multiple><input id="thought-image-urls" type="hidden" value="[]"><div class="post-cover-actions"><button class="tonal-button" id="upload-thought-image" type="button" data-no-icon>上传照片</button><button class="text-button" id="clear-thought-image" type="button" data-no-icon>移除全部照片</button></div><div class="thought-image-previews" id="thought-image-previews"></div><span class="save-status" id="thought-image-status" role="status"></span></div><div class="account-settings-actions"><button class="filled-button" id="save-thought" type="submit" data-no-icon>添加日常</button><button class="text-button hidden" id="cancel-thought-edit" type="button" data-no-icon>取消编辑</button><span id="thought-editor-status" class="save-status" role="status"></span></div></form><div id="admin-thought-list" class="admin-moderation-grid"><div class="admin-empty">正在读取日常…</div></div></section>
+        <section class="surface admin-reports" aria-labelledby="admin-reports-title"><div class="sidebar-head"><div><span class="eyebrow">COMMUNITY SAFETY</span><h2 id="admin-reports-title">举报队列</h2></div><button class="outlined-button" id="refresh-reports" aria-label="刷新举报" data-icon="refresh">刷新举报</button></div><p class="muted">查看举报人与被举报内容，可直接标记处理、驳回、禁言或封禁账号。处置结果会写入审计记录。</p><div id="admin-report-list" class="admin-moderation-grid"><div class="admin-empty">正在读取举报…</div></div></section>
+        <section class="surface admin-users" aria-labelledby="admin-users-title"><div class="sidebar-head"><div><span class="eyebrow">ACCOUNT MODERATION</span><h2 id="admin-users-title">用户与账号状态</h2></div><button class="outlined-button" id="refresh-users" aria-label="刷新用户" data-icon="refresh">刷新用户</button></div><p class="muted">禁言用户仍可登录、浏览和举报，但不能发表评论；封禁会立即注销该用户的现有会话。所有操作均可撤销。</p><div id="admin-user-list" class="admin-moderation-grid"><div class="admin-empty">正在读取用户…</div></div></section>
+        <section class="surface admin-friend-applications" aria-labelledby="admin-friend-applications-title"><div class="sidebar-head"><div><span class="eyebrow">FRIEND APPLICATIONS</span><h2 id="admin-friend-applications-title">友链申请</h2></div><button class="outlined-button" id="refresh-friend-applications" aria-label="刷新友链申请" data-icon="refresh">刷新申请</button></div><p class="muted">检查申请站点后可通过或驳回。批准后友链会立即出现在访客页，联系邮箱不会公开。</p><div id="admin-friend-application-list" class="admin-moderation-grid"><div class="admin-empty">正在读取友链申请…</div></div></section>
+        <section class="surface admin-comments admin-comment-section" data-comment-section="article" aria-labelledby="admin-article-comments-title">
+          <div class="sidebar-head"><div><span class="eyebrow">ARTICLE COMMENTS</span><h2 id="admin-article-comments-title">文章评论</h2></div><div class="admin-comment-heading-actions"><span class="admin-comment-summary" data-comment-summary>正在读取…</span><button class="outlined-button" type="button" data-refresh-comments aria-label="刷新文章评论" data-icon="refresh">刷新</button></div></div>
+          <p class="admin-comment-rule-note">普通评论自动公开；命中违禁词的内容会以星号遮罩公开并进入人工审核，通过后恢复原文。</p>
+          <div class="admin-comment-toolbar">
+            <div class="admin-comment-filters" role="group" aria-label="文章评论状态筛选"><button class="admin-comment-filter active" type="button" data-comment-filter="all" data-no-icon aria-pressed="true">全部 <span data-comment-count="all">0</span></button><button class="admin-comment-filter" type="button" data-comment-filter="pending" data-no-icon aria-pressed="false">待审核 <span data-comment-count="pending">0</span></button><button class="admin-comment-filter" type="button" data-comment-filter="approved" data-no-icon aria-pressed="false">已公开 <span data-comment-count="approved">0</span></button></div>
+            <label class="admin-comment-search"><span>搜索</span><input type="search" autocomplete="off" placeholder="用户名、内容或文章标题" data-comment-search></label>
+          </div>
+          <p class="admin-comment-status" data-comment-status-text role="status" aria-live="polite"></p>
+          <div class="admin-comment-list" data-comment-list><div class="admin-empty">正在读取文章评论…</div></div>
+        </section>
+        <section class="surface admin-comments admin-comment-section" data-comment-section="guestbook" aria-labelledby="admin-guestbook-title">
+          <div class="sidebar-head"><div><span class="eyebrow">GUESTBOOK</span><h2 id="admin-guestbook-title">留言区</h2></div><div class="admin-comment-heading-actions"><span class="admin-comment-summary" data-comment-summary>正在读取…</span><button class="outlined-button" type="button" data-refresh-comments aria-label="刷新留言区" data-icon="refresh">刷新</button></div></div>
+          <p class="admin-comment-rule-note">普通留言自动公开；命中违禁词的内容会以星号遮罩公开并进入人工审核，通过后恢复原文。</p>
+          <div class="admin-comment-toolbar">
+            <div class="admin-comment-filters" role="group" aria-label="留言区状态筛选"><button class="admin-comment-filter active" type="button" data-comment-filter="all" data-no-icon aria-pressed="true">全部 <span data-comment-count="all">0</span></button><button class="admin-comment-filter" type="button" data-comment-filter="pending" data-no-icon aria-pressed="false">待审核 <span data-comment-count="pending">0</span></button><button class="admin-comment-filter" type="button" data-comment-filter="approved" data-no-icon aria-pressed="false">已公开 <span data-comment-count="approved">0</span></button></div>
+            <label class="admin-comment-search"><span>搜索</span><input type="search" autocomplete="off" placeholder="用户名或留言内容" data-comment-search></label>
+          </div>
+          <p class="admin-comment-status" data-comment-status-text role="status" aria-live="polite"></p>
+          <div class="admin-comment-list" data-comment-list><div class="admin-empty">正在读取留言…</div></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="返回顶部" title="返回顶部" data-no-icon><mdui-icon name="arrow_upward"></mdui-icon></button>
+  <dialog class="cover-crop-dialog" id="post-cover-crop-dialog" aria-labelledby="post-cover-crop-title">
+    <header class="cover-crop-head"><div><span class="eyebrow">COVER CROP</span><h2 id="post-cover-crop-title">裁剪文章封面</h2><p>固定输出 1600 × 900 · 拖动图片调整位置，使用滑块缩放</p></div><button class="icon-button" id="close-post-cover-crop" type="button" aria-label="关闭裁剪窗口" data-icon="close"></button></header>
+    <div class="cover-crop-stage" id="post-cover-crop-stage"><img id="post-cover-crop-image" alt="待裁剪的文章封面" draggable="false"></div>
+    <div class="cover-crop-controls"><label for="post-cover-crop-zoom">缩放</label><input id="post-cover-crop-zoom" type="range" min="100" max="260" value="100" step="1"><output id="post-cover-crop-zoom-value">100%</output></div>
+    <div class="cover-crop-actions"><button class="text-button" id="cancel-post-cover-crop" type="button" data-no-icon>取消</button><button class="filled-button" id="apply-post-cover-crop" type="button" data-no-icon>裁剪并上传</button></div>
+    <p class="save-status" id="post-cover-crop-status" role="status"></p>
+  </dialog>
+  <script src="/icons.js?v=20261107-lazy-pages-v20"></script><script src="/material-select.js?v=20261107-lazy-pages-v20"></script><script src="/solar.js?v=20261107-lazy-pages-v20"></script><script src="/admin.js?v=20261107-lazy-pages-v20"></script>
+</body>
+</html>
+
+
+
