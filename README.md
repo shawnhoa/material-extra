@@ -5,7 +5,7 @@
 一个基于 Material 3 的个人内容站点模板，包含访客网站、独立管理端和轻量 Python 服务端。首页是一套「品牌舞台」：站点标志被画成舞台中心的小屋，二十四节气与传统／世界节日共 36 套场景围绕它重新编排，小屋会呼吸、眨眼、左右环顾。界面与数据均为该主题框架的演示内容，不包含原部署实例的文章、用户、图片、账号、接口地址或服务器配置。
 
 <p align="center">
-  <a href="https://github.com/shawnhoa/material-extra/releases/tag/v0.1.5">下载 v0.1.5</a> ·
+  <a href="https://github.com/shawnhoa/material-extra/releases/tag/v0.1.6">下载 v0.1.6</a> ·
   <a href="https://github.com/shawnhoa/material-extra">源代码</a>
 </p>
 
@@ -113,6 +113,11 @@ scripts/             语法检查与发布打包脚本
 - **数据在哪里**：全部位于 `data/blog.json`（容器部署时为挂载的数据目录），升级前请备份该目录。
 
 ## 版本
+
+### v0.1.6
+
+- 修复首屏加载遮罩只覆盖内容上方的缺陷：#app-loading 补上 ottom: 0 与背景色，加载期间覆盖整个内容区（顶部导航保留，与线上一致）。
+- 遮罩在深色主题下使用对应的表面色，退出时仍走淡出过渡。
 
 ### v0.1.5
 
