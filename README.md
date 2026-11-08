@@ -5,7 +5,7 @@
 一个基于 Material 3 的个人内容站点模板，包含访客网站、独立管理端和轻量 Python 服务端。首页是一套「品牌舞台」：站点标志被画成舞台中心的小屋，二十四节气与传统／世界节日共 36 套场景围绕它重新编排，小屋会呼吸、眨眼、左右环顾。界面与数据均为该主题框架的演示内容，不包含原部署实例的文章、用户、图片、账号、接口地址或服务器配置。
 
 <p align="center">
-  <a href="https://github.com/shawnhoa/material-extra/releases/tag/v0.1.3">下载 v0.1.3</a> ·
+  <a href="https://github.com/shawnhoa/material-extra/releases/tag/v0.1.4">下载 v0.1.4</a> ·
   <a href="https://github.com/shawnhoa/material-extra">源代码</a>
 </p>
 
@@ -31,21 +31,34 @@
 
 ## 快速开始
 
-需要 Python 3.10+。Linux/macOS：
+需要 Python 3.10+（Windows 安装时请勾选 “Add python.exe to PATH”），唯一依赖是 Pillow：
+
+```sh
+python -m pip install -r app/requirements.txt
+```
+
+Linux / macOS：
 
 ```sh
 cp .env.example .env
 sh run.sh
 ```
 
-Windows PowerShell：
+Windows：直接双击 **`run.cmd`**（推荐），或在终端里执行：
 
-```powershell
-Copy-Item .env.example .env
-.\run.ps1
+```bat
+run.cmd
 ```
 
-先在 `.env` 中设置 `ADMIN_USERNAME` 与至少 16 位的 `ADMIN_PASSWORD`。访客端默认监听 `http://localhost:8080`，管理端默认监听 `http://localhost:8081/admin`。本地脚本将管理端绑定到回环地址；生产部署应通过 HTTPS 反向代理和访问控制保护管理端。
+`run.cmd` 会自动补一份 `.env`、设置环境变量并启动服务，不依赖 PowerShell 脚本执行策略，因此从压缩包解压到「下载」目录后也能直接运行。
+
+如果你更习惯 PowerShell，脚本文件可能带有“网络来源”标记而被系统策略拦截，此时用：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run.ps1
+```
+
+访客端默认监听 `http://localhost:8080`，管理端默认监听 `http://localhost:8081/admin`。**首次启动时如果 `.env` 里的 `ADMIN_PASSWORD` 为空或不足 16 位，程序会自动生成一个管理员密码并打印在控制台**，凭据保存在 `data/admin-access.json`；想固定密码，就在 `.env` 中设置 `ADMIN_PASSWORD` 并删除该文件后重启。本地脚本将管理端绑定到回环地址；生产部署应通过 HTTPS 反向代理和访问控制保护管理端。
 
 ## Docker
 
@@ -91,7 +104,22 @@ scripts/             语法检查与发布打包脚本
 
 本主题的部署实例可由项目所有者自行引用真实站点与截图。该站点仅作为外观和部署参考，任何站点专属文字、接口、图片与用户数据都不属于本模板。
 
+## 故障排查
+
+- **Windows 双击 `run.ps1` 没反应或提示“禁止运行脚本”**：改用 `run.cmd`，或执行 `powershell -ExecutionPolicy Bypass -File .\run.ps1`。下载来的脚本会被系统标记为“网络来源”，属于正常安全限制。
+- **启动报 `ModuleNotFoundError: No module named 'PIL'`**：执行 `python -m pip install -r app/requirements.txt`。
+- **端口被占用**：在 `.env` 中修改 `PORT` / `ADMIN_PORT` 后重启。
+- **记不清管理员密码**：删除 `data/admin-access.json`，在 `.env` 里设置新的 `ADMIN_PASSWORD`（16 位以上）后重启；若 `ADMIN_PASSWORD` 仍为空，程序会重新生成并打印。
+- **数据在哪里**：全部位于 `data/blog.json`（容器部署时为挂载的数据目录），升级前请备份该目录。
+
 ## 版本
+
+### v0.1.4
+
+- 新增 Windows 启动器 `run.cmd`，避开 PowerShell 脚本执行策略对“网络来源”文件的拦截。
+- 首次启动若未设置管理员密码，自动生成并打印，不再直接启动失败。
+- `run.ps1` 支持从任意工作目录启动，缺少 `.env` 时自动补全，并在缺少 Python 时给出提示。
+- README 补充 Windows 启动方式、首次运行密码行为与故障排查。
 
 ### v0.1.3
 

@@ -303,10 +303,18 @@ def load_admin_config():
     try:
         return json.loads(target.read_text(encoding="utf-8"))
     except (OSError, ValueError, json.JSONDecodeError):
-        username = os.getenv("ADMIN_USERNAME", "")
+        username = os.getenv("ADMIN_USERNAME", "") or "admin"
+        if not valid_admin_username(username):
+            username = "admin"
         password = os.getenv("ADMIN_PASSWORD", "")
-        if not valid_admin_username(username) or not valid_admin_password(password) or len(password) < 16:
-            raise FileNotFoundError("Set ADMIN_USERNAME and a 16+ character ADMIN_PASSWORD before opening the admin port")
+        if not valid_admin_password(password) or len(password) < 16:
+            password = secrets.token_urlsafe(18)
+            print(
+                "[material-extra] ADMIN_PASSWORD is empty or shorter than 16 characters.\n"
+                f"[material-extra] Generated admin account: {username} / {password}\n"
+                f"[material-extra] Credentials are stored in {target}. Set ADMIN_PASSWORD in .env and delete that file to pin your own password.",
+                flush=True,
+            )
         config = {"username": username, "password_hash": hash_password(password)}
         save_admin_config(config)
         return config
@@ -2566,6 +2574,10 @@ class BlogHandler(BaseHTTPRequestHandler):
 
 
 def main():
+    try:
+        load_admin_config()
+    except Exception as error:  # keep the guest site usable even if admin setup fails
+        print(f"[material-extra] admin configuration unavailable: {error}", flush=True)
     guest = ThreadingHTTPServer((os.getenv("GUEST_BIND_HOST", "0.0.0.0"), PORT), BlogHandler); admin = ThreadingHTTPServer((os.getenv("ADMIN_BIND_HOST", "127.0.0.1"), ADMIN_PORT), BlogHandler)
     threading.Thread(target=admin.serve_forever, daemon=True).start(); print(f"Material Extra guest :{PORT}, admin :{ADMIN_PORT}"); guest.serve_forever()
 
