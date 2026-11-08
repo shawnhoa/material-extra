@@ -1234,7 +1234,31 @@ class BlogHandler(BaseHTTPRequestHandler):
         path = STATIC_DIR / filename
         if not path.is_file(): return self.send_error(HTTPStatus.NOT_FOUND)
         content_type = {".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "application/javascript; charset=utf-8", ".xml": "application/xml", ".json": "application/json; charset=utf-8", ".svg": "image/svg+xml", ".png": "image/png", ".webp": "image/webp", ".woff2": "font/woff2"}.get(path.suffix, "application/octet-stream")
-        raw = path.read_bytes(); self.send_response(200); self.send_header("Content-Type", content_type); self.send_header("Content-Length", str(len(raw))); self.end_headers(); self.wfile.write(raw)
+        raw = path.read_bytes()
+        stat = path.stat()
+        etag = '"%x-%x"' % (stat.st_mtime_ns, len(raw))
+        versioned = "?v=" in (self.path or "")
+        if versioned:
+            cache = "public, max-age=31536000, immutable"
+        elif path.suffix in {".woff2", ".ttf"}:
+            cache = "public, max-age=86400"
+        else:
+            cache = "public, max-age=0, must-revalidate"
+        if self.headers.get("If-None-Match") == etag:
+            self.send_response(HTTPStatus.NOT_MODIFIED)
+            self.send_header("ETag", etag)
+            self.send_header("Cache-Control", cache)
+            self.end_headers()
+            return
+        self.send_response(200)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Content-Length", str(len(raw)))
+        self.send_header("ETag", etag)
+        self.send_header("Cache-Control", cache)
+        self.send_header("Last-Modified", formatdate(stat.st_mtime, usegmt=True))
+        self.end_headers()
+        if self.command != "HEAD": self.wfile.write(raw)
+
     def send_index(self, page="home"):
         path = STATIC_DIR / "index.html"
         if not path.is_file():

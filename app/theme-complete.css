@@ -1462,3 +1462,6 @@ html:not([data-focus-modality="keyboard"]) body:not(.admin-page) :focus-visible 
     max-height: calc(5 * 36px);
   }
 }
+
+/* Icon ligature text must never paint before the symbol font arrives. */
+html.icons-pending .mdui-glyph{visibility:hidden}

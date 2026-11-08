@@ -3,7 +3,7 @@
 body:not(.admin-page)[data-term] .tonal-button{color:var(--primary)}body:not(.admin-page)[data-term] .tonal-button:hover{background:color-mix(in srgb,var(--primary) 22%,var(--surface))}
 .solar-scene{position:relative;width:100%;height:100%;min-height:0;overflow:hidden;border-radius:inherit;isolation:isolate;background:var(--term-sky1)}
 .solar-scene svg{display:block;width:100%;height:100%;min-height:0;overflow:hidden}
-.solar-scene-caption{position:absolute;left:24px;bottom:22px;display:flex;flex-direction:column;gap:5px;color:#fff;text-shadow:0 1px 10px #122c3666;pointer-events:none}
+.solar-scene-caption{position:absolute;left:14px;bottom:12px;display:flex;flex-direction:column;gap:4px;padding:10px 16px 12px;border-radius:var(--radius-control,16px);background:radial-gradient(130% 130% at 0% 100%,rgba(8,22,17,.5),rgba(8,22,17,0) 72%);color:#fff;text-shadow:0 2px 10px rgba(10,25,20,.5),0 0 2px rgba(10,25,20,.55);pointer-events:none}
 .solar-scene-caption span{font-size:9px;letter-spacing:2.4px;font-weight:600}.solar-scene-caption strong{font-size:24px;font-weight:500;line-height:1.1}
 .solar-scene [class^="term-"]{transform-box:fill-box;transform-origin:center;animation-delay:var(--delay,0s)}
 .solar-scene .term-sun-halo{animation:term-sun-breathe 9s ease-in-out infinite}.solar-scene .term-rain{animation:term-rain-fall 2.8s linear infinite}.solar-scene .term-rain:nth-child(3n){animation-duration:3.7s}
@@ -108,4 +108,39 @@ body:not(.admin-page)[data-term] .tonal-button{color:var(--primary)}body:not(.ad
 @media(max-width:760px){.admin-page .editor-layout{grid-template-columns:minmax(0,1fr)}.admin-page .post-sidebar{min-width:0}.admin-page .admin-overview{flex-wrap:wrap;gap:12px}.admin-page .admin-metrics{min-width:0;flex:1;gap:8px}.admin-page .admin-overview-actions{width:100%;justify-content:flex-start}.admin-page .rich-toolbar{flex-wrap:wrap}.admin-page .form-grid{grid-template-columns:minmax(0,1fr)}.admin-page .editor-form input,.admin-page .editor-form select{min-width:0;max-width:100%}.admin-page .post-sidebar #admin-post-list{max-width:100%}.admin-page .sidebar-post{flex:0 0 170px}.account-settings-head{align-items:flex-start;flex-direction:column}.account-settings-actions{align-items:flex-start;flex-direction:column}.account-settings-actions .filled-button{width:100%}}
 @media(max-width:600px){.admin-page .topbar{height:auto;min-height:100px;display:flex;flex-wrap:wrap;padding:12px 14px;gap:8px}.admin-page .topbar .brand{width:100%;min-width:0;font-size:16px}.admin-page .topbar .admin-label{margin:0 auto 0 0}.admin-page .topbar #visitor-link{margin:0}.admin-page .editor-head{flex-wrap:wrap}}
 @media(max-width:600px){.theme-settings{padding:20px}.theme-preview-grid{grid-template-columns:1fr;gap:12px}.theme-selector-row{flex-direction:column;align-items:stretch}.theme-preview{height:220px}.theme-preview-copy h3{font-size:21px}.solar-scene-caption{left:18px;bottom:18px}.solar-scene-caption strong{font-size:21px}.account-dialog{padding-top:14px}}
+/* 闁冲厜鍋撻柍鍏夊亾 Stage: a centred brand diorama, shared by every season 闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾闁冲厜鍋?*/
+.solar-scene .stage-sun-glow{transform-box:fill-box;transform-origin:center;animation:stage-glow-breathe 11s ease-in-out infinite}
+.solar-scene .stage-sun{transform-box:fill-box;transform-origin:center;animation:stage-sun-drift 12s ease-in-out infinite}
+.solar-scene .stage-sun-ring{transform-box:fill-box;transform-origin:center;animation:stage-ring-spin 46s linear infinite}
+.solar-scene .stage-hill-far{animation:stage-hill-drift 34s ease-in-out infinite}
+.solar-scene .stage-hill-mid{animation:stage-hill-drift 44s ease-in-out infinite reverse}
+.solar-scene .stage-path{animation:stage-path-glow 7s ease-in-out infinite}
+.solar-scene .term-tuft{transform-box:fill-box;transform-origin:center bottom;animation:stage-tuft-sway 6.6s ease-in-out infinite}
+.solar-scene .term-tuft:nth-of-type(2n){animation-delay:-2.3s}
+.solar-scene .term-stone{animation:stage-stone-settle 9s ease-in-out infinite}
+
+/* 闁冲厜鍋撻柍鍏夊亾 The mark: eyes blink, the gaze wanders, the smile breathes 闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾闁冲厜鍋撻柍鍏夊亾 */
+.solar-scene [class^="logo-"]{transform-box:fill-box;transform-origin:center}
+.solar-scene .logo-house{animation:logo-house-drift 9s ease-in-out infinite}
+.solar-scene .logo-gaze{animation:logo-gaze 14s ease-in-out infinite}
+.solar-scene .logo-blink{animation:logo-blink 6.2s infinite}
+.solar-scene .logo-body{fill:var(--term-accent)}
+.solar-scene .logo-eye{fill:var(--term-sun);animation:logo-eye-breathe 7.4s ease-in-out infinite}
+.solar-scene .logo-eye.is-right{animation-delay:-1.9s}
+.solar-scene .logo-smile{fill:var(--term-sun);animation:logo-smile-breathe 8.2s ease-in-out infinite}
+.solar-scene .logo-house.is-night .logo-body{fill:color-mix(in srgb,var(--term-accent) 84%,#ffffff)}
+.solar-scene .logo-house.is-night .logo-eye,.solar-scene .logo-house.is-night .logo-smile{fill:#ffe3a3}
+@keyframes stage-glow-breathe{0%,100%{opacity:.5;transform:scale(.93)}50%{opacity:.85;transform:scale(1.05)}}
+@keyframes stage-sun-drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes stage-ring-spin{to{transform:rotate(360deg)}}
+@keyframes stage-hill-drift{0%,100%{transform:translateX(-7px)}50%{transform:translateX(9px)}}
+@keyframes stage-path-glow{0%,100%{stroke-opacity:.16}50%{stroke-opacity:.34}}
+@keyframes stage-tuft-sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(3deg)}}
+@keyframes stage-stone-settle{0%,100%{opacity:.8}50%{opacity:1}}
+@keyframes logo-house-drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-3.2px)}}
+@keyframes logo-gaze{0%,12%,70%,84%,100%{transform:translateX(0)}22%,34%{transform:translateX(2.6px)}46%,58%{transform:translateX(-2.6px)}}
+@keyframes logo-blink{0%,72%,78.5%,90%,100%{transform:scaleY(1)}74.5%,76.5%{transform:scaleY(.07)}93%,95.5%{transform:scaleY(.07)}97.5%{transform:scaleY(1)}}
+@keyframes logo-eye-breathe{0%,100%{opacity:.78}44%{opacity:1}70%{opacity:.86}}
+@keyframes logo-smile-breathe{0%,100%{opacity:.82;transform:scaleY(.92)}48%{opacity:1;transform:scaleY(1.16)}}
 @media(prefers-reduced-motion:reduce){.solar-scene *{animation:none!important;transition:none!important}}
+.theme-preview .solar-scene-caption{display:none}
